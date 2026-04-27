@@ -1,0 +1,373 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: #f4efe7;
+  --foreground: #181814;
+
+  --card: #ffffff;
+  --card-foreground: #181713;
+
+  --popover: #ffffff;
+  --popover-foreground: #181713;
+
+  --primary: #181713;
+  --primary-foreground: #fff98c;
+
+  --secondary: #fff98c;
+  --secondary-foreground: #181713;
+
+  --muted: #e4dfd2;
+  --muted-foreground: #615d52;
+
+  --accent: #4188e8;
+  --accent-foreground: #ffffff;
+
+  --destructive: #c13b2d;
+  --destructive-foreground: #fff98c;
+
+  --border: #d9d3c4;
+  --input: #d9d3c4;
+  --ring: #4188e8;
+
+  /* ── Brand tokens ─────────────────────────────── */
+  --brand-butter: #FBEA9D;   /* cashmere yellow, expensive   */
+  --brand-blue:   #7393B3;   /* dusty french blue, elegant   */
+  --brand-cream:  #f4efe7;   /* warm editorial base  */
+  --brand-sand:   #eaded2;   /* sand section         */
+  --brand-ink:    #181814;   /* near-black           */
+  --brand-ink-soft: #2d2922;
+  --brand-white:  #fffdf5;   /* off-white            */
+  --footer-accent: #FBEA9D;  /* cashmere yellow      */
+
+  --radius: 0.25rem;
+}
+
+@theme inline {
+  --font-sans: var(--font-sans), "Montserrat Fallback", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-serif), "Old Standard TT Fallback", ui-serif, Georgia, serif;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-brand-butter: var(--brand-butter);
+  --color-brand-blue: var(--brand-blue);
+  --color-brand-cream: var(--brand-cream);
+  --color-brand-sand: var(--brand-sand);
+  --color-brand-ink: var(--brand-ink);
+  --color-brand-white: var(--brand-white);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 4px);
+  --radius-xl: calc(var(--radius) + 10px);
+  --radius-2xl: calc(var(--radius) + 18px);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: normal;
+    overflow-x: hidden;
+  }
+  ::selection {
+    background: var(--brand-butter);
+    color: var(--brand-ink);
+  }
+  a {
+    text-underline-offset: 0.18em;
+  }
+  /* Ensure all interactive elements meet 44 × 44 px touch target */
+  button, [role="button"], a {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+  /* Override above for inline text links */
+  p a, li a {
+    min-height: unset;
+    display: inline;
+  }
+}
+
+@layer utilities {
+  .font-serif {
+    font-family: var(--font-serif);
+  }
+  .font-display {
+    font-family: var(--font-serif);
+    letter-spacing: 0;
+    text-transform: uppercase;
+  }
+
+  /* ── Layout ──────────────────────────────────── */
+  .site-shell {
+    /* At least 20 px side padding on very small screens */
+    width: min(100% - max(6vw, 1.25rem), 1596px);
+    margin-inline: auto;
+  }
+  @media (min-width: 768px) {
+    .site-shell {
+      width: min(100% - max(7vw, 2.5rem), 1596px);
+    }
+  }
+  .section-pad {
+    padding-block: 5.5rem;
+  }
+  @media (min-width: 768px) {
+    .section-pad {
+      padding-block: 8.5rem;
+    }
+  }
+  @media (min-width: 1280px) {
+    .section-pad {
+      padding-block: 11rem;
+    }
+  }
+
+  /* Typography scale */
+  .hero-title {
+    font-size: 3.8rem;
+    line-height: 0.95;
+    text-wrap: balance;
+  }
+  .mega-title {
+    font-size: 3rem;
+    line-height: 0.95;
+    text-wrap: balance;
+  }
+  .section-title {
+    font-size: 2.5rem;
+    line-height: 0.95;
+    text-wrap: balance;
+  }
+  .marquee-title {
+    font-size: 4.5rem;
+    line-height: 0.95;
+  }
+  @media (min-width: 640px) {
+    .hero-title { font-size: 7.2rem; }
+    .mega-title { font-size: 4.7rem; }
+    .section-title { font-size: 4.15rem; }
+    .marquee-title { font-size: 7.5rem; }
+  }
+  @media (min-width: 1024px) {
+    .hero-title { font-size: 11.8rem; }
+    .mega-title { font-size: 7rem; }
+    .section-title { font-size: 5.8rem; }
+    .marquee-title { font-size: 10rem; }
+  }
+  @media (min-width: 1280px) {
+    .hero-title { font-size: 15rem; }
+    .mega-title { font-size: 9rem; }
+    .section-title { font-size: 7rem; }
+    .marquee-title { font-size: 12rem; }
+  }
+  @media (min-width: 1536px) {
+    .hero-title { font-size: 17rem; }
+    .mega-title { font-size: 10.5rem; }
+    .section-title { font-size: 8rem; }
+    .marquee-title { font-size: 13.5rem; }
+  }
+
+  .hero-lockup {
+    position: absolute;
+    z-index: 12;
+    top: 24svh;
+    left: 50%;
+    width: min(100% - 1rem, 1680px);
+    transform: translateX(-50%);
+    color: var(--brand-butter);
+    text-align: center;
+    text-shadow: 0 10px 34px rgba(24, 24, 20, 0.16);
+    pointer-events: none;
+  }
+  @media (max-width: 380px) {
+    .hero-title {
+      font-size: 3.9rem;
+    }
+  }
+  @media (min-width: 768px) {
+    .hero-lockup {
+      top: 17svh;
+      width: 112%;
+    }
+  }
+
+  .editorial-photo {
+    filter: saturate(0.92) contrast(1.03) brightness(1.02);
+  }
+  .editorial-photo-warm {
+    filter: saturate(0.9) contrast(1.04) brightness(1.04);
+  }
+
+  /* ── Pill button ─────────────────────────────── */
+  .pill-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    padding: 0.875rem 1.5rem;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    transition:
+      transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+      background-color 0.45s ease,
+      color 0.45s ease,
+      box-shadow 0.45s ease;
+    min-height: 44px;
+  }
+  .pill-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 34px -18px rgba(24, 20, 16, 0.34);
+  }
+  .pill-button:active {
+    transform: translateY(-1px);
+  }
+
+  /* ── Marquee ─────────────────────────────────── */
+  .animate-marquee {
+    animation: marquee 34s linear infinite;
+  }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+
+  /* ── Floating stickers ───────────────────────── */
+  .animate-float-slow {
+    animation: floatSlow 8s ease-in-out infinite;
+  }
+  .animate-float-slower {
+    animation: floatSlow 12s ease-in-out infinite;
+  }
+  @keyframes floatSlow {
+    0%, 100% { transform: translateY(0)    rotate(var(--sticker-rotate, 0deg)); }
+    50%       { transform: translateY(-10px) rotate(var(--sticker-rotate, 0deg)); }
+  }
+
+  /* ── Hero entrance ───────────────────────────── */
+  .animate-fade-up {
+    animation: fadeUp 1.05s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(22px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .animate-hero-photo {
+    animation: heroPhoto 1.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+  @keyframes heroPhoto {
+    from { opacity: 0; transform: scale(1.035); }
+    to   { opacity: 1; transform: scale(1); }
+  }
+
+  .animate-nav-rise {
+    animation: navRise 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+    animation-delay: 0.35s;
+  }
+  @keyframes navRise {
+    from { opacity: 0; transform: translateY(100%); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── Legacy scroll-reveal (CSS-only, kept for compat) ── */
+  .reveal-on-scroll {
+    animation: fadeUp both;
+    animation-duration: 0.85s;
+    animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  @supports (animation-timeline: view()) {
+    .reveal-on-scroll {
+      animation-timeline: view();
+      animation-range: entry 0% cover 28%;
+    }
+  }
+
+  /* ── Squarespace-style one-shot scroll reveal ── */
+  /*
+   * Add data-reveal="" to any element. JS observer adds .is-visible
+   * when the element crosses the viewport threshold (6 %).
+   * Fires once per element — no reverse on scroll-back.
+   */
+  [data-reveal] {
+    opacity: 0;
+    transform: translateY(18px);
+    transition:
+      opacity   0.95s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 0.95s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+  }
+  [data-reveal="fade"] {
+    transform: none;
+  }
+  [data-reveal].is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ── Dot-grid noise texture ──────────────────── */
+  .bg-noise {
+    background-image:
+      radial-gradient(rgba(24, 20, 16, 0.07) 1px, transparent 1px);
+    background-size: 4px 4px;
+  }
+
+  .text-stroke-soft {
+    -webkit-text-stroke: 1px rgba(255, 249, 140, 0.18);
+  }
+
+  /* ── Reduced-motion: disable all animations ──── */
+  @media (prefers-reduced-motion: reduce) {
+    .animate-marquee,
+    .animate-float-slow,
+    .animate-float-slower,
+    .animate-fade-up,
+    .animate-hero-photo,
+    .animate-nav-rise,
+    .reveal-on-scroll {
+      animation: none;
+    }
+    [data-reveal] {
+      opacity: 1 !important;
+      transform: none !important;
+      transition: none !important;
+    }
+  }
+
+  /* ── Safe-area bottom (notched phones) ──────── */
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+}
