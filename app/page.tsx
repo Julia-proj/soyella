@@ -14,7 +14,7 @@ import { SiteFooter } from "@/components/site-footer"
 export default function Page() {
   return (
     <>
-      <main className="pb-20 lg:pb-24">
+      <main>
         <HeroSection />
         <AboutSection />
         <NextEventSection />

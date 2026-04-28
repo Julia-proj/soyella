@@ -1,57 +1,53 @@
 import Image from "next/image"
-import { ArrowUpRight } from "lucide-react"
 
 export function HeroSection() {
   return (
     <section
       id="home"
       aria-label="SOY ELLA — главный экран"
-      className="relative min-h-[100svh] overflow-hidden bg-brand-cream text-brand-ink"
+      className="relative min-h-[100svh] overflow-hidden bg-brand-ink"
     >
+      {/* Photo */}
       <Image
-        src="/soy-ella/IMG_9509.JPG"
-        alt="Участница женского комьюнити SOY ELLA в Мадриде"
+        src="/soy-ella/2nd.JPG"
+        alt="SOY ELLA — женское комьюнити в Мадриде"
         fill
         priority
         sizes="100vw"
-        className="animate-hero-photo editorial-photo object-cover object-center"
+        className="animate-hero-photo hero-photo-shift object-cover"
       />
-      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(244,239,231,0.42)_0%,rgba(244,239,231,0.08)_38%,rgba(24,24,20,0.42)_100%)]" />
-      <div className="absolute inset-x-0 top-0 h-44 bg-[linear-gradient(180deg,rgba(244,239,231,0.86)_0%,rgba(244,239,231,0)_100%)]" />
 
-      <h1 className="hero-lockup hero-title animate-fade-up font-display">
-        <span className="block sm:inline">SOY</span>{" "}
-        <span className="block sm:inline">ELLA</span>
-      </h1>
+      {/* Overlays */}
+      <div className="absolute inset-x-0 top-0 h-[55%] bg-gradient-to-b from-brand-ink/75 via-brand-ink/30 to-transparent" />
+      <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/60 via-black/15 to-transparent" />
 
-      <div className="site-shell relative z-20 flex min-h-[100svh] flex-col justify-between py-8 pt-28 sm:pt-32 lg:pb-16 lg:pt-10">
-        <p className="animate-fade-up text-[0.68rem] uppercase tracking-[0.22em] text-brand-ink/60">
-          Женское комьюнити · Мадрид
+      {/* Layout */}
+      <div className="site-shell relative z-10 flex min-h-[100svh] flex-col pb-10 pt-32 sm:pb-14 sm:pt-36 lg:pb-20 lg:pt-40">
+        <div className="flex items-start justify-between gap-4">
+          <h1 className="animate-fade-up hero-title -mx-[1vw] w-[102%] font-display text-brand-butter mix-blend-normal drop-shadow-[0_16px_40px_rgba(0,0,0,0.18)]">
+            SOY ELLA
+          </h1>
+        </div>
+
+        <p className="animate-fade-up mt-3 max-w-[13rem] self-end text-right font-serif text-xl leading-[1] text-brand-butter drop-shadow-[0_8px_20px_rgba(0,0,0,0.22)] [animation-delay:0.12s] sm:max-w-[18rem] sm:text-2xl lg:mt-1 lg:max-w-[22rem] lg:text-3xl xl:text-4xl">
+          Женское комьюнити · <em className="block font-normal">Мадрид</em>
         </p>
 
-        <div className="grid gap-8 pb-12 pt-[34svh] sm:pt-[38svh] lg:grid-cols-12 lg:items-end lg:pb-0 lg:pt-0">
-          <div className="flex max-w-sm flex-col gap-4 text-white drop-shadow-[0_2px_18px_rgba(24,24,20,0.34)] lg:col-span-4">
-            <p className="text-lg font-medium leading-relaxed text-white md:text-xl">
-              Закрытое женское комьюнити в Мадриде для девушек, которые выбирают рост,
-              качество жизни и сильное окружение.
-            </p>
-            <div className="flex flex-col gap-3 sm:flex-row">
-              <a
-                href="#event"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-butter px-8 py-4 text-[0.72rem] font-bold uppercase tracking-[0.1em] text-brand-ink transition-all duration-300 hover:-translate-y-0.5 hover:bg-white"
-              >
-                Занять место
-                <ArrowUpRight className="size-4" aria-hidden />
-              </a>
-              <a
-                href="#about"
-                className="inline-flex items-center justify-center rounded-full border border-white/55 px-8 py-4 text-[0.72rem] font-bold uppercase tracking-[0.1em] text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-white hover:text-brand-ink"
-              >
-                О комьюнити
-              </a>
-            </div>
-          </div>
+        <div className="flex-1" />
+
+        <div className="animate-fade-up max-w-[16rem] [animation-delay:0.25s] sm:max-w-xs lg:max-w-sm">
+          <p className="mb-6 font-medium text-[0.92rem] leading-relaxed text-white drop-shadow-[0_8px_18px_rgba(0,0,0,0.34)] sm:text-[0.98rem] lg:text-base">
+            Закрытое женское комьюнити в Мадриде для девушек, которые выбирают рост,
+            качество жизни и сильное окружение.
+          </p>
+          <a
+            href="#event"
+            className="inline-flex items-center justify-center rounded-full bg-brand-butter px-8 py-3.5 text-[0.68rem] font-bold uppercase tracking-[0.1em] text-brand-ink transition-all duration-300 hover:-translate-y-0.5 hover:bg-white sm:px-10 sm:py-4 sm:text-[0.72rem]"
+          >
+            Занять место
+          </a>
         </div>
+
       </div>
     </section>
   )

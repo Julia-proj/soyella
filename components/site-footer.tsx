@@ -2,10 +2,10 @@ import { Instagram, Mail, MapPin, ArrowUpRight } from "lucide-react"
 import { TransitionLink } from "@/components/ui/transition-link"
 
 const NAV = [
-  { href: "#about",   label: "О нас" },
-  { href: "#event",   label: "Следующая встреча" },
-  { href: "#experts", label: "Эксперты" },
-  { href: "#reviews", label: "Отзывы" },
+  { href: "#about",   label: "О НАС" },
+  { href: "#event",   label: "ВСТРЕЧА" },
+  { href: "#experts", label: "ПРОГРАММА" },
+  { href: "#gallery", label: "ГАЛЕРЕЯ" },
 ]
 
 export function SiteFooter() {

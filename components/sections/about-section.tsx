@@ -41,9 +41,6 @@ export function AboutSection() {
                 className="editorial-photo object-cover object-center transition-transform duration-1000 hover:scale-[1.025]"
               />
             </div>
-            <Sticker tone="blue" rotate={-1} className="absolute left-5 top-5">
-              только свои
-            </Sticker>
           </div>
 
           <div data-reveal="" data-delay="160" className="border-y border-brand-ink/15 py-8 lg:col-span-4 lg:border-y-0 lg:py-0">
@@ -78,7 +75,7 @@ export function AboutSection() {
               key={item.n}
               data-reveal=""
               data-delay={i * 100}
-              className="border-brand-ink/15 py-8 md:border-r md:px-8 md:last:border-r-0"
+              className="border-brand-ink/15 py-10 md:border-r md:px-8 md:last:border-r-0"
             >
               <span className="font-serif text-5xl italic text-brand-blue">{item.n}</span>
               <h3 className="mt-5 font-serif text-3xl uppercase leading-none">{item.t}</h3>

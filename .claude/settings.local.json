@@ -5,7 +5,8 @@
       "Bash(cp c:/Users/Julee/Downloads/matcha__files/matcha.jpg c:/Users/Julee/OneDrive/Desktop/proyectos_postbootcamp/soy_ella2/public/soy-ella/expert-matcha.jpg)",
       "Bash(cp c:/Users/Julee/Downloads/3d.jpg c:/Users/Julee/OneDrive/Desktop/proyectos_postbootcamp/soy_ella2/public/soy-ella/expert-leame.jpg)",
       "Bash(cp c:/Users/Julee/Downloads/hairlab.JPG c:/Users/Julee/OneDrive/Desktop/proyectos_postbootcamp/soy_ella2/public/soy-ella/expert-hairlab.jpg)",
-      "Bash(cp c:/Users/Julee/Downloads/hairlab.JPG c:/Users/Julee/OneDrive/Desktop/proyectos_postbootcamp/soy_ella2/public/soy-ella/partner-hairlab.jpg)"
+      "Bash(cp c:/Users/Julee/Downloads/hairlab.JPG c:/Users/Julee/OneDrive/Desktop/proyectos_postbootcamp/soy_ella2/public/soy-ella/partner-hairlab.jpg)",
+      "WebFetch(domain:dove-gecko-cs7n.squarespace.com)"
     ]
   }
 }

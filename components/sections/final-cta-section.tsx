@@ -1,6 +1,5 @@
 import Image from "next/image"
 import { ArrowUpRight } from "lucide-react"
-import { Sticker } from "@/components/sticker"
 
 export function FinalCtaSection() {
   return (
@@ -19,17 +18,12 @@ export function FinalCtaSection() {
       <div className="absolute inset-x-0 bottom-0 h-2/3 bg-[linear-gradient(0deg,rgba(24,20,16,0.9)_0%,rgba(24,20,16,0)_100%)]" />
 
       <div className="site-shell relative z-10 flex min-h-[88svh] flex-col justify-center py-16">
-        <Sticker tone="white" rotate={0} className="mb-10 w-fit">
-          последний блок - решись
-        </Sticker>
-
         <h2 data-reveal="" data-delay="80" className="mega-title max-w-6xl font-display text-brand-butter">
-          Твое окружение влияет на скорость роста
+          SOY ELLA
         </h2>
 
         <p data-reveal="" data-delay="180" className="mt-8 max-w-xl text-xl leading-relaxed text-white/85">
-          Занимай одно из 30 мест на Beauty Day. Без формальностей, просто приходи,
-          знакомься и оставайся среди своих.
+          Место, где рождается дружба, проекты и большие идеи.
         </p>
 
         <div data-reveal="" data-delay="260" className="mt-10 flex flex-wrap gap-3">
@@ -43,7 +37,7 @@ export function FinalCtaSection() {
         </div>
 
         <p data-reveal="" data-delay="320" className="mt-8 text-xs font-bold uppercase tracking-widest text-white/55">
-          30 мая — Madrid — 30 мест
+          30 мая — Madrid
         </p>
       </div>
     </section>

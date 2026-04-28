@@ -12,7 +12,7 @@ const REVIEWS = [
     role: "маркетолог",
   },
   {
-    text: "Наконец-то встреча, где не стыдно быть серьезной и красивой одновременно. Вернусь на каждую.",
+    text: "Уходила с реальными контактами и желанием вернуться. Редко где одновременно красиво, по делу и по-настоящему тепло.",
     name: "Мария",
     role: "архитектор",
   },
@@ -45,21 +45,21 @@ export function TestimonialsSection() {
               data-reveal=""
               data-delay={index * 90}
               className={
-                "relative min-h-[18rem] p-8 md:p-10 " +
+                "relative flex flex-col p-6 sm:min-h-[22rem] sm:p-8 md:p-10 " +
                 (index % 2 === 0 ? "bg-brand-white" : "bg-brand-blue text-white")
               }
             >
               <Quote
                 className={
-                  "absolute right-6 top-6 size-9 " +
+                  "absolute right-5 top-5 size-7 sm:right-6 sm:top-6 sm:size-9 " +
                   (index % 2 === 0 ? "text-brand-blue/25" : "text-brand-butter/50")
                 }
                 aria-hidden
               />
-              <p className="max-w-2xl pr-10 font-serif text-3xl uppercase leading-[1.02] md:text-4xl">
+              <p className="max-w-2xl pr-8 font-serif text-xl uppercase leading-[1.05] sm:text-2xl md:text-3xl lg:text-4xl">
                 {review.text}
               </p>
-              <div className="mt-10">
+              <div className="mt-auto pt-7 sm:pt-10">
                 <p className="text-sm font-bold uppercase tracking-wider">{review.name}</p>
                 <p className={
                   "mt-1 text-xs uppercase tracking-widest " +

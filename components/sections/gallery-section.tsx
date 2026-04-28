@@ -1,24 +1,60 @@
 "use client"
 
 import Image from "next/image"
-import { Sticker } from "@/components/sticker"
 import { motion } from "framer-motion"
 
 const IMAGES = [
-  { src: "/soy-ella/IMG_9498.JPG", alt: "Теплая встреча участниц SOY ELLA" },
-  { src: "/soy-ella/IMG_4920.jpeg", alt: "Букет и сервировка встречи" },
-  { src: "/soy-ella/reir.JPG", alt: "Выступление эксперта SOY ELLA" },
-  { src: "/soy-ella/IMG_4752.PNG", alt: "Детали премиального события" },
-  { src: "/soy-ella/IMG_4749.PNG", alt: "Улыбки девушек на встрече" },
-  { src: "/soy-ella/salmon.jpeg",   alt: "Угощения на встрече SOY ELLA" },
-  { src: "/soy-ella/flower.jpeg",   alt: "Флористика встречи SOY ELLA" },
-  { src: "/soy-ella/table.jpeg",    alt: "Сервировка стола SOY ELLA" },
-  { src: "/soy-ella/2nd.JPG",       alt: "Участница встречи SOY ELLA" },
+  // Desktop: left hero (5 cols, 2 rows) | Mobile: full-width
+  {
+    src: "/soy-ella/flower.jpeg",
+    alt: "Флористика встречи SOY ELLA",
+    frame: "aspect-[3/4] sm:col-span-2 sm:aspect-[16/10] lg:col-span-5 lg:row-span-2 lg:aspect-auto",
+  },
+  // Desktop: right-top wide (7 cols) | Tablet: full-width
+  {
+    src: "/soy-ella/IMG_4920.jpeg",
+    alt: "Букет и сервировка встречи",
+    frame: "aspect-[3/4] sm:col-span-2 sm:aspect-[16/9] lg:col-span-7 lg:row-span-1 lg:aspect-auto",
+  },
+  // Desktop: right-bottom pair (4+3 cols) | Mobile: 2-col pair
+  {
+    src: "/soy-ella/reir.JPG",
+    alt: "Выступление эксперта SOY ELLA",
+    frame: "aspect-[4/5] lg:col-span-4 lg:row-span-1",
+  },
+  {
+    src: "/soy-ella/IMG_4752.PNG",
+    alt: "Детали премиального события",
+    frame: "aspect-[4/5] lg:col-span-3 lg:row-span-1",
+  },
+  // Desktop: three equal (4+4+4) | Mobile: 2-col pair
+  {
+    src: "/soy-ella/IMG_4749.PNG",
+    alt: "Улыбки девушек на встрече",
+    frame: "aspect-[4/5] lg:col-span-4 lg:row-span-1",
+  },
+  {
+    src: "/soy-ella/salmon.jpeg",
+    alt: "Угощения на встрече SOY ELLA",
+    frame: "aspect-[4/5] lg:col-span-4 lg:row-span-1",
+  },
+  // Desktop: third of three | Tablet: full-width to avoid orphan
+  {
+    src: "/soy-ella/IMG_9498.JPG",
+    alt: "Теплая встреча участниц SOY ELLA",
+    frame: "aspect-[4/5] sm:col-span-2 sm:aspect-[16/9] lg:col-span-4 lg:row-span-1",
+  },
+  // Desktop: full-width panorama | Tablet+: full-width
+  {
+    src: "/soy-ella/table.jpeg",
+    alt: "Сервировка стола SOY ELLA",
+    frame: "aspect-[3/4] sm:col-span-2 sm:aspect-[16/9] lg:col-span-12 lg:row-span-1 lg:aspect-[21/9]",
+  },
 ]
 
 export function GallerySection() {
   return (
-    <section id="gallery" aria-label="Галерея встреч" className="section-pad relative overflow-hidden bg-brand-blue text-white">
+    <section id="gallery" aria-label="Галерея встреч" className="relative overflow-hidden bg-brand-blue py-16 text-white md:py-28 xl:py-36">
       <div className="site-shell">
         <div className="grid gap-8 lg:grid-cols-12 lg:items-end">
           <motion.div 
@@ -32,17 +68,6 @@ export function GallerySection() {
             <h2 className="section-title mt-4 font-display">
               Наши встречи в кадре
             </h2>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-            className="w-fit lg:col-span-4 lg:justify-self-end"
-          >
-            <Sticker tone="white" rotate={0}>
-              как маленький праздник
-            </Sticker>
           </motion.div>
         </div>
 
@@ -59,33 +84,26 @@ export function GallerySection() {
               }
             }
           }}
-          className="mt-14 grid grid-cols-2 gap-3 lg:grid-cols-4 lg:gap-4"
+          className="mt-8 grid grid-cols-2 gap-2 sm:gap-3 lg:grid-cols-12 lg:auto-rows-[14rem] lg:gap-4 xl:auto-rows-[15rem]"
         >
-          {IMAGES.map((img, index) => {
-            const tall = index === 0 || index === 3
-            const wide = index === 1 || index === 5
-            return (
-              <motion.div
-                key={img.src}
-                variants={{
-                  hidden: { opacity: 0, scale: 0.95, y: 20 },
-                  visible: { opacity: 1, scale: 1, y: 0, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } }
-                }}
-                className={
-                  "group relative overflow-hidden rounded-lg bg-white/10 shadow-[0_18px_56px_-36px_rgba(0,0,0,0.55)] " +
-                  (tall ? "row-span-2 aspect-[3/4] lg:aspect-[3/5]" : wide ? "aspect-[5/3]" : "aspect-square")
-                }
-              >
-                <Image
-                  src={img.src}
-                  alt={img.alt}
-                  fill
-                  sizes="(min-width: 1024px) 25vw, 50vw"
-                  className="editorial-photo-warm object-cover transition-transform duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-[1.025]"
-                />
-              </motion.div>
-            )
-          })}
+          {IMAGES.map((img) => (
+            <motion.div
+              key={img.src}
+              variants={{
+                hidden: { opacity: 0, scale: 0.95, y: 20 },
+                visible: { opacity: 1, scale: 1, y: 0, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } }
+              }}
+              className={`group relative overflow-hidden rounded-2xl bg-white/10 shadow-[0_18px_56px_-36px_rgba(0,0,0,0.55)] ${img.frame}`}
+            >
+              <Image
+                src={img.src}
+                alt={img.alt}
+                fill
+                sizes="(min-width: 1024px) 34vw, (min-width: 640px) 50vw, 100vw"
+                className="editorial-photo-warm object-cover transition-transform duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-[1.025]"
+              />
+            </motion.div>
+          ))}
         </motion.div>
       </div>
     </section>

@@ -17,7 +17,7 @@ export function StickyMobileCta() {
   return (
     <div
       className={cn(
-        "fixed inset-x-0 bottom-0 z-50 bg-brand-blue text-white shadow-[0_-16px_38px_-28px_rgba(24,24,20,0.75)] transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] lg:hidden",
+        "fixed inset-x-0 bottom-0 z-50 bg-brand-ink text-white shadow-[0_-16px_38px_-28px_rgba(24,24,20,0.75)] transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] lg:hidden",
         visible ? "translate-y-0" : "translate-y-full",
       )}
       style={{ paddingBottom: "env(safe-area-inset-bottom, 0px)" }}
