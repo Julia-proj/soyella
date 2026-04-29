@@ -8,9 +8,8 @@ interface MarqueeTextProps {
 }
 
 export function MarqueeText({ variant = "blue", className = "" }: MarqueeTextProps) {
-  // Single repeated word exactly like reference — "Anna Schmidt" → "Soy Ella"
   const word = "Soy Ella"
-  const separator = "  —  "
+  const separator = "   ·   "
   const repeated = Array(12).fill(word + separator).join("")
 
   const styles: Record<string, string> = {

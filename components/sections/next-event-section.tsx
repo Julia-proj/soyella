@@ -89,7 +89,7 @@ export function NextEventSection() {
               />
             </div>
             <figcaption className="mt-3 text-[0.6rem] font-medium uppercase tracking-[0.15em] text-brand-cream/40 sm:text-[0.65rem]">
-              Beauty Day · Madrid
+              Beauty Day, Madrid
             </figcaption>
           </motion.figure>
 
@@ -109,7 +109,7 @@ export function NextEventSection() {
                 Welcome box, премиальные закуски и напитки, все выступления экспертов, нетворкинг и знакомства с участницами.
               </p>
               <p className="mt-5 text-[0.6rem] font-medium uppercase tracking-[0.18em] text-brand-cream/40">
-                Безопасная оплата · Stripe
+                Безопасная оплата, Stripe
               </p>
             </div>
 

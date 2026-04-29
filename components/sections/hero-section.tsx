@@ -84,10 +84,10 @@ export function HeroSection() {
       >
         <div className="site-shell flex items-center justify-between py-5 sm:py-6">
           <p className="text-[0.6rem] font-medium uppercase tracking-[0.25em] text-white/50 sm:text-[0.65rem]">
-            30 мая · Madrid
+            30 мая, Madrid
           </p>
           <p className="hidden text-[0.6rem] font-medium uppercase tracking-[0.25em] text-white/50 sm:block sm:text-[0.65rem]">
-            Beauty Day · No. 04
+            Beauty Day No. 04
           </p>
           <p className="text-[0.6rem] font-medium uppercase tracking-[0.25em] text-white/50 sm:text-[0.65rem]">
             Мест ограничено

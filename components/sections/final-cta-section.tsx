@@ -51,7 +51,7 @@ export function FinalCtaSection() {
           transition={{ duration: 0.8, delay: 0.1 }}
           className="mt-6 text-[0.65rem] font-semibold uppercase tracking-[0.22em] text-brand-yellow sm:text-[0.7rem]"
         >
-          Beauty Day · 30 мая · Мест ограничено
+          Beauty Day, 30 мая, мест ограничено
         </motion.p>
 
         <motion.h2
@@ -85,7 +85,7 @@ export function FinalCtaSection() {
             href="#event"
             className="inline-flex items-center justify-center bg-brand-yellow px-8 py-4 text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-brand-blue transition-all duration-300 hover:bg-brand-cream sm:px-10 sm:text-[0.7rem]"
           >
-            Занять место · 195€
+            Занять место, 195€
           </a>
           <a
             href="#about"

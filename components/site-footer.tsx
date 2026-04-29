@@ -98,7 +98,7 @@ export function SiteFooter() {
         </div>
 
         <div className="mt-14 flex flex-col justify-between gap-4 border-t border-brand-cream/10 pt-10 text-[0.6rem] font-medium uppercase tracking-[0.15em] text-brand-cream/35 sm:mt-20 sm:flex-row sm:text-[0.65rem]">
-          <p>© {new Date().getFullYear()} Soy Ella — Madrid</p>
+          <p>© {new Date().getFullYear()} Soy Ella · Madrid</p>
           <p>Сделано с вниманием к деталям</p>
         </div>
       </div>
