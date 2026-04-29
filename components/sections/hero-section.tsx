@@ -10,11 +10,11 @@ export function HeroSection() {
       aria-label="SOY ELLA — главный экран"
       className="relative min-h-[100svh] overflow-hidden bg-brand-ink"
     >
-      {/* Background photo — pushed down via object position */}
+      {/* Background photo */}
       <motion.div
-        initial={{ scale: 1.08, opacity: 0 }}
+        initial={{ scale: 1.1, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 2, ease: [0.16, 1, 0.3, 1] }}
+        transition={{ duration: 2.2, ease: [0.16, 1, 0.3, 1] }}
         className="absolute inset-0"
       >
         <Image
@@ -23,91 +23,64 @@ export function HeroSection() {
           fill
           priority
           sizes="100vw"
-          className="object-cover object-[center_75%]"
-          style={{ filter: "saturate(0.8) contrast(1.08) brightness(0.92)" }}
+          className="object-cover object-[center_65%] sm:object-[center_60%]"
+          style={{ filter: "saturate(0.85) contrast(1.05) brightness(0.88)" }}
         />
       </motion.div>
 
-      {/* Layered overlays for readability */}
-      <div className="absolute inset-0 bg-gradient-to-b from-brand-ink/55 via-brand-ink/10 to-brand-ink/70" />
-      <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-brand-ink/60 to-transparent" />
+      {/* Overlays for readability */}
+      <div className="absolute inset-0 bg-gradient-to-b from-brand-ink/70 via-brand-ink/30 to-brand-ink/80" />
+      <div className="absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-brand-ink/50 to-transparent" />
 
-      {/* Center lockup */}
-      <div className="relative z-10 flex min-h-[100svh] flex-col items-center justify-center px-5 pb-24 text-center sm:px-8 sm:pb-28">
+      {/* Content */}
+      <div className="relative z-10 flex min-h-[100svh] flex-col justify-between px-5 pb-8 pt-28 sm:px-8 sm:pb-10 sm:pt-32">
+        
+        {/* Top section with title */}
+        <div className="flex-1 flex flex-col justify-center max-w-5xl">
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
+            className="text-[0.65rem] font-medium uppercase tracking-[0.3em] text-white/50 sm:text-[0.7rem]"
+          >
+            Soy Ella
+          </motion.p>
 
-        {/* Eyebrow */}
-        <motion.p
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="mb-7 text-[0.6rem] font-medium uppercase tracking-[0.35em] text-white/55 sm:mb-9 sm:text-[0.68rem]"
-        >
-          Закрытое женское комьюнити
-        </motion.p>
+          <motion.h1
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.2, delay: 0.7, ease: [0.16, 1, 0.3, 1] }}
+            className="mt-6 font-serif text-[2.5rem] leading-[1.1] text-white sm:mt-8 sm:text-5xl md:text-6xl lg:text-7xl"
+          >
+            Закрытое женское комьюнити в Мадриде для девушек, которые выбирают рост, качество жизни и сильное окружение.
+          </motion.h1>
+        </div>
 
-        {/* Main title */}
-        <motion.h1
-          initial={{ opacity: 0, y: 28 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.4, delay: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="font-display text-white"
-          style={{
-            fontSize: "clamp(4rem, 22vw, 16rem)",
-            lineHeight: 0.85,
-            letterSpacing: "-0.02em",
-          }}
-        >
-          Soy Ella.
-        </motion.h1>
-
-        {/* Subtitle */}
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 1.1, ease: [0.16, 1, 0.3, 1] }}
-          className="mx-auto mt-9 max-w-xs text-sm font-light leading-[1.7] text-white/70 sm:mt-11 sm:max-w-sm sm:text-base md:max-w-md md:text-lg"
-        >
-          Камерные встречи, экспертный круг и среда, в которой решения рождаются за одним столом.
-        </motion.p>
-
-        {/* CTA */}
+        {/* Bottom bar */}
         <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 1.3, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-11 sm:mt-14"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1.2, delay: 1.2 }}
+          className="mt-12 flex items-end justify-between border-t border-white/15 pt-6 sm:mt-16"
         >
+          <div>
+            <p className="text-[0.6rem] font-medium uppercase tracking-[0.25em] text-white/40 sm:text-[0.65rem]">
+              Следующая встреча
+            </p>
+            <p className="mt-2 font-serif text-lg text-white/80 sm:text-xl">
+              30 мая, Мадрид
+            </p>
+          </div>
+
           <a
             href="#event"
-            className="inline-flex items-center justify-center border border-white/35 px-10 py-4 text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-white transition-all duration-500 hover:bg-white hover:text-brand-ink sm:px-12 sm:py-4.5 sm:text-[0.72rem]"
+            className="group flex items-center gap-3 text-[0.65rem] font-medium uppercase tracking-[0.2em] text-white/70 transition-colors hover:text-white sm:text-[0.7rem]"
           >
-            Занять место
+            <span>Узнать больше</span>
+            <span className="inline-block h-px w-8 bg-white/40 transition-all group-hover:w-12 group-hover:bg-white" />
           </a>
         </motion.div>
       </div>
-
-      {/* Bottom bar */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1.2, delay: 1.6 }}
-        className="absolute bottom-0 left-0 right-0 z-20 px-5 pb-7 sm:px-8 sm:pb-9"
-      >
-        <div className="mx-auto flex max-w-[1400px] items-end justify-between">
-          <div>
-            <p className="text-[0.52rem] font-medium uppercase tracking-[0.22em] text-white/35 sm:text-[0.58rem]">
-              Следующая встреча
-            </p>
-            <p className="mt-1 font-serif text-sm text-white/75 sm:text-base">
-              30 мая · Мадрид
-            </p>
-          </div>
-          <div className="flex flex-col items-center gap-2">
-            <span className="text-[0.5rem] font-medium uppercase tracking-[0.28em] text-white/35">Scroll</span>
-            <div className="h-9 w-px bg-gradient-to-b from-white/35 to-transparent" />
-          </div>
-        </div>
-      </motion.div>
     </section>
   )
 }

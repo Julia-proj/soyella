@@ -10,16 +10,19 @@ import { TestimonialsSection } from "@/components/sections/testimonials-section"
 import { FinalCtaSection } from "@/components/sections/final-cta-section"
 import { StickyMobileCta } from "@/components/sticky-mobile-cta"
 import { SiteFooter } from "@/components/site-footer"
+import { MarqueeText } from "@/components/marquee-text"
 
 export default function Page() {
   return (
     <>
       <main>
         <HeroSection />
+        <MarqueeText text="Soy Ella" className="bg-brand-cream" />
         <AboutSection />
         <NextEventSection />
         <ExpertsSection />
         <FeaturedOrganizerSection />
+        <MarqueeText text="Quality over quantity" className="bg-brand-sand" />
         <ForWhoSection />
         <GallerySection />
         <TestimonialsSection />

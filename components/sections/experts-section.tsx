@@ -42,7 +42,7 @@ export function ExpertsSection() {
           transition={{ duration: 0.8 }}
           className="section-number"
         >
-          No. 03 / Эксперты
+          No. 03 / Программа
         </motion.span>
 
         <motion.h2
@@ -55,18 +55,8 @@ export function ExpertsSection() {
           Те, кто выйдет к нам на сцену
         </motion.h2>
 
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="mt-6 max-w-xl text-base leading-relaxed text-brand-ink/60 sm:text-lg"
-        >
-          Каждый спикер встречи отобран лично. Только те, кто действительно знает дело и готов делиться по-настоящему полезным.
-        </motion.p>
-
-        {/* Experts grid — horizontal cards like reference */}
-        <div className="mt-12 grid gap-4 sm:mt-16 sm:gap-6 lg:grid-cols-2">
+        {/* Experts grid - larger photos */}
+        <div className="mt-12 grid gap-6 sm:mt-16 sm:grid-cols-2 lg:gap-8">
           {EXPERTS.map((expert, index) => (
             <motion.article
               key={expert.name}
@@ -74,36 +64,32 @@ export function ExpertsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.1 * index }}
-              className="group flex gap-5 border-b border-brand-ink/10 pb-6 sm:gap-6 sm:pb-8"
+              className="group"
             >
-              {/* Image */}
-              <div className="relative aspect-square w-24 shrink-0 overflow-hidden bg-brand-cream sm:w-32 md:w-36">
+              {/* Large image */}
+              <div className="relative aspect-[4/3] overflow-hidden bg-brand-cream sm:aspect-[3/2]">
                 <Image
                   src={expert.image}
                   alt={`Эксперт SOY ELLA: ${expert.name}`}
                   fill
-                  sizes="(min-width: 768px) 144px, 96px"
-                  className="editorial-photo-warm object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]"
+                  sizes="(min-width: 1024px) 45vw, (min-width: 640px) 50vw, 100vw"
+                  className="object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]"
+                  style={{ filter: "saturate(0.9) contrast(1.02)" }}
                 />
               </div>
 
               {/* Content */}
-              <div className="flex flex-col justify-center">
-                <span className="text-[0.55rem] font-semibold uppercase tracking-[0.2em] text-brand-taupe sm:text-[0.6rem]">
+              <div className="mt-5 sm:mt-6">
+                <span className="text-[0.6rem] font-medium uppercase tracking-[0.2em] text-brand-taupe sm:text-[0.65rem]">
                   {expert.tag}
                 </span>
-                <h3 className="mt-2 font-serif text-xl text-brand-ink sm:text-2xl">
+                <h3 className="mt-2 font-serif text-2xl text-brand-ink sm:text-3xl">
                   {expert.name}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-brand-ink/60 sm:text-base">
+                <p className="mt-2 text-base leading-relaxed text-brand-ink/60 sm:text-lg">
                   {expert.topic}
                 </p>
               </div>
-
-              {/* Number badge */}
-              <span className="ml-auto hidden shrink-0 font-serif text-3xl text-brand-ink/10 sm:block md:text-4xl">
-                {String(index + 1).padStart(2, '0')}
-              </span>
             </motion.article>
           ))}
         </div>

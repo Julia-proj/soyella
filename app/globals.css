@@ -32,16 +32,16 @@
   --input: #e0dcd4;
   --ring: #8b7355;
 
-  /* ── Brand tokens — editorial palette close to reference ─── */
-  --brand-butter: #c8b99a;   /* warm stone, like reference gold */
-  --brand-blue:   #5a6d7a;   /* deep slate blue */
-  --brand-cream:  #f5f2ec;   /* warm off-white, reference base */
-  --brand-sand:   #ede9e1;   /* soft sand section bg */
-  --brand-ink:    #1c1b18;   /* near-black, warm */
-  --brand-ink-soft: #2e2d28;
-  --brand-white:  #faf8f4;   /* pure warm white */
-  --brand-taupe:  #9e8e7e;   /* muted taupe for labels */
-  --footer-accent: #c8b99a;
+  /* ── Brand tokens — elegant minimal palette ─── */
+  --brand-butter: #b8a888;   /* warm taupe gold */
+  --brand-blue:   #5d6d78;   /* muted slate */
+  --brand-cream:  #f8f6f2;   /* warm white */
+  --brand-sand:   #f0ede7;   /* soft sand */
+  --brand-ink:    #1a1816;   /* rich warm black */
+  --brand-ink-soft: #2a2826;
+  --brand-white:  #fcfaf7;   /* pure off-white */
+  --brand-taupe:  #8c7c6c;   /* warm taupe for labels */
+  --footer-accent: #b8a888;
 
   --radius: 0.125rem;
 }
@@ -154,34 +154,34 @@
     }
   }
 
-  /* Typography scale */
+  /* Typography scale — refined and readable */
   .hero-title {
-    font-size: clamp(3.5rem, 18vw, 14rem);
-    line-height: 0.85;
-    letter-spacing: -0.02em;
+    font-size: clamp(2.5rem, 12vw, 8rem);
+    line-height: 1.1;
+    letter-spacing: -0.01em;
     font-weight: 400;
   }
   .mega-title {
-    font-size: clamp(2.5rem, 10vw, 7rem);
-    line-height: 0.95;
-    letter-spacing: -0.01em;
+    font-size: clamp(2rem, 8vw, 5rem);
+    line-height: 1.05;
+    letter-spacing: -0.005em;
     text-wrap: balance;
   }
   @media (min-width: 640px) {
     .mega-title {
-      font-size: clamp(3.5rem, 7vw, 7rem);
+      font-size: clamp(2.5rem, 6vw, 5rem);
     }
   }
   .section-title {
-    font-size: clamp(2rem, 6vw, 4.5rem);
-    line-height: 1;
-    letter-spacing: -0.01em;
+    font-size: clamp(1.75rem, 5vw, 3.5rem);
+    line-height: 1.15;
+    letter-spacing: -0.005em;
     font-weight: 400;
     text-wrap: balance;
   }
   @media (min-width: 640px) {
     .section-title {
-      font-size: clamp(2.5rem, 5vw, 4.5rem);
+      font-size: clamp(2rem, 4vw, 3.5rem);
     }
   }
 

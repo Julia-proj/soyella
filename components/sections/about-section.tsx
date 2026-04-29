@@ -42,10 +42,10 @@ export function AboutSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.1 }}
-          className="mt-6 max-w-3xl sm:mt-8"
+          className="mt-8 max-w-3xl sm:mt-10"
         >
-          <p className="font-serif text-xl italic text-brand-ink/55 sm:text-2xl md:text-3xl">
-            &ldquo;Не массовый нетворкинг. Качество важнее количества.&rdquo;
+          <p className="font-serif text-2xl italic text-brand-ink/50 sm:text-3xl md:text-4xl">
+            Не массовый нетворкинг. Качество важнее количества.
           </p>
         </motion.blockquote>
 
