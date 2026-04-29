@@ -19,11 +19,18 @@ const montserrat = Montserrat({
   display: "swap",
 })
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://soyella.es"
+const ogImage = "/soy-ella/og-image.jpg"
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: "SOY ELLA - закрытое женское комьюнити в Мадриде",
   description:
     "SOY ELLA - премиальное комьюнити для русскоговорящих женщин в Мадриде. Нетворкинг, рост, окружение уровня. Следующая встреча: BEAUTY DAY, 30 мая.",
-  generator: "v0.app",
+  applicationName: "SOY ELLA",
+  alternates: {
+    canonical: "/",
+  },
   icons: {
     icon: "/soy-ella/icon.svg",
     apple: "/soy-ella/apple-icon.png",
@@ -32,8 +39,24 @@ export const metadata: Metadata = {
     title: "SOY ELLA - закрытое женское комьюнити в Мадриде",
     description:
       "Премиальное комьюнити для русскоговорящих женщин в Мадриде. Следующая встреча: BEAUTY DAY, 30 мая.",
+    url: "/",
+    siteName: "SOY ELLA",
+    images: [
+      {
+        url: ogImage,
+        width: 1200,
+        height: 630,
+        alt: "SOY ELLA - Beauty Day в Мадриде",
+      },
+    ],
     locale: "ru_RU",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "SOY ELLA - Beauty Day в Мадриде",
+    description: "Премиальное женское комьюнити в Мадриде. Следующая встреча: BEAUTY DAY, 30 мая.",
+    images: [ogImage],
   },
 }
 

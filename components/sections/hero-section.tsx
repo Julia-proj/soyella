@@ -85,14 +85,14 @@ export function HeroSection() {
         transition={{ duration: 1, delay: 1.4 }}
         className="absolute inset-x-0 bottom-0 z-10 border-t border-white/10"
       >
-        <div className="site-shell flex items-center justify-between py-5 sm:py-6">
-          <p className="text-[0.6rem] font-medium uppercase tracking-[0.25em] text-white/50 sm:text-[0.65rem]">
+        <div className="site-shell flex items-center justify-between gap-4 py-5 sm:py-6">
+          <p className="text-[0.55rem] font-medium uppercase tracking-[0.16em] text-white/50 sm:text-[0.65rem] sm:tracking-[0.25em]">
             30 мая next event
           </p>
           <p className="hidden text-[0.6rem] font-medium uppercase tracking-[0.25em] text-white/50 sm:block sm:text-[0.65rem]">
             Beauty Day No. 04
           </p>
-          <p className="text-[0.6rem] font-medium uppercase tracking-[0.25em] text-white/50 sm:text-[0.65rem]">
+          <p className="text-right text-[0.55rem] font-medium uppercase tracking-[0.16em] text-white/50 sm:text-[0.65rem] sm:tracking-[0.25em]">
             Места ограничены
           </p>
         </div>

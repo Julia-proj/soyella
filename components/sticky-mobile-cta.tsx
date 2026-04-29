@@ -21,8 +21,8 @@ export function StickyMobileCta() {
       )}
       style={{ paddingBottom: "env(safe-area-inset-bottom, 0px)" }}
     >
-      <div className="flex h-16 items-center justify-between px-5 sm:px-6">
-        <div>
+      <div className="flex h-16 items-center justify-between gap-3 px-4 sm:px-6">
+        <div className="min-w-0">
           <p className="text-[0.5rem] font-medium uppercase tracking-[0.2em] text-white/40 sm:text-[0.55rem]">
             30 мая · Madrid
           </p>
@@ -32,7 +32,7 @@ export function StickyMobileCta() {
         </div>
         <a
           href="#event"
-          className="inline-flex items-center justify-center rounded-full bg-white px-5 py-2.5 text-[0.55rem] font-semibold uppercase tracking-[0.2em] text-brand-ink transition-colors hover:bg-brand-butter sm:px-6 sm:py-3 sm:text-[0.6rem]"
+          className="inline-flex shrink-0 items-center justify-center rounded-full bg-white px-4 py-2.5 text-[0.52rem] font-semibold uppercase tracking-[0.14em] text-brand-ink transition-colors hover:bg-brand-butter sm:px-6 sm:py-3 sm:text-[0.6rem] sm:tracking-[0.2em]"
         >
           Занять место
         </a>

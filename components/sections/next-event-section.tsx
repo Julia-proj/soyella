@@ -1,13 +1,8 @@
 "use client"
 
-import dynamic from "next/dynamic"
 import Image from "next/image"
 import { motion } from "framer-motion"
-
-const SparklesCore = dynamic(
-  () => import("@/components/ui/sparkles").then((m) => ({ default: m.SparklesCore })),
-  { ssr: false }
-)
+import { Spotlight } from "@/components/ui/spotlight-new"
 
 export function NextEventSection() {
   return (
@@ -17,16 +12,21 @@ export function NextEventSection() {
       className="relative overflow-hidden"
     >
       {/* ── TOP ZONE — black ───────────────────────────────────── */}
-      <div className="relative bg-black text-brand-cream overflow-hidden">
-        <SparklesCore
-          background="transparent"
-          particleColor="#f2c744"
-          particleDensity={50}
-          minSize={0.4}
-          maxSize={1.2}
-          speed={1.2}
-          className="absolute inset-0 z-0 h-full w-full"
-        />
+      <div className="relative overflow-hidden bg-black text-brand-cream">
+        <div className="absolute inset-0 z-0 overflow-hidden">
+          <Spotlight
+            gradientFirst="radial-gradient(68.54% 68.72% at 55.02% 31.46%, rgba(250, 246, 239, 0.16) 0, rgba(242, 199, 68, 0.08) 46%, rgba(242, 199, 68, 0) 78%)"
+            gradientSecond="radial-gradient(50% 50% at 50% 50%, rgba(247, 229, 158, 0.12) 0, rgba(247, 229, 158, 0.04) 78%, transparent 100%)"
+            gradientThird="radial-gradient(50% 50% at 50% 50%, rgba(45, 74, 111, 0.18) 0, rgba(45, 74, 111, 0.06) 76%, transparent 100%)"
+            translateY={-430}
+            width={520}
+            height={1180}
+            smallWidth={220}
+            duration={9}
+            xOffset={70}
+          />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(250,246,239,0.10),transparent_34%),linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.42)_100%)]" />
+        </div>
         {/* Desktop: photo left, content right — full-bleed */}
         <div className="relative z-10 lg:grid lg:grid-cols-[50fr_50fr] lg:items-stretch xl:grid-cols-[52fr_48fr]">
 
@@ -159,12 +159,12 @@ export function NextEventSection() {
                   href="https://buy.stripe.com/8x29AT8nv9YfdK48WLdnW1U"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex w-full items-center justify-between rounded-full bg-brand-yellow px-5 py-3 text-brand-blue-deep transition-colors duration-300 hover:bg-brand-yellow-soft"
+                  className="flex w-full items-center justify-between gap-4 rounded-full bg-brand-yellow px-4 py-3 text-brand-blue-deep transition-colors duration-300 hover:bg-brand-yellow-soft sm:px-5"
                 >
-                  <span className="text-[0.7rem] font-bold uppercase tracking-[0.18em]">
+                  <span className="min-w-0 text-[0.62rem] font-bold uppercase tracking-[0.14em] sm:text-[0.7rem] sm:tracking-[0.18em]">
                     Оплатить участие
                   </span>
-                  <span className="font-display text-2xl font-normal">180 €</span>
+                  <span className="shrink-0 font-display text-2xl font-normal">180 €</span>
                 </a>
 
                 <div className="flex items-center gap-3">
@@ -178,12 +178,12 @@ export function NextEventSection() {
                     href="https://buy.stripe.com/00wcN56fn7Q7eO8c8XdnW1T"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex w-full items-center justify-between rounded-full border border-white/20 px-5 py-3 text-brand-cream transition-colors duration-300 hover:border-brand-yellow hover:text-brand-yellow"
+                    className="flex w-full items-center justify-between gap-4 rounded-full border border-white/20 px-4 py-3 text-brand-cream transition-colors duration-300 hover:border-brand-yellow hover:text-brand-yellow sm:px-5"
                   >
-                    <span className="text-[0.7rem] font-semibold uppercase tracking-[0.18em]">
+                    <span className="min-w-0 text-[0.62rem] font-semibold uppercase tracking-[0.14em] sm:text-[0.7rem] sm:tracking-[0.18em]">
                       Забронировать место
                     </span>
-                    <span className="font-display text-2xl font-normal">50 €</span>
+                    <span className="shrink-0 font-display text-2xl font-normal">50 €</span>
                   </a>
                   <p className="mt-2.5 text-[0.6rem] leading-relaxed text-white/35">
                     Фиксирует место. Остаток 130 € оплатишь ближе к дате.
@@ -221,8 +221,8 @@ export function NextEventSection() {
             viewport={{ once: true }}
             transition={{ duration: 1, delay: 0.1 }}
           >
-            <h3 className="font-serif text-2xl text-brand-ink sm:text-3xl md:text-4xl">
-              <span className="text-brand-ink/80">Почему стоит быть здесь</span>
+            <h3 className="font-serif text-2xl text-brand-blue-deep sm:text-3xl md:text-4xl">
+              <span className="text-brand-blue-deep/85">Почему стоит быть здесь</span>
             </h3>
             <ul className="mt-8 grid gap-3 sm:mt-10 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3">
               {[
@@ -233,12 +233,12 @@ export function NextEventSection() {
                 { n: "05", t: "Подарки партнеров", d: "Каждая уходит с welcome box." },
                 { n: "06", t: "Новые знакомства", d: "Девушки, с которыми хочется дружить." },
               ].map((item) => (
-                <li key={item.n} className="rounded-2xl border border-black/10 p-5 transition-colors duration-300 hover:border-black/20 hover:bg-black/5 sm:p-6">
-                  <span className="text-[0.65rem] font-semibold uppercase tracking-[0.22em] text-brand-gold">
+                <li key={item.n} className="rounded-2xl border border-brand-blue-deep/10 bg-white/20 p-5 shadow-[0_18px_60px_rgba(30,49,72,0.06)] transition-colors duration-300 hover:border-brand-blue-deep/18 hover:bg-white/[0.28] sm:p-6">
+                  <span className="text-[0.62rem] font-semibold uppercase tracking-[0.18em] text-brand-blue-deep/50">
                     {item.n}
                   </span>
-                  <h4 className="mt-4 font-serif text-lg text-brand-ink sm:text-xl">{item.t}</h4>
-                  <p className="mt-2 text-sm leading-relaxed text-brand-ink/60 sm:text-base">{item.d}</p>
+                  <h4 className="mt-4 font-serif text-lg text-brand-blue-deep sm:text-xl">{item.t}</h4>
+                  <p className="mt-2 text-sm leading-relaxed text-brand-blue-deep/65 sm:text-base">{item.d}</p>
                 </li>
               ))}
             </ul>

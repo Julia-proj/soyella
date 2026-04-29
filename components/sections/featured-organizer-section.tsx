@@ -54,6 +54,7 @@ export function FeaturedOrganizerSection() {
           >
             <h2 className="display-mega font-display text-brand-blue">
               Keratin<span className="lg:hidden"><br /></span><span className="hidden lg:inline"> </span>Madrid
+              <span className="sm:hidden"><br /></span>
               <span className="text-brand-butter"> × </span>
               <span className="text-brand-butter">Soy Ella</span>
             </h2>
@@ -67,7 +68,7 @@ export function FeaturedOrganizerSection() {
                 href="https://www.instagram.com/curso_keratin_madrid/"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center justify-center rounded-full bg-brand-blue px-7 py-4 text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-brand-cream transition-all duration-300 hover:bg-brand-blue-deep sm:px-8 sm:text-[0.7rem]"
+                className="inline-flex w-full items-center justify-center rounded-full bg-brand-blue px-5 py-4 text-center text-[0.6rem] font-semibold uppercase tracking-[0.14em] text-brand-cream transition-all duration-300 hover:bg-brand-blue-deep sm:w-auto sm:px-8 sm:text-[0.7rem] sm:tracking-[0.2em]"
               >
                 Instagram Keratin Madrid
               </a>
@@ -75,7 +76,7 @@ export function FeaturedOrganizerSection() {
                 href="https://www.instagram.com/curso_keratin_madrid/"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center justify-center rounded-full border border-brand-blue/30 bg-transparent px-7 py-4 text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-brand-blue transition-all duration-300 hover:border-brand-blue hover:bg-brand-blue hover:text-brand-cream sm:px-8 sm:text-[0.7rem]"
+                className="inline-flex w-full items-center justify-center rounded-full border border-brand-blue/30 bg-transparent px-5 py-4 text-center text-[0.6rem] font-semibold uppercase tracking-[0.14em] text-brand-blue transition-all duration-300 hover:border-brand-blue hover:bg-brand-blue hover:text-brand-cream sm:w-auto sm:px-8 sm:text-[0.7rem] sm:tracking-[0.2em]"
               >
                 В доступе скоро
               </a>
