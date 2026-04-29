@@ -1,87 +1,142 @@
-import Image from "next/image"
-import { Sticker } from "@/components/sticker"
+"use client"
 
+import Image from "next/image"
+import { motion } from "framer-motion"
 
 const PRINCIPLES = [
   {
     n: "01",
     t: "Закрытый формат",
-    d: "Небольшой круг, заявки вручную и атмосфера, где легко быть собой.",
+    d: "Только по заявке. Ограниченные места на каждую встречу.",
   },
   {
     n: "02",
-    t: "Окружение уровня",
-    d: "Предпринимательницы, специалисты и девушки, которым важно качество контакта.",
+    t: "Экспертные встречи",
+    d: "Спикеры, бренды и темы, проверенные на себе.",
   },
   {
     n: "03",
-    t: "Красиво и по делу",
-    d: "Встречи с экспертами, честные разговоры, эстетика и практическая польза.",
+    t: "Теплая среда",
+    d: "Женщины, которые вдохновляют, а не сравнивают.",
   },
 ]
 
 export function AboutSection() {
   return (
-    <section id="about" aria-label="О SOY ELLA" className="section-pad relative overflow-hidden bg-brand-cream">
+    <section id="about" aria-label="О SOY ELLA" className="section-pad relative overflow-hidden bg-brand-cream text-brand-blue">
       <div className="site-shell">
-        <div data-reveal="" className="max-w-7xl">
-          <p className="mb-5 text-xs font-bold uppercase tracking-widest text-brand-blue">О SOY ELLA</p>
-          <h2 className="section-title font-display text-brand-ink">
-            Мы создаем среду, где знакомства становятся дружбой, партнерством и точкой роста.
-          </h2>
+        {/* Section number */}
+        <motion.span
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="section-number section-number-dark"
+        >
+          No. 01 / О Soy Ella
+        </motion.span>
+
+        {/* Quote */}
+        <motion.blockquote
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.1 }}
+          className="mt-10 max-w-3xl sm:mt-12"
+        >
+          <p className="font-serif text-2xl italic text-brand-blue/55 sm:text-3xl md:text-4xl">
+            Не массовый нетворкинг. Качество важнее количества.
+          </p>
+        </motion.blockquote>
+
+        {/* Main title - LARGE editorial */}
+        <motion.h2
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1, delay: 0.2 }}
+          className="mega-title mt-12 max-w-5xl font-display text-brand-blue sm:mt-16"
+        >
+          Пространство, где женщины знакомятся, растут и выходят на новый уровень.
+        </motion.h2>
+
+        {/* Two-column content */}
+        <div className="mt-14 grid gap-10 sm:mt-20 lg:grid-cols-2 lg:gap-20">
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="text-base leading-relaxed text-brand-blue/70 sm:text-lg md:text-xl"
+          >
+            Мы создаем среду, в которой легко быть собой, говорить по-настоящему и находить своих. Без пустых знакомств и конкуренции.
+          </motion.p>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="text-base leading-relaxed text-brand-blue/70 sm:text-lg md:text-xl"
+          >
+            Каждая встреча продумана как личный вечер: сильные спикеры, теплый контакт, премиальные партнеры и девушки, с которыми хочется оставаться на связи.
+          </motion.p>
         </div>
 
-        <div className="mt-16 grid items-center gap-10 lg:grid-cols-12 lg:gap-12">
-          <div data-reveal="" data-delay="80" className="relative lg:col-span-4">
-            <div className="relative aspect-[3/4] overflow-hidden rounded-lg shadow-[0_24px_70px_-48px_rgba(24,24,20,0.58)]">
-              <Image
-                src="/soy-ella/hero.jpg"
-                alt="Женщины общаются на встрече SOY ELLA"
-                fill
-                sizes="(min-width: 1024px) 31vw, 100vw"
-                className="editorial-photo object-cover object-center transition-transform duration-1000 hover:scale-[1.025]"
-              />
-            </div>
-          </div>
-
-          <div data-reveal="" data-delay="160" className="border-y border-brand-ink/15 py-8 lg:col-span-4 lg:border-y-0 lg:py-0">
-            <p className="font-serif text-4xl uppercase leading-[0.9] text-brand-ink md:text-5xl">
-              Мы создаем среду, где знакомства становятся дружбой, партнерством и точкой роста.
-            </p>
-            <p className="mt-7 text-lg leading-relaxed text-brand-ink/75">
-              Каждая встреча продумана как личный вечер: сильные спикеры, теплый контакт,
-              премиальные партнеры и девушки, с которыми хочется оставаться на связи.
-            </p>
-          </div>
-
-          <div data-reveal="" data-delay="240" className="relative lg:col-span-4">
-            <div className="relative aspect-[4/5] overflow-hidden rounded-lg shadow-[0_24px_70px_-48px_rgba(24,24,20,0.58)]">
-              <Image
-                src="/soy-ella/IMG_4749.PNG"
-                alt="Детали премиального события SOY ELLA"
-                fill
-                sizes="(min-width: 1024px) 31vw, 100vw"
-                className="editorial-photo-warm object-cover object-center transition-transform duration-1000 hover:scale-[1.025]"
-              />
-            </div>
-            <Sticker tone="white" rotate={1} className="absolute bottom-5 right-4">
-              качество важнее количества
-            </Sticker>
-          </div>
+        {/* Image grid */}
+        <div className="mt-16 grid gap-4 sm:mt-24 sm:gap-6 lg:grid-cols-2">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, delay: 0.2 }}
+            className="relative aspect-[4/3] overflow-hidden sm:aspect-[16/10]"
+          >
+            <Image
+              src="/soy-ella/hero.jpg"
+              alt="Женщины общаются на встрече SOY ELLA"
+              fill
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              className="editorial-photo object-cover object-center transition-transform duration-1000 hover:scale-[1.02]"
+            />
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, delay: 0.3 }}
+            className="relative aspect-[4/3] overflow-hidden sm:aspect-[16/10]"
+          >
+            <Image
+              src="/soy-ella/IMG_4749.PNG"
+              alt="Детали премиального события SOY ELLA"
+              fill
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              className="editorial-photo-warm object-cover object-center transition-transform duration-1000 hover:scale-[1.02]"
+            />
+          </motion.div>
         </div>
 
-        <ul className="mt-16 grid border-y border-brand-ink/15 md:grid-cols-3">
+        {/* Principles */}
+        <ul className="mt-16 grid border-t border-brand-blue/15 sm:mt-24 sm:grid-cols-3">
           {PRINCIPLES.map((item, i) => (
-            <li
+            <motion.li
               key={item.n}
-              data-reveal=""
-              data-delay={i * 100}
-              className="border-brand-ink/15 py-10 md:border-r md:px-8 md:last:border-r-0"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.1 * i }}
+              className="border-b border-brand-blue/15 py-10 sm:border-b-0 sm:border-r sm:px-8 sm:py-14 sm:last:border-r-0 md:px-10"
             >
-              <span className="font-serif text-5xl italic text-brand-blue">{item.n}</span>
-              <h3 className="mt-5 font-serif text-3xl uppercase leading-none">{item.t}</h3>
-              <p className="mt-4 leading-relaxed text-brand-ink/70">{item.d}</p>
-            </li>
+              <span className="text-[0.65rem] font-semibold uppercase tracking-[0.22em] text-brand-butter sm:text-[0.7rem]">
+                {item.n}
+              </span>
+              <h3 className="mt-5 font-serif text-2xl text-brand-blue sm:text-3xl">
+                {item.t}
+              </h3>
+              <p className="mt-4 text-base leading-relaxed text-brand-blue/65 sm:text-lg">
+                {item.d}
+              </p>
+            </motion.li>
           ))}
         </ul>
       </div>

@@ -1,42 +1,76 @@
+"use client"
+
+import { motion } from "framer-motion"
+
 const ITEMS = [
-  { n: "01", t: "Ищешь окружение", d: "Хочешь быть среди тех, кто тоже растет и действует." },
-  { n: "02", t: "Хочешь рост", d: "В деле, теле, отношениях и личной стратегии." },
-  { n: "03", t: "Любишь красоту и здоровье", d: "Умный подход без маркетинговых ловушек." },
-  { n: "04", t: "Ценишь качество", d: "Предпочитаешь одну сильную встречу десятку случайных." },
-  { n: "05", t: "Новая в Мадриде", d: "Ищешь своих и хочешь быстрее войти в среду." },
-  { n: "06", t: "Хочешь знакомства уровня", d: "Рядом женщины, с которыми хочется быть на связи." },
+  { n: "01", t: "Ищешь окружение", d: "Хочешь быть среди тех, кто тоже растет." },
+  { n: "02", t: "Хочешь рост", d: "В деле, в теле, в отношениях, в жизни." },
+  { n: "03", t: "Умная красота", d: "Красота и здоровье без маркетинговых ловушек." },
+  { n: "04", t: "Ценишь качество", d: "Одно премиальное вместо десяти средних." },
+  { n: "05", t: "Новая в Мадриде", d: "Ищешь своих и хочешь быстро войти в среду." },
+  { n: "06", t: "Знакомства уровня", d: "Женщины, с которыми хочется быть на связи." },
 ]
 
 export function ForWhoSection() {
   return (
-    <section aria-label="Для кого SOY ELLA" className="section-pad overflow-hidden bg-brand-cream">
+    <section aria-label="Для кого SOY ELLA" className="section-pad overflow-hidden bg-brand-blue text-brand-cream">
       <div className="site-shell">
-        <div className="mt-0 grid gap-8 lg:grid-cols-12 lg:items-start">
-          <div data-reveal="" className="lg:col-span-5">
-            <p className="text-xs font-bold uppercase tracking-widest text-brand-blue">Для кого</p>
-            <h2 className="section-title mt-4 font-display">
-              Для тебя, если ты выбираешь среду сильнее случайности
-            </h2>
-          </div>
+        {/* Section number */}
+        <motion.span
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="section-number section-number-light"
+        >
+          No. 05 / Для кого
+        </motion.span>
 
-          <ul className="grid gap-px bg-brand-ink/15 lg:col-span-7 md:grid-cols-2">
-            {ITEMS.map((item, i) => (
-              <li
-                key={item.n}
-                data-reveal=""
-                data-delay={i * 60}
-                className="group bg-brand-white p-8 transition-colors duration-500 hover:bg-brand-butter sm:p-9"
-              >
-                <div className="flex items-center justify-between gap-4">
-                  <span className="font-serif text-4xl italic text-brand-blue">{item.n}</span>
-                  <span className="size-2 rounded-full bg-brand-blue" aria-hidden />
-                </div>
-                <h3 className="mt-7 font-serif text-3xl uppercase leading-none">{item.t}</h3>
-                <p className="mt-4 leading-relaxed text-brand-ink/70">{item.d}</p>
-              </li>
-            ))}
-          </ul>
-        </div>
+        <motion.h2
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1, delay: 0.1 }}
+          className="mega-title mt-8 max-w-3xl font-display text-brand-cream sm:mt-10"
+        >
+          Для тебя, если ты
+        </motion.h2>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="mt-6 max-w-xl text-base leading-relaxed text-brand-cream/65 sm:text-lg md:text-xl"
+        >
+          Шесть признаков женщины, для которой Soy Ella про своих. Узнала себя хотя бы в трех, значит наша.
+        </motion.p>
+
+        {/* Grid */}
+        <ul className="mt-14 grid gap-px bg-brand-cream/15 sm:mt-20 sm:grid-cols-2 lg:grid-cols-3">
+          {ITEMS.map((item, i) => (
+            <motion.li
+              key={item.n}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.05 * i }}
+              className="group bg-brand-blue p-7 transition-colors duration-500 hover:bg-brand-blue-deep sm:p-9"
+            >
+              <div className="flex items-start justify-between gap-4">
+                <span className="text-[0.65rem] font-semibold uppercase tracking-[0.22em] text-brand-yellow sm:text-[0.7rem]">
+                  {item.n}
+                </span>
+              </div>
+              <h3 className="mt-5 font-serif text-2xl text-brand-cream sm:text-3xl">
+                {item.t}
+              </h3>
+              <p className="mt-4 text-base leading-relaxed text-brand-cream/60 sm:text-lg">
+                {item.d}
+              </p>
+            </motion.li>
+          ))}
+        </ul>
       </div>
     </section>
   )

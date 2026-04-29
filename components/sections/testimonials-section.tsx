@@ -1,25 +1,31 @@
-import { Quote } from "lucide-react"
+"use client"
+
+import { motion } from "framer-motion"
 
 const REVIEWS = [
   {
     text: "Пришла без ожиданий, ушла с тремя подругами и новым клиентом. Формат редкий для Мадрида.",
     name: "Алина",
-    role: "основательница студии",
+    role: "Founder · студия бренд-дизайна",
+    initial: "А",
   },
   {
-    text: "Это не нетворкинг ради нетворкинга. Это про женщин, которые живут интересно и делятся честно.",
+    text: "Это не про нетворкинг ради нетворкинга. Это про женщин, которые живут интересно и делятся честно.",
     name: "Вика",
-    role: "маркетолог",
+    role: "Marketing director",
+    initial: "В",
   },
   {
-    text: "Уходила с реальными контактами и желанием вернуться. Редко где одновременно красиво, по делу и по-настоящему тепло.",
+    text: "Наконец встреча, где не стыдно быть серьезной и красивой одновременно. Вернусь на каждую.",
     name: "Мария",
-    role: "архитектор",
+    role: "Архитектор",
+    initial: "М",
   },
   {
-    text: "Переехала в Мадрид недавно и нашла своих именно здесь. Спасибо за такое бережное комьюнити.",
+    text: "Переехала в Мадрид три месяца назад и нашла своих именно здесь. Спасибо за такое бережное комьюнити.",
     name: "Ксения",
-    role: "продюсер",
+    role: "Продюсер",
+    initial: "К",
   },
 ]
 
@@ -28,47 +34,68 @@ export function TestimonialsSection() {
     <section
       id="reviews"
       aria-label="Отзывы участниц"
-      className="section-pad bg-brand-butter text-brand-ink"
+      className="section-pad bg-brand-yellow-soft text-brand-blue"
     >
       <div className="site-shell">
-        <div data-reveal="" className="max-w-5xl">
-          <p className="text-xs font-bold uppercase tracking-widest text-brand-blue">Отзывы</p>
-          <h2 className="section-title mt-4 font-display">
-            Что говорят участницы
-          </h2>
-        </div>
+        {/* Section header */}
+        <motion.span
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="section-number section-number-dark"
+        >
+          No. 07 / Отзывы
+        </motion.span>
 
-        <ul className="mt-14 grid gap-4 md:grid-cols-2">
+        <motion.h2
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1, delay: 0.1 }}
+          className="mega-title mt-8 max-w-3xl font-display text-brand-blue sm:mt-10"
+        >
+          Что говорят участницы
+        </motion.h2>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="mt-6 max-w-xl text-base leading-relaxed text-brand-blue/70 sm:text-lg md:text-xl"
+        >
+          Короткие живые отзывы девушек, которые приходят к нам снова.
+        </motion.p>
+
+        {/* Reviews grid */}
+        <ul className="mt-14 grid gap-5 sm:mt-20 sm:grid-cols-2 lg:gap-7">
           {REVIEWS.map((review, index) => (
-            <li
+            <motion.li
               key={review.name}
-              data-reveal=""
-              data-delay={index * 90}
-              className={
-                "relative flex flex-col p-6 sm:min-h-[22rem] sm:p-8 md:p-10 " +
-                (index % 2 === 0 ? "bg-brand-white" : "bg-brand-blue text-white")
-              }
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.1 * index }}
+              className="flex flex-col bg-brand-cream p-7 transition-shadow duration-500 hover:shadow-[0_20px_50px_-15px_rgba(29,45,61,0.15)] sm:p-10"
             >
-              <Quote
-                className={
-                  "absolute right-5 top-5 size-7 sm:right-6 sm:top-6 sm:size-9 " +
-                  (index % 2 === 0 ? "text-brand-blue/25" : "text-brand-butter/50")
-                }
-                aria-hidden
-              />
-              <p className="max-w-2xl pr-8 font-serif text-xl uppercase leading-[1.05] sm:text-2xl md:text-3xl lg:text-4xl">
+              <p className="font-serif text-xl leading-relaxed text-brand-blue sm:text-2xl md:text-3xl">
                 {review.text}
               </p>
-              <div className="mt-auto pt-7 sm:pt-10">
-                <p className="text-sm font-bold uppercase tracking-wider">{review.name}</p>
-                <p className={
-                  "mt-1 text-xs uppercase tracking-widest " +
-                  (index % 2 === 0 ? "text-brand-ink/55" : "text-white/65")
-                }>
-                  {review.role}
-                </p>
+
+              <div className="mt-10 flex items-center gap-4 border-t border-brand-blue/15 pt-7">
+                <span className="flex size-12 items-center justify-center bg-brand-blue font-serif text-base text-brand-cream sm:size-14 sm:text-lg">
+                  {review.initial}
+                </span>
+                <div>
+                  <p className="text-base font-semibold text-brand-blue sm:text-lg">{review.name}</p>
+                  <p className="mt-0.5 text-sm text-brand-blue/55">{review.role}</p>
+                </div>
+                <span className="ml-auto font-serif text-3xl text-brand-blue/15 sm:text-4xl">
+                  {String(index + 1).padStart(2, '0')}
+                </span>
               </div>
-            </li>
+            </motion.li>
           ))}
         </ul>
       </div>

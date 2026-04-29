@@ -1,17 +1,20 @@
+"use client"
+
 import Image from "next/image"
+import { motion } from "framer-motion"
 
 const EXPERTS = [
   {
     name: "Christina",
     topic: "Воркшоп по современному уходу и клеточному долголетию",
-    tag: "Longevity",
+    tag: "Skincare",
     image: "/soy-ella/expert-christina.jpg",
   },
   {
-    name: "Lera Ruma",
-    topic: "Личный бренд и стратегия: как говорить о себе ярко и строить влиятельный проект",
-    tag: "Стратегия",
-    image: "/soy-ella/ruma.jpg",
+    name: "Leame Beauty Zone",
+    topic: "3D-диагностика лица и индивидуальный протокол",
+    tag: "Diagnostic",
+    image: "/soy-ella/3d.jpg",
   },
   {
     name: "Amazoniko",
@@ -20,69 +23,82 @@ const EXPERTS = [
     image: "/soy-ella/expert-amazoniko.jpg",
   },
   {
-    name: "Leame Beauty Zone",
-    topic: "3D-диагностика лица и честная beauty-стратегия",
-    tag: "Diagnostic",
-    image: "/soy-ella/3d.jpg",
-  },
-  {
     name: "Matcha Atelier",
-    topic: "Дегустация премиальной матчи и ритуалы энергии",
+    topic: "Дегустация премиальной церемониальной матчи",
     tag: "Tea",
     image: "/soy-ella/matcha.jpg",
   },
   {
-    name: "Елена Александрова",
-    topic: "Система домашнего восстановления волос · Keratin Madrid",
-    tag: "Keratin",
-    image: "/soy-ella/expert-keratin-madrid.jpg",
+    name: "Lera Ruma",
+    topic: "Личный бренд и стратегия: как говорить о себе ярко и строить влиятельный проект",
+    tag: "Стратегия",
+    image: "/soy-ella/expert-lera-ruma.jpg",
   },
 ]
 
 export function ExpertsSection() {
   return (
-    <section id="experts" aria-label="Эксперты встречи" className="section-pad bg-brand-butter text-brand-ink">
+    <section id="experts" aria-label="Эксперты встречи" className="section-pad bg-brand-yellow-soft text-brand-blue">
       <div className="site-shell">
-        <div className="grid gap-8 lg:grid-cols-12 lg:items-end">
-          <div className="lg:col-span-8">
-            <p className="section-label text-brand-blue">Программа</p>
-            <h2 className="section-title mt-4 font-display">
-              Программа в этот день
-            </h2>
-          </div>
-          <p className="hidden max-w-md text-lg leading-relaxed text-brand-ink/75 lg:col-span-4 lg:block">
-            Каждый спикер отобран лично. Только те, кто действительно знает дело и умеет
-            делиться полезным без лишней воды.
-          </p>
-        </div>
+        {/* Section header */}
+        <motion.span
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="section-number section-number-dark"
+        >
+          No. 03 / Программа
+        </motion.span>
 
-        <ul className="mt-8 grid gap-3 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3 xl:grid-cols-4">
+        <motion.h2
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1, delay: 0.1 }}
+          className="mega-title mt-8 max-w-3xl font-display text-brand-blue sm:mt-10"
+        >
+          Что будет в этот день
+        </motion.h2>
+
+        {/* Experts grid - larger photos */}
+        <div className="mt-14 grid gap-8 sm:mt-20 sm:grid-cols-2 sm:gap-10 lg:grid-cols-3">
           {EXPERTS.map((expert, index) => (
-            <li
+            <motion.article
               key={expert.name}
-              data-reveal=""
-              data-delay={index * 80}
-              className="group card-lift flex overflow-hidden rounded-xl border border-brand-ink/8 bg-brand-white sm:flex-col sm:rounded-2xl"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.08 * index }}
+              className="group"
             >
-              {/* Image: square on mobile (row), portrait on sm+ (col) */}
-              <div className="relative aspect-square w-32 shrink-0 overflow-hidden bg-brand-sand sm:aspect-[3/4] sm:w-full">
+              {/* Image */}
+              <div className="relative aspect-[3/4] overflow-hidden bg-brand-cream sm:aspect-[4/5]">
                 <Image
                   src={expert.image}
                   alt={`Эксперт SOY ELLA: ${expert.name}`}
                   fill
-                  sizes="(min-width: 1280px) 25vw, (min-width: 1024px) 33vw, (min-width: 640px) 50vw, 8rem"
-                  className="editorial-photo-warm object-cover object-top transition-transform duration-700 group-hover:scale-[1.04]"
+                  sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                  className="object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]"
+                  style={{ filter: "saturate(0.95) contrast(1.02)" }}
                 />
               </div>
-              {/* Text */}
-              <div className="flex flex-1 flex-col justify-center gap-1.5 p-4 sm:justify-start sm:gap-2 sm:p-6">
-                <span className="section-label text-brand-blue">{expert.tag}</span>
-                <h3 className="font-serif text-lg uppercase leading-tight text-brand-ink sm:text-2xl">{expert.name}</h3>
-                <p className="text-[0.78rem] leading-snug text-brand-ink/65 sm:mt-1 sm:text-[0.84rem] sm:leading-relaxed">{expert.topic}</p>
+
+              {/* Content */}
+              <div className="mt-6 sm:mt-7">
+                <span className="text-[0.65rem] font-semibold uppercase tracking-[0.22em] text-brand-blue/55 sm:text-[0.7rem]">
+                  {expert.tag}
+                </span>
+                <h3 className="mt-3 font-serif text-2xl text-brand-blue sm:text-3xl">
+                  {expert.name}
+                </h3>
+                <p className="mt-3 text-base leading-relaxed text-brand-blue/70 sm:text-lg">
+                  {expert.topic}
+                </p>
               </div>
-            </li>
+            </motion.article>
           ))}
-        </ul>
+        </div>
       </div>
     </section>
   )

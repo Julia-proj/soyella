@@ -1,67 +1,59 @@
-import { Instagram, Mail, MapPin, ArrowUpRight } from "lucide-react"
+import { Instagram, Mail, MapPin } from "lucide-react"
 import { TransitionLink } from "@/components/ui/transition-link"
 
 const NAV = [
-  { href: "#about",   label: "О НАС" },
-  { href: "#event",   label: "ВСТРЕЧА" },
-  { href: "#experts", label: "ПРОГРАММА" },
-  { href: "#gallery", label: "ГАЛЕРЕЯ" },
+  { href: "#about",   label: "О нас" },
+  { href: "#event",   label: "Встреча" },
+  { href: "#experts", label: "Эксперты" },
+  { href: "#gallery", label: "Галерея" },
 ]
 
 export function SiteFooter() {
   return (
-    <footer id="contact" className="bg-foreground pb-20 text-background lg:pb-24">
+    <footer id="contact" className="bg-brand-blue-deep pb-12 text-brand-cream sm:pb-16 lg:pb-20">
 
-      {/* ── Event banner ─────────────────────────────── */}
-      <div className="border-b border-background/10">
-        <div className="site-shell flex flex-col gap-6 py-12 md:flex-row md:items-end md:justify-between">
+      {/* Event banner */}
+      <div className="border-b border-brand-cream/10">
+        <div className="site-shell flex flex-col gap-6 py-12 sm:py-16 md:flex-row md:items-end md:justify-between">
           <div>
-            <p className="text-[0.68rem] uppercase tracking-[0.22em] text-background/35 mb-3">
+            <p className="text-[0.6rem] font-medium uppercase tracking-[0.22em] text-brand-yellow sm:text-[0.65rem]">
               Следующая встреча
             </p>
-            <p
-              className="font-display text-background leading-[0.85] tracking-normal section-title"
-            >
-              30 МАЯ · MADRID
+            <p className="mt-4 font-display text-3xl leading-none tracking-[-0.01em] text-brand-cream sm:text-4xl md:text-5xl">
+              30 мая · Madrid
             </p>
           </div>
           <a
             href="#event"
-            className="inline-flex items-center gap-2 border border-background/30 text-background px-8 py-4 text-[0.72rem] font-bold uppercase tracking-[0.1em] transition-colors hover:bg-background hover:text-foreground self-start md:self-auto"
+            className="inline-flex items-center justify-center self-start border border-brand-cream/25 bg-transparent px-8 py-4 text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-brand-cream transition-all duration-300 hover:bg-brand-yellow hover:text-brand-blue hover:border-brand-yellow sm:text-[0.7rem] md:self-auto"
           >
             Посмотреть программу
-            <ArrowUpRight className="size-4" aria-hidden />
           </a>
         </div>
       </div>
 
-      {/* ── Footer content ───────────────────────────── */}
-      <div className="site-shell py-16">
-        <div className="grid gap-12 lg:grid-cols-12">
+      {/* Footer content */}
+      <div className="site-shell py-14 sm:py-20">
+        <div className="grid gap-10 sm:gap-12 lg:grid-cols-12">
 
-          <div className="lg:col-span-6">
-            <p
-              className="font-display uppercase leading-none tracking-normal text-background section-title"
-            >
+          <div className="lg:col-span-5">
+            <p className="font-display text-2xl tracking-[0.05em] text-brand-cream sm:text-3xl">
               SOY ELLA
             </p>
-            <p className="mt-6 max-w-md text-background/55 leading-relaxed">
+            <p className="mt-6 max-w-sm text-base leading-relaxed text-brand-cream/55 sm:text-lg">
               Закрытое женское комьюнити в Мадриде. Место, где рождаются дружбы,
               проекты и большие идеи.
             </p>
           </div>
 
           <div className="lg:col-span-3">
-            <p
-              className="text-[0.68rem] font-bold uppercase tracking-widest mb-5"
-              style={{ color: "var(--footer-accent)" }}
-            >
+            <p className="text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-brand-yellow sm:text-[0.65rem]">
               Навигация
             </p>
-            <ul className="space-y-3 text-sm font-semibold uppercase text-background/55">
+            <ul className="mt-6 space-y-3 text-base text-brand-cream/55">
               {NAV.map((link) => (
                 <li key={link.href}>
-                  <TransitionLink href={link.href} className="transition-colors hover:text-background">
+                  <TransitionLink href={link.href} className="transition-colors hover:text-brand-cream">
                     {link.label}
                   </TransitionLink>
                 </li>
@@ -69,20 +61,17 @@ export function SiteFooter() {
             </ul>
           </div>
 
-          <div className="lg:col-span-3">
-            <p
-              className="text-[0.68rem] font-bold uppercase tracking-widest mb-5"
-              style={{ color: "var(--footer-accent)" }}
-            >
+          <div className="lg:col-span-4">
+            <p className="text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-brand-yellow sm:text-[0.65rem]">
               Контакты
             </p>
-            <ul className="space-y-3">
+            <ul className="mt-6 space-y-3 text-base text-brand-cream/55">
               <li>
                 <a
                   href="https://instagram.com/"
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-2 text-background/55 transition-colors hover:text-background"
+                  className="inline-flex items-center gap-2 transition-colors hover:text-brand-cream"
                 >
                   <Instagram className="size-4" aria-hidden />
                   Instagram
@@ -91,14 +80,14 @@ export function SiteFooter() {
               <li>
                 <a
                   href="mailto:hello@soyella.com"
-                  className="inline-flex items-center gap-2 text-background/55 transition-colors hover:text-background"
+                  className="inline-flex items-center gap-2 transition-colors hover:text-brand-cream"
                 >
                   <Mail className="size-4" aria-hidden />
                   hello@soyella.com
                 </a>
               </li>
               <li>
-                <span className="inline-flex items-center gap-2 text-background/55">
+                <span className="inline-flex items-center gap-2">
                   <MapPin className="size-4" aria-hidden />
                   Madrid
                 </span>
@@ -108,8 +97,8 @@ export function SiteFooter() {
 
         </div>
 
-        <div className="mt-14 flex flex-col justify-between gap-4 border-t border-background/10 pt-7 text-xs font-bold uppercase tracking-wider text-background/35 sm:flex-row">
-          <p>© {new Date().getFullYear()} Soy Ella — Madrid</p>
+        <div className="mt-14 flex flex-col justify-between gap-4 border-t border-brand-cream/10 pt-10 text-[0.6rem] font-medium uppercase tracking-[0.15em] text-brand-cream/35 sm:mt-20 sm:flex-row sm:text-[0.65rem]">
+          <p>© {new Date().getFullYear()} Soy Ella · Madrid</p>
           <p>Сделано с вниманием к деталям</p>
         </div>
       </div>

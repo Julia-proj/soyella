@@ -1,44 +1,99 @@
+"use client"
+
 import Image from "next/image"
-import { ArrowUpRight } from "lucide-react"
+import { motion } from "framer-motion"
 
 export function FinalCtaSection() {
   return (
     <section
       aria-label="Финальный призыв"
-      className="relative min-h-[88svh] overflow-hidden bg-brand-ink pb-28 text-white"
+      className="relative min-h-[70svh] overflow-hidden bg-brand-blue-deep text-brand-cream sm:min-h-[80svh]"
     >
-      <Image
-        src="/soy-ella/2nd.JPG"
-        alt="Участницы SOY ELLA на встрече в Мадриде"
-        fill
-        sizes="100vw"
-        className="editorial-photo object-cover object-center"
-      />
-      <div className="absolute inset-0 bg-brand-ink/52" />
-      <div className="absolute inset-x-0 bottom-0 h-2/3 bg-[linear-gradient(0deg,rgba(24,20,16,0.9)_0%,rgba(24,20,16,0)_100%)]" />
+      {/* Background image */}
+      <motion.div
+        initial={{ scale: 1.1, opacity: 0 }}
+        whileInView={{ scale: 1, opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
+        className="absolute inset-0"
+      >
+        <Image
+          src="/soy-ella/2nd.JPG"
+          alt="Участницы SOY ELLA на встрече в Мадриде"
+          fill
+          sizes="100vw"
+          className="object-cover object-[center_65%]"
+          style={{ filter: 'saturate(0.85) contrast(1.05)' }}
+        />
+      </motion.div>
 
-      <div className="site-shell relative z-10 flex min-h-[88svh] flex-col justify-center py-16">
-        <h2 data-reveal="" data-delay="80" className="mega-title max-w-6xl font-display text-brand-butter">
-          SOY ELLA
-        </h2>
+      {/* Strong overlay — text must be readable over photo */}
+      <div className="absolute inset-0 bg-brand-blue-deep/75" />
+      <div className="absolute inset-0 bg-gradient-to-t from-brand-blue-deep via-brand-blue-deep/40 to-transparent" />
 
-        <p data-reveal="" data-delay="180" className="mt-8 max-w-xl text-xl leading-relaxed text-white/85">
-          Место, где рождается дружба, проекты и большие идеи.
-        </p>
+      {/* Content */}
+      <div className="site-shell relative z-10 flex min-h-[70svh] flex-col justify-end pb-16 pt-20 sm:min-h-[80svh] sm:pb-20">
+        {/* Section tag */}
+        <motion.span
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="section-number section-number-light"
+        >
+          No. 08 / Решение
+        </motion.span>
 
-        <div data-reveal="" data-delay="260" className="mt-10 flex flex-wrap gap-3">
-          <a href="#contact" className="pill-button bg-brand-butter text-brand-ink">
-            Занять место
-            <ArrowUpRight className="ml-2 size-4" aria-hidden />
+          <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.1 }}
+          className="mt-6 text-[0.65rem] font-semibold uppercase tracking-[0.22em] text-brand-yellow sm:text-[0.7rem]"
+        >
+          Beauty Day, 30 мая, мест ограничено
+        </motion.p>
+
+        <motion.h2
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1, delay: 0.2 }}
+          className="mega-title mt-8 max-w-4xl font-display text-brand-cream sm:mt-10"
+        >
+          Твое окружение влияет на скорость роста.
+        </motion.h2>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="mt-8 max-w-xl text-base leading-relaxed text-brand-cream/75 sm:text-lg md:text-xl"
+        >
+          Занимай одно из мест на Beauty Day. Без формальностей, просто приходи, знакомься и останься среди своих.
+        </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="mt-12 flex flex-wrap gap-3 sm:mt-14"
+        >
+          <a
+            href="#event"
+            className="inline-flex items-center justify-center bg-brand-yellow px-8 py-4 text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-brand-blue transition-all duration-300 hover:bg-brand-cream sm:px-10 sm:text-[0.7rem]"
+          >
+            Занять место, 195€
           </a>
-          <a href="#about" className="pill-button border border-white/50 text-white hover:bg-white hover:text-brand-ink">
-            Узнать больше
+          <a
+            href="#about"
+            className="inline-flex items-center justify-center border border-brand-cream/30 bg-transparent px-8 py-4 text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-brand-cream transition-all duration-300 hover:bg-brand-cream hover:text-brand-blue sm:px-10 sm:text-[0.7rem]"
+          >
+            Сначала узнать больше
           </a>
-        </div>
-
-        <p data-reveal="" data-delay="320" className="mt-8 text-xs font-bold uppercase tracking-widest text-white/55">
-          30 мая — Madrid
-        </p>
+        </motion.div>
       </div>
     </section>
   )
