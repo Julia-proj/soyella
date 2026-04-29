@@ -4,8 +4,8 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: #f5f2ec;
-  --foreground: #1c1b18;
+  --background: #faf8f5;
+  --foreground: #1a1815;
 
   --card: #ffffff;
   --card-foreground: #1a1a18;
@@ -32,17 +32,17 @@
   --input: #e0dcd4;
   --ring: #8b7355;
 
-  /* ── Brand tokens — elegant palette with gold & blue accents ─── */
-  --brand-butter: #c9a962;   /* warm gold accent */
-  --brand-gold:   #c9a962;   /* gold for highlights */
-  --brand-blue:   #4a6fa5;   /* refined blue accent */
-  --brand-cream:  #f9f7f3;   /* warm white */
-  --brand-sand:   #f2efe9;   /* soft sand */
-  --brand-ink:    #1a1816;   /* rich warm black */
-  --brand-ink-soft: #2a2826;
-  --brand-white:  #fdfbf8;   /* pure off-white */
-  --brand-taupe:  #8c7c6c;   /* warm taupe for labels */
-  --footer-accent: #c9a962;
+  /* ── Brand tokens — warm elegant palette like Anna Schmidt ─── */
+  --brand-butter: #d4b896;   /* warm beige-gold */
+  --brand-gold:   #c4a67a;   /* rich gold accent */
+  --brand-blue:   #4a5d6e;   /* muted slate blue */
+  --brand-cream:  #faf8f5;   /* warm cream base */
+  --brand-sand:   #f4f1eb;   /* soft sand for sections */
+  --brand-ink:    #1a1815;   /* rich warm black */
+  --brand-ink-soft: #2a2622;
+  --brand-white:  #fefdfb;   /* pure warm white */
+  --brand-taupe:  #9a8a78;   /* warm taupe for labels */
+  --footer-accent: #c4a67a;
 
   --radius: 0.125rem;
 }

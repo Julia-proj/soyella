@@ -61,8 +61,8 @@ export function ExpertsSection() {
           Что будет в этот день
         </motion.h2>
 
-        {/* Experts grid */}
-        <div className="mt-10 grid gap-4 sm:mt-14 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3 lg:gap-6">
+        {/* Experts grid - larger photos */}
+        <div className="mt-12 grid gap-6 sm:mt-16 sm:grid-cols-2 sm:gap-8 lg:grid-cols-3">
           {EXPERTS.map((expert, index) => (
             <motion.article
               key={expert.name}
@@ -72,27 +72,27 @@ export function ExpertsSection() {
               transition={{ duration: 0.8, delay: 0.08 * index }}
               className="group"
             >
-              {/* Image - more square on mobile for compactness */}
-              <div className="relative aspect-[4/3] overflow-hidden bg-brand-cream">
+              {/* Image - larger aspect ratio */}
+              <div className="relative aspect-[3/4] overflow-hidden bg-brand-cream sm:aspect-[4/5]">
                 <Image
                   src={expert.image}
                   alt={`Эксперт SOY ELLA: ${expert.name}`}
                   fill
                   sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                   className="object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]"
-                  style={{ filter: "saturate(0.92) contrast(1.02)" }}
+                  style={{ filter: "saturate(0.95) contrast(1.02)" }}
                 />
               </div>
 
               {/* Content */}
-              <div className="mt-4 sm:mt-5">
-                <span className="text-[0.55rem] font-semibold uppercase tracking-[0.2em] text-brand-gold sm:text-[0.6rem]">
+              <div className="mt-5 sm:mt-6">
+                <span className="text-[0.6rem] font-semibold uppercase tracking-[0.2em] text-brand-gold sm:text-[0.65rem]">
                   {expert.tag}
                 </span>
-                <h3 className="mt-1.5 font-serif text-xl text-brand-ink sm:text-2xl">
+                <h3 className="mt-2 font-serif text-xl text-brand-ink sm:text-2xl">
                   {expert.name}
                 </h3>
-                <p className="mt-1.5 text-sm leading-relaxed text-brand-ink/55 sm:text-base">
+                <p className="mt-2 text-sm leading-relaxed text-brand-ink/60 sm:text-base">
                   {expert.topic}
                 </p>
               </div>

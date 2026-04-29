@@ -150,26 +150,29 @@ export function NextEventSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1, delay: 0.3 }}
-          className="mt-16 border-t border-white/10 pt-12 sm:mt-20 sm:pt-16"
+          className="mt-20 border-t border-white/15 pt-14 sm:mt-28 sm:pt-20"
         >
-          <h3 className="font-serif text-2xl text-white sm:text-3xl">
-            Что будет на встрече
+          <span className="text-[0.6rem] font-medium uppercase tracking-[0.2em] text-brand-butter sm:text-[0.65rem]">
+            В программе
+          </span>
+          <h3 className="mt-4 font-serif text-2xl text-white sm:mt-5 sm:text-3xl md:text-4xl">
+            Что ждет на Beauty Day
           </h3>
-          <ul className="mt-6 grid gap-px bg-white/10 sm:grid-cols-2 lg:grid-cols-3">
+          <ul className="mt-8 grid gap-4 sm:mt-10 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3">
             {[
               { n: "01", t: "Экспертные выступления", d: "Спикеры уровня, короткие форматы, живые вопросы." },
               { n: "02", t: "Beauty инновации", d: "Новые подходы к уходу, волосам и коже." },
               { n: "03", t: "Нетворкинг", d: "Знакомства, которые остаются не на один вечер." },
               { n: "04", t: "Закуски и напитки", d: "Премиальное меню от партнеров." },
-              { n: "05", t: "Подарки ��артнеров", d: "Каждая уходит с welcome box." },
+              { n: "05", t: "Подарки партнеров", d: "Каждая уходит с welcome box." },
               { n: "06", t: "Новые знакомства", d: "Девушки, с которыми хочется дружить." },
             ].map((item) => (
-              <li key={item.n} className="bg-brand-ink p-5 sm:p-6">
-                <span className="text-[0.55rem] font-medium uppercase tracking-[0.15em] text-brand-butter sm:text-[0.6rem]">
+              <li key={item.n} className="border border-white/10 p-5 sm:p-6">
+                <span className="text-[0.6rem] font-medium uppercase tracking-[0.2em] text-brand-butter sm:text-[0.65rem]">
                   {item.n}
                 </span>
-                <h4 className="mt-3 font-serif text-base text-white sm:text-lg">{item.t}</h4>
-                <p className="mt-2 text-xs leading-relaxed text-white/50 sm:text-sm">{item.d}</p>
+                <h4 className="mt-4 font-serif text-lg text-white sm:text-xl">{item.t}</h4>
+                <p className="mt-2 text-sm leading-relaxed text-white/55">{item.d}</p>
               </li>
             ))}
           </ul>
