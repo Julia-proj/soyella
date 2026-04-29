@@ -43,14 +43,14 @@ export function FinalCtaSection() {
           No. 08 / Решение
         </motion.span>
 
-        <motion.p
+          <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.1 }}
           className="mt-4 text-[0.6rem] font-medium uppercase tracking-[0.15em] text-brand-butter sm:text-[0.65rem]"
         >
-          Beauty Day · 30 мая · 30 мест
+          Beauty Day · 30 мая · Мест ограничено
         </motion.p>
 
         <motion.h2
@@ -70,7 +70,7 @@ export function FinalCtaSection() {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="mt-6 max-w-lg text-base leading-relaxed text-white/70 sm:text-lg"
         >
-          Занимай одно из 30 мест на Beauty Day. Без формальностей — просто приходи, знакомься и останься среди своих.
+          Занимай одно из мест на Beauty Day. Без формальностей, просто приходи, знакомься и останься среди своих.
         </motion.p>
 
         <motion.div

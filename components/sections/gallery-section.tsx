@@ -68,7 +68,7 @@ export function GallerySection() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="mt-4 max-w-lg text-base leading-relaxed text-brand-ink/60 sm:text-lg"
         >
-          Каждая встреча — отдельная история. Формат, детали и свет подобраны так, чтобы хотелось вернуться.
+          Каждая встреча своя история. Формат, детали и свет подобраны так, чтобы хотелось вернуться.
         </motion.p>
 
         {/* Image grid */}

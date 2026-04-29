@@ -46,9 +46,8 @@ export function SiteNav() {
             aria-label="SOY ELLA — на главную"
             className="font-display text-sm tracking-[0.1em] sm:text-base"
           >
-            <span className={cn("transition-colors duration-300", scrolled ? "text-brand-ink" : "text-white")}>
-              SOY ELLA
-            </span>
+            <span className={cn("transition-colors duration-300", scrolled ? "text-brand-ink" : "text-white")}>SOY </span>
+            <span className="text-brand-blue">ELLA</span>
           </a>
 
           {/* Desktop links */}
@@ -122,7 +121,7 @@ export function SiteNav() {
       >
         <div className="flex items-center justify-between">
           <span className="font-display text-sm uppercase tracking-[0.1em]">
-            SOY ELLA
+            <span className="text-brand-ink">SOY </span><span className="text-brand-blue">ELLA</span>
           </span>
           <button
             type="button"

@@ -4,8 +4,8 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: #f7f5f0;
-  --foreground: #1a1a18;
+  --background: #f5f2ec;
+  --foreground: #1c1b18;
 
   --card: #ffffff;
   --card-foreground: #1a1a18;
@@ -32,16 +32,16 @@
   --input: #e0dcd4;
   --ring: #8b7355;
 
-  /* ── Brand tokens — refined editorial palette ─── */
-  --brand-butter: #d4c5a9;   /* muted gold, sophisticated */
-  --brand-blue:   #6b7c8a;   /* slate blue-gray, elegant */
-  --brand-cream:  #f7f5f0;   /* warm white base */
-  --brand-sand:   #ebe7df;   /* soft sand */
-  --brand-ink:    #1a1a18;   /* rich black */
-  --brand-ink-soft: #2d2d28;
-  --brand-white:  #fffef9;   /* pure off-white */
-  --brand-taupe:  #a69888;   /* warm taupe accent */
-  --footer-accent: #d4c5a9;
+  /* ── Brand tokens — editorial palette close to reference ─── */
+  --brand-butter: #c8b99a;   /* warm stone, like reference gold */
+  --brand-blue:   #5a6d7a;   /* deep slate blue */
+  --brand-cream:  #f5f2ec;   /* warm off-white, reference base */
+  --brand-sand:   #ede9e1;   /* soft sand section bg */
+  --brand-ink:    #1c1b18;   /* near-black, warm */
+  --brand-ink-soft: #2e2d28;
+  --brand-white:  #faf8f4;   /* pure warm white */
+  --brand-taupe:  #9e8e7e;   /* muted taupe for labels */
+  --footer-accent: #c8b99a;
 
   --radius: 0.125rem;
 }
@@ -99,6 +99,8 @@
     @apply bg-background text-foreground;
     font-feature-settings: normal;
     overflow-x: hidden;
+    font-size: 1rem;
+    line-height: 1.6;
   }
   ::selection {
     background: var(--brand-butter);
@@ -154,24 +156,24 @@
 
   /* Typography scale */
   .hero-title {
-    font-size: clamp(2.5rem, 14vw, 11rem);
+    font-size: clamp(3.5rem, 18vw, 14rem);
     line-height: 0.85;
     letter-spacing: -0.02em;
     font-weight: 400;
   }
   .mega-title {
-    font-size: clamp(2rem, 10vw, 6rem);
+    font-size: clamp(2.5rem, 10vw, 7rem);
     line-height: 0.95;
     letter-spacing: -0.01em;
     text-wrap: balance;
   }
   @media (min-width: 640px) {
     .mega-title {
-      font-size: clamp(3rem, 7vw, 6rem);
+      font-size: clamp(3.5rem, 7vw, 7rem);
     }
   }
   .section-title {
-    font-size: clamp(1.75rem, 6vw, 4rem);
+    font-size: clamp(2rem, 6vw, 4.5rem);
     line-height: 1;
     letter-spacing: -0.01em;
     font-weight: 400;
@@ -179,15 +181,15 @@
   }
   @media (min-width: 640px) {
     .section-title {
-      font-size: clamp(2.25rem, 4.5vw, 4rem);
+      font-size: clamp(2.5rem, 5vw, 4.5rem);
     }
   }
 
   /* ── Section number badge ─────────────────────── */
   .section-number {
-    font-size: 0.65rem;
+    font-size: 0.7rem;
     font-weight: 500;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
     color: var(--brand-taupe);
     display: inline-flex;
@@ -196,10 +198,10 @@
   }
   .section-number::before {
     content: '';
-    width: 2rem;
+    width: 2.5rem;
     height: 1px;
     background: var(--brand-taupe);
-    opacity: 0.4;
+    opacity: 0.45;
   }
 
   .editorial-photo {

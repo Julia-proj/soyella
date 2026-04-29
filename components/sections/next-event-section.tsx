@@ -59,7 +59,7 @@ export function NextEventSection() {
             <dt className="text-[0.55rem] font-medium uppercase tracking-[0.2em] text-white/40 sm:text-[0.6rem]">
               Мест
             </dt>
-            <dd className="mt-1 font-serif text-lg text-white sm:text-xl">Всего 30</dd>
+            <dd className="mt-1 font-serif text-lg text-white sm:text-xl">Ограничено</dd>
           </div>
           <div>
             <dt className="text-[0.55rem] font-medium uppercase tracking-[0.2em] text-white/40 sm:text-[0.6rem]">

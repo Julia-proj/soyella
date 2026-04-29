@@ -44,7 +44,7 @@ export function AboutSection() {
           transition={{ duration: 0.8, delay: 0.1 }}
           className="mt-6 max-w-3xl sm:mt-8"
         >
-          <p className="font-serif text-lg italic text-brand-ink/60 sm:text-xl md:text-2xl">
+          <p className="font-serif text-xl italic text-brand-ink/55 sm:text-2xl md:text-3xl">
             &ldquo;Не массовый нетворкинг. Качество важнее количества.&rdquo;
           </p>
         </motion.blockquote>
@@ -67,7 +67,7 @@ export function AboutSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-base leading-relaxed text-brand-ink/70 sm:text-lg"
+            className="text-base leading-relaxed text-brand-ink/65 sm:text-lg md:text-xl"
           >
             Мы создаем среду, в которой легко быть собой, говорить по-настоящему и находить своих. Без пустых знакомств и конкуренции.
           </motion.p>
@@ -76,7 +76,7 @@ export function AboutSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-base leading-relaxed text-brand-ink/70 sm:text-lg"
+            className="text-base leading-relaxed text-brand-ink/65 sm:text-lg md:text-xl"
           >
             Каждая встреча продумана как личный вечер: сильные спикеры, теплый контакт, премиальные партнеры и девушки, с которыми хочется оставаться на связи.
           </motion.p>

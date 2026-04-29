@@ -43,7 +43,7 @@ export function ForWhoSection() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="mt-4 max-w-lg text-base leading-relaxed text-white/50 sm:text-lg"
         >
-          Шесть признаков женщины, для которой Soy Ella — про своих. Узнала себя хотя бы в трех — точно наша.
+          Шесть признаков женщины, для которой Soy Ella про своих. Узнала себя хотя бы в трех, значит наша.
         </motion.p>
 
         {/* Grid */}
@@ -59,7 +59,7 @@ export function ForWhoSection() {
             >
               <div className="flex items-start justify-between gap-4">
                 <span className="text-[0.55rem] font-medium uppercase tracking-[0.15em] text-brand-butter sm:text-[0.6rem]">
-                  {item.n}—
+                  {item.n}
                 </span>
               </div>
               <h3 className="mt-4 font-serif text-xl text-white sm:text-2xl">

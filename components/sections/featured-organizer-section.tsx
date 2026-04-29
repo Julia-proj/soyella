@@ -30,7 +30,7 @@ export function FeaturedOrganizerSection() {
             transition={{ duration: 1 }}
             className="relative"
           >
-            <div className="relative aspect-[3/4] overflow-hidden sm:aspect-[4/5]">
+            <div className="relative aspect-[4/3] overflow-hidden sm:aspect-[3/2]">
               <Image
                 src="/soy-ella/expert-keratin-madrid.jpg"
                 alt="Елена Александрова, Keratin Madrid"
@@ -61,7 +61,7 @@ export function FeaturedOrganizerSection() {
             </h2>
 
             <p className="mt-8 max-w-lg text-base leading-relaxed text-brand-ink/70 sm:text-lg">
-              Keratin Madrid — один из организаторов сообщества Soy Ella. Елена Александрова отвечает за экспертную программу и приводит на встречи систему домашнего восстановления волос для девушек, которые ценят качество и время.
+              Keratin Madrid является одним из организаторов сообщества Soy Ella. Елена Александрова отвечает за экспертную программу и приводит на встречи систему домашнего восстановления волос для девушек, которые ценят качество и время.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3 sm:mt-10">
