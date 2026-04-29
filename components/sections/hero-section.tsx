@@ -27,7 +27,7 @@ export function HeroSection() {
       </div>
 
       {/* Content — bottom left */}
-      <div className="relative z-10 flex min-h-[100svh] flex-col items-start justify-end px-5 pb-32 pt-24 text-left sm:px-10 sm:pb-36 lg:px-20">
+      <div className="relative z-10 flex min-h-[100svh] flex-col items-start justify-end px-5 pb-32 pt-24 text-left sm:px-10 sm:pb-36 lg:px-20 lg:pb-40 xl:pb-48">
 
         {/* Eyebrow */}
         <motion.p
@@ -60,7 +60,7 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, delay: 0.9, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-8 max-w-sm text-base font-light leading-relaxed text-white/80 sm:mt-10 sm:max-w-md sm:text-lg"
+          className="mt-8 max-w-sm text-base font-light leading-relaxed text-white/80 sm:mt-10 sm:max-w-md sm:text-lg lg:max-w-xl lg:text-xl"
         >
           Закрытое женское комьюнити в Мадриде для девушек, которые выбирают рост, качество жизни и сильное окружение.
         </motion.p>
@@ -86,7 +86,7 @@ export function HeroSection() {
       >
         <div className="site-shell flex items-center justify-between py-5 sm:py-6">
           <p className="text-[0.6rem] font-medium uppercase tracking-[0.25em] text-white/50 sm:text-[0.65rem]">
-            30 мая, Madrid
+            30 мая next event
           </p>
           <p className="hidden text-[0.6rem] font-medium uppercase tracking-[0.25em] text-white/50 sm:block sm:text-[0.65rem]">
             Beauty Day No. 04

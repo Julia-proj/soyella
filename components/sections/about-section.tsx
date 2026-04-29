@@ -44,7 +44,7 @@ export function AboutSection() {
           transition={{ duration: 0.8, delay: 0.1 }}
           className="mt-10 max-w-3xl sm:mt-12"
         >
-          <p className="font-serif text-2xl italic text-brand-blue/55 sm:text-3xl md:text-4xl">
+          <p className="font-serif text-2xl italic text-brand-ink/50 sm:text-3xl md:text-4xl">
             Не массовый нетворкинг. Качество важнее количества.
           </p>
         </motion.blockquote>
@@ -67,7 +67,7 @@ export function AboutSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-base leading-relaxed text-brand-blue/70 sm:text-lg md:text-xl"
+            className="text-base leading-relaxed text-brand-ink/65 sm:text-lg md:text-xl"
           >
             Мы создаем среду, в которой легко быть собой, говорить по-настоящему и находить своих. Без пустых знакомств и конкуренции.
           </motion.p>
@@ -76,7 +76,7 @@ export function AboutSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-base leading-relaxed text-brand-blue/70 sm:text-lg md:text-xl"
+            className="text-base leading-relaxed text-brand-ink/65 sm:text-lg md:text-xl"
           >
             Каждая встреча продумана как личный вечер: сильные спикеры, теплый контакт, премиальные партнеры и девушки, с которыми хочется оставаться на связи.
           </motion.p>
@@ -146,7 +146,7 @@ export function AboutSection() {
         </div>
 
         {/* Principles */}
-        <ul className="mt-16 grid border-t border-brand-blue/15 sm:mt-24 sm:grid-cols-3">
+        <ul className="mt-16 grid border-t border-brand-ink/10 sm:mt-24 sm:grid-cols-3">
           {PRINCIPLES.map((item, i) => (
             <motion.li
               key={item.n}
@@ -154,7 +154,7 @@ export function AboutSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.1 * i }}
-              className="border-b border-brand-blue/15 py-10 sm:border-b-0 sm:border-r sm:px-8 sm:py-14 sm:last:border-r-0 md:px-10"
+              className="border-b border-brand-ink/10 py-10 sm:border-b-0 sm:border-r sm:px-8 sm:py-14 sm:last:border-r-0 md:px-10"
             >
               <span className="text-[0.65rem] font-semibold uppercase tracking-[0.22em] text-brand-butter sm:text-[0.7rem]">
                 {item.n}
@@ -162,7 +162,7 @@ export function AboutSection() {
               <h3 className="mt-5 font-serif text-2xl text-brand-blue sm:text-3xl">
                 {item.t}
               </h3>
-              <p className="mt-4 text-base leading-relaxed text-brand-blue/65 sm:text-lg">
+              <p className="mt-4 text-base leading-relaxed text-brand-ink/60 sm:text-lg">
                 {item.d}
               </p>
             </motion.li>

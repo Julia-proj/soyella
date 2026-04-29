@@ -13,7 +13,7 @@ export function SiteFooter() {
     <footer id="contact" className="bg-brand-blue-deep pb-12 text-brand-cream sm:pb-16 lg:pb-20">
 
       {/* Event banner */}
-      <div className="border-b border-brand-cream/10">
+      <div className="border-b border-white/10 bg-black">
         <div className="site-shell flex flex-col gap-6 py-12 sm:py-16 md:flex-row md:items-end md:justify-between">
           <div>
             <p className="text-[0.6rem] font-medium uppercase tracking-[0.22em] text-brand-yellow sm:text-[0.65rem]">

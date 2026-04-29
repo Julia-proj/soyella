@@ -66,14 +66,14 @@ export function NextEventSection() {
           </motion.dl>
 
           {/* Content grid */}
-          <div className="mt-12 grid gap-8 sm:mt-16 lg:grid-cols-12 lg:gap-12">
+          <div className="mt-12 grid gap-8 sm:mt-16 lg:grid-cols-12 lg:gap-12 xl:gap-16">
             {/* Photo */}
             <motion.figure
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 1, delay: 0.2 }}
-              className="relative overflow-hidden lg:col-span-7"
+              className="relative overflow-hidden lg:col-span-8 xl:col-span-7"
             >
               <div className="relative aspect-[3/2] sm:aspect-[16/10]">
                 <Image
@@ -95,7 +95,7 @@ export function NextEventSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 1, delay: 0.3 }}
-              className="flex flex-col justify-between border border-white/10 p-6 sm:p-8 lg:col-span-5"
+              className="flex flex-col justify-between border border-white/10 p-6 sm:p-8 lg:col-span-4 xl:col-span-5"
             >
               <div>
                 <span className="text-[0.65rem] font-semibold uppercase tracking-[0.25em] text-brand-yellow">

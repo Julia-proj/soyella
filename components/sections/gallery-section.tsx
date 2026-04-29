@@ -40,7 +40,7 @@ export function GallerySection() {
 
       {/* Gallery grid - modern masonry-like layout */}
       <div className="px-4 sm:px-6 lg:px-10">
-        <div className="grid grid-cols-2 gap-2 sm:gap-3 md:grid-cols-3 lg:gap-4">
+        <div className="grid grid-cols-2 gap-2 sm:gap-3 md:grid-cols-4 lg:gap-4">
           {IMAGES.map((img, index) => (
             <motion.div
               key={img.src}
@@ -49,8 +49,8 @@ export function GallerySection() {
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.8, delay: 0.08 * index }}
               className={`group relative overflow-hidden bg-brand-sand ${
-                index === 0 ? "aspect-[3/4] md:col-span-2 md:row-span-2 md:aspect-square" :
-                index === 5 ? "aspect-[3/4] md:col-span-1 md:aspect-square" :
+                index === 0 ? "col-span-2 aspect-[4/3] md:col-span-2 md:row-span-2 md:aspect-auto" :
+                index === 3 ? "aspect-[3/4] md:col-span-1 md:aspect-[3/4]" :
                 "aspect-[4/5] sm:aspect-square"
               }`}
             >

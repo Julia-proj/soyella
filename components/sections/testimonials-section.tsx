@@ -61,7 +61,7 @@ export function TestimonialsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.9, delay: 0.08 * index }}
-              className="border-t border-brand-blue/15 py-10 sm:py-14"
+              className="border-t border-brand-ink/10 py-10 sm:py-14"
             >
               <span
                 aria-hidden
@@ -70,15 +70,15 @@ export function TestimonialsSection() {
                 &ldquo;
               </span>
               <blockquote className="mt-4">
-                <p className="font-serif text-xl leading-relaxed text-brand-blue sm:text-2xl">
+                <p className="font-serif text-xl leading-relaxed text-brand-ink sm:text-2xl">
                   {review.text}
                 </p>
               </blockquote>
               <footer className="mt-8">
-                <p className="text-sm font-semibold uppercase tracking-[0.18em] text-brand-blue">
+                <p className="text-sm font-semibold uppercase tracking-[0.18em] text-brand-ink">
                   {review.name}
                 </p>
-                <p className="mt-1.5 text-[0.65rem] uppercase tracking-[0.14em] text-brand-blue/50">
+                <p className="mt-1.5 text-[0.65rem] uppercase tracking-[0.14em] text-brand-ink/45">
                   {review.role}
                 </p>
               </footer>
