@@ -54,9 +54,9 @@ const IMAGES = [
 
 export function GallerySection() {
   return (
-    <section id="gallery" aria-label="Галерея встреч" className="relative overflow-hidden bg-brand-blue py-16 text-white md:py-28 xl:py-36">
+    <section id="gallery" aria-label="Галерея встреч" className="relative overflow-hidden bg-brand-blue py-12 text-white sm:py-16 md:py-28 xl:py-36">
       <div className="site-shell">
-        <div className="grid gap-8 lg:grid-cols-12 lg:items-end">
+        <div className="grid gap-4 sm:gap-8 lg:grid-cols-12 lg:items-end">
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -64,8 +64,8 @@ export function GallerySection() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="lg:col-span-8"
           >
-            <p className="text-xs font-bold uppercase tracking-widest text-brand-butter">Атмосфера</p>
-            <h2 className="section-title mt-4 font-display">
+            <p className="text-[0.65rem] font-bold uppercase tracking-widest text-brand-butter sm:text-xs">Атмосфера</p>
+            <h2 className="section-title mt-3 font-display sm:mt-4">
               Наши встречи в кадре
             </h2>
           </motion.div>
@@ -84,7 +84,7 @@ export function GallerySection() {
               }
             }
           }}
-          className="mt-8 grid grid-cols-2 gap-2 sm:gap-3 lg:grid-cols-12 lg:auto-rows-[14rem] lg:gap-4 xl:auto-rows-[15rem]"
+          className="mt-6 grid grid-cols-2 gap-1.5 sm:mt-8 sm:gap-3 lg:grid-cols-12 lg:auto-rows-[14rem] lg:gap-4 xl:auto-rows-[15rem]"
         >
           {IMAGES.map((img) => (
             <motion.div
@@ -93,14 +93,14 @@ export function GallerySection() {
                 hidden: { opacity: 0, scale: 0.95, y: 20 },
                 visible: { opacity: 1, scale: 1, y: 0, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } }
               }}
-              className={`group relative overflow-hidden rounded-2xl bg-white/10 shadow-[0_18px_56px_-36px_rgba(0,0,0,0.55)] ${img.frame}`}
+              className={`group relative overflow-hidden rounded-lg bg-white/10 shadow-[0_18px_56px_-36px_rgba(0,0,0,0.55)] sm:rounded-xl lg:rounded-2xl ${img.frame}`}
             >
               <Image
                 src={img.src}
                 alt={img.alt}
                 fill
                 sizes="(min-width: 1024px) 34vw, (min-width: 640px) 50vw, 100vw"
-                className="editorial-photo-warm object-cover transition-transform duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-[1.025]"
+                className="editorial-photo-warm object-cover transition-transform duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-[1.02]"
               />
             </motion.div>
           ))}

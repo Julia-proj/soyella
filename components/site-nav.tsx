@@ -39,12 +39,12 @@ export function SiteNav() {
             : "bg-transparent border-b border-transparent",
         )}
       >
-        <div className="site-shell flex h-16 items-center justify-between gap-6 sm:h-20">
+        <div className="site-shell flex h-14 items-center justify-between gap-4 sm:h-16 md:h-20 md:gap-6">
           {/* Logo */}
           <a
             href="#home"
             aria-label="SOY ELLA — на главную"
-            className="font-display text-xl leading-none tracking-normal sm:text-2xl"
+            className="font-display text-lg leading-none tracking-normal sm:text-xl md:text-2xl"
           >
             <span className={cn("transition-colors duration-300", scrolled ? "text-foreground" : "text-white")}>SOY </span>
             <span className="text-brand-blue">ELLA</span>
@@ -89,11 +89,11 @@ export function SiteNav() {
             aria-label="Открыть меню"
             aria-expanded={open}
             className={cn(
-              "lg:hidden inline-flex size-11 items-center justify-center transition-colors duration-300",
+              "inline-flex size-10 items-center justify-center transition-colors duration-300 sm:size-11 lg:hidden",
               scrolled ? "text-foreground" : "text-white",
             )}
           >
-            <Menu className="size-6" />
+            <Menu className="size-5 sm:size-6" />
           </button>
         </div>
       </header>
@@ -111,7 +111,7 @@ export function SiteNav() {
       {/* Mobile drawer */}
       <div
         className={cn(
-          "fixed inset-y-0 right-0 z-[70] w-full max-w-[320px] bg-background px-6 pt-6 text-foreground transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] lg:hidden",
+          "fixed inset-y-0 right-0 z-[70] w-full max-w-[300px] bg-background px-5 pt-5 text-foreground transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] sm:max-w-[320px] sm:px-6 sm:pt-6 lg:hidden",
           open ? "translate-x-0" : "translate-x-full",
         )}
         role="dialog"
@@ -120,26 +120,26 @@ export function SiteNav() {
         aria-label="Меню навигации"
       >
         <div className="flex items-center justify-between">
-          <span className="font-display text-xl tracking-normal uppercase">
+          <span className="font-display text-lg uppercase tracking-normal sm:text-xl">
             SOY <span className="text-brand-blue">ELLA</span>
           </span>
           <button
             type="button"
             onClick={() => setOpen(false)}
             aria-label="Закрыть меню"
-            className="inline-flex size-11 items-center justify-center"
+            className="inline-flex size-10 items-center justify-center sm:size-11"
           >
-            <X className="size-5" />
+            <X className="size-4 sm:size-5" />
           </button>
         </div>
 
-        <ul className="mt-10 grid gap-0">
+        <ul className="mt-8 grid gap-0 sm:mt-10">
           {LINKS.map((link) => (
             <li key={link.href}>
               <TransitionLink
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="block border-t border-border py-5 font-display text-3xl uppercase leading-none tracking-normal transition-colors hover:text-accent"
+                className="block border-t border-border py-4 font-display text-2xl uppercase leading-none tracking-normal transition-colors hover:text-accent sm:py-5 sm:text-3xl"
               >
                 {link.label}
               </TransitionLink>
@@ -150,7 +150,7 @@ export function SiteNav() {
         <a
           href="#event"
           onClick={() => setOpen(false)}
-          className="mt-8 inline-flex w-full items-center justify-center bg-foreground text-background py-4 text-[0.72rem] font-bold uppercase tracking-[0.1em] transition-colors hover:bg-foreground/80"
+          className="mt-6 inline-flex w-full items-center justify-center bg-foreground py-3.5 text-[0.68rem] font-bold uppercase tracking-[0.1em] text-background transition-colors hover:bg-foreground/80 sm:mt-8 sm:py-4 sm:text-[0.72rem]"
         >
           Занять место
         </a>

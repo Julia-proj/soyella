@@ -31,56 +31,53 @@ export function AboutSection() {
           </h2>
         </div>
 
-        <div className="mt-16 grid items-center gap-10 lg:grid-cols-12 lg:gap-12">
+        <div className="mt-10 grid items-center gap-6 sm:mt-14 sm:gap-8 lg:mt-16 lg:grid-cols-12 lg:gap-12">
           <div data-reveal="" data-delay="80" className="relative lg:col-span-4">
-            <div className="relative aspect-[3/4] overflow-hidden rounded-lg shadow-[0_24px_70px_-48px_rgba(24,24,20,0.58)]">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-xl shadow-[0_24px_70px_-48px_rgba(24,24,20,0.45)] sm:aspect-[3/4]">
               <Image
                 src="/soy-ella/hero.jpg"
                 alt="Женщины общаются на встрече SOY ELLA"
                 fill
                 sizes="(min-width: 1024px) 31vw, 100vw"
-                className="editorial-photo object-cover object-center transition-transform duration-1000 hover:scale-[1.025]"
+                className="editorial-photo object-cover object-center transition-transform duration-1000 hover:scale-[1.02]"
               />
             </div>
           </div>
 
-          <div data-reveal="" data-delay="160" className="border-y border-brand-ink/15 py-8 lg:col-span-4 lg:border-y-0 lg:py-0">
-            <p className="font-serif text-4xl uppercase leading-[0.9] text-brand-ink md:text-5xl">
-              Мы создаем среду, где знакомства становятся дружбой, партнерством и точкой роста.
-            </p>
-            <p className="mt-7 text-lg leading-relaxed text-brand-ink/75">
+          <div data-reveal="" data-delay="160" className="py-6 lg:col-span-4 lg:py-0">
+            <p className="text-base leading-relaxed text-brand-ink/70 sm:text-lg lg:text-xl">
               Каждая встреча продумана как личный вечер: сильные спикеры, теплый контакт,
               премиальные партнеры и девушки, с которыми хочется оставаться на связи.
             </p>
           </div>
 
           <div data-reveal="" data-delay="240" className="relative lg:col-span-4">
-            <div className="relative aspect-[4/5] overflow-hidden rounded-lg shadow-[0_24px_70px_-48px_rgba(24,24,20,0.58)]">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-xl shadow-[0_24px_70px_-48px_rgba(24,24,20,0.45)] sm:aspect-[4/5]">
               <Image
                 src="/soy-ella/IMG_4749.PNG"
                 alt="Детали премиального события SOY ELLA"
                 fill
                 sizes="(min-width: 1024px) 31vw, 100vw"
-                className="editorial-photo-warm object-cover object-center transition-transform duration-1000 hover:scale-[1.025]"
+                className="editorial-photo-warm object-cover object-center transition-transform duration-1000 hover:scale-[1.02]"
               />
             </div>
-            <Sticker tone="white" rotate={1} className="absolute bottom-5 right-4">
+            <Sticker tone="white" rotate={1} className="absolute bottom-4 right-3 sm:bottom-5 sm:right-4">
               качество важнее количества
             </Sticker>
           </div>
         </div>
 
-        <ul className="mt-16 grid border-y border-brand-ink/15 md:grid-cols-3">
+        <ul className="mt-10 grid gap-px bg-brand-ink/10 sm:mt-14 sm:grid-cols-3 lg:mt-16">
           {PRINCIPLES.map((item, i) => (
             <li
               key={item.n}
               data-reveal=""
               data-delay={i * 100}
-              className="border-brand-ink/15 py-10 md:border-r md:px-8 md:last:border-r-0"
+              className="bg-brand-cream px-5 py-8 sm:px-6 sm:py-10 md:px-8"
             >
-              <span className="font-serif text-5xl italic text-brand-blue">{item.n}</span>
-              <h3 className="mt-5 font-serif text-3xl uppercase leading-none">{item.t}</h3>
-              <p className="mt-4 leading-relaxed text-brand-ink/70">{item.d}</p>
+              <span className="font-serif text-4xl italic text-brand-blue sm:text-5xl">{item.n}</span>
+              <h3 className="mt-4 font-serif text-2xl uppercase leading-none sm:mt-5 sm:text-3xl">{item.t}</h3>
+              <p className="mt-3 text-sm leading-relaxed text-brand-ink/65 sm:mt-4 sm:text-base">{item.d}</p>
             </li>
           ))}
         </ul>

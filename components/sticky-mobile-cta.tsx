@@ -22,24 +22,24 @@ export function StickyMobileCta() {
       )}
       style={{ paddingBottom: "env(safe-area-inset-bottom, 0px)" }}
     >
-      <div className="flex h-16 items-center justify-between px-5">
+      <div className="flex h-14 items-center justify-between px-4 sm:h-16 sm:px-5">
         <div>
           <p
-            className="text-[0.6rem] font-bold uppercase tracking-[0.22em]"
+            className="text-[0.55rem] font-bold uppercase tracking-[0.22em] sm:text-[0.6rem]"
             style={{ color: "var(--brand-butter)" }}
           >
             30 МАЯ · MADRID
           </p>
-          <p className="mt-1 font-display text-sm uppercase leading-none tracking-normal text-white">
+          <p className="mt-0.5 font-display text-xs uppercase leading-none tracking-normal text-white sm:mt-1 sm:text-sm">
             Beauty Day
           </p>
         </div>
         <a
           href="#event"
           aria-label="Посмотреть программу"
-          className="inline-flex size-12 items-center justify-center rounded-full bg-brand-butter text-brand-ink transition-colors hover:bg-white"
+          className="inline-flex size-10 items-center justify-center rounded-full bg-brand-butter text-brand-ink transition-colors hover:bg-white sm:size-12"
         >
-          <ArrowUpRight className="size-5" />
+          <ArrowUpRight className="size-4 sm:size-5" />
         </a>
       </div>
     </div>

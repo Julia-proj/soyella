@@ -32,37 +32,37 @@ export function TestimonialsSection() {
     >
       <div className="site-shell">
         <div data-reveal="" className="max-w-5xl">
-          <p className="text-xs font-bold uppercase tracking-widest text-brand-blue">Отзывы</p>
-          <h2 className="section-title mt-4 font-display">
+          <p className="text-[0.65rem] font-bold uppercase tracking-widest text-brand-blue sm:text-xs">Отзывы</p>
+          <h2 className="section-title mt-3 font-display sm:mt-4">
             Что говорят участницы
           </h2>
         </div>
 
-        <ul className="mt-14 grid gap-4 md:grid-cols-2">
+        <ul className="mt-8 grid gap-3 sm:mt-14 sm:gap-4 md:grid-cols-2">
           {REVIEWS.map((review, index) => (
             <li
               key={review.name}
               data-reveal=""
               data-delay={index * 90}
               className={
-                "relative flex flex-col p-6 sm:min-h-[22rem] sm:p-8 md:p-10 " +
+                "relative flex flex-col p-5 sm:min-h-[20rem] sm:p-7 md:min-h-[22rem] md:p-10 " +
                 (index % 2 === 0 ? "bg-brand-white" : "bg-brand-blue text-white")
               }
             >
               <Quote
                 className={
-                  "absolute right-5 top-5 size-7 sm:right-6 sm:top-6 sm:size-9 " +
+                  "absolute right-4 top-4 size-6 sm:right-6 sm:top-6 sm:size-9 " +
                   (index % 2 === 0 ? "text-brand-blue/25" : "text-brand-butter/50")
                 }
                 aria-hidden
               />
-              <p className="max-w-2xl pr-8 font-serif text-xl uppercase leading-[1.05] sm:text-2xl md:text-3xl lg:text-4xl">
+              <p className="max-w-2xl pr-6 font-serif text-lg uppercase leading-[1.1] sm:pr-8 sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">
                 {review.text}
               </p>
-              <div className="mt-auto pt-7 sm:pt-10">
-                <p className="text-sm font-bold uppercase tracking-wider">{review.name}</p>
+              <div className="mt-auto pt-5 sm:pt-8 md:pt-10">
+                <p className="text-xs font-bold uppercase tracking-wider sm:text-sm">{review.name}</p>
                 <p className={
-                  "mt-1 text-xs uppercase tracking-widest " +
+                  "mt-0.5 text-[0.65rem] uppercase tracking-widest sm:mt-1 sm:text-xs " +
                   (index % 2 === 0 ? "text-brand-ink/55" : "text-white/65")
                 }>
                   {review.role}

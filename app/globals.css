@@ -197,12 +197,18 @@
     color: var(--brand-white);
     text-align: center;
     text-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
-    pointer-events: none;
-    padding-inline: 1rem;
+    pointer-events: auto;
+    padding-inline: 1.25rem;
+  }
+  @media (min-width: 640px) {
+    .hero-lockup {
+      padding-inline: 2rem;
+    }
   }
   @media (min-width: 768px) {
     .hero-lockup {
       width: 100%;
+      padding-inline: 3rem;
     }
   }
 
