@@ -1,7 +1,6 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { ArrowUpRight } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 export function StickyMobileCta() {
@@ -17,29 +16,25 @@ export function StickyMobileCta() {
   return (
     <div
       className={cn(
-        "fixed inset-x-0 bottom-0 z-50 bg-brand-ink text-white shadow-[0_-16px_38px_-28px_rgba(24,24,20,0.75)] transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] lg:hidden",
+        "fixed inset-x-0 bottom-0 z-50 bg-brand-ink/95 backdrop-blur-sm text-white transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] lg:hidden",
         visible ? "translate-y-0" : "translate-y-full",
       )}
       style={{ paddingBottom: "env(safe-area-inset-bottom, 0px)" }}
     >
-      <div className="flex h-14 items-center justify-between px-4 sm:h-16 sm:px-5">
+      <div className="flex h-16 items-center justify-between px-5 sm:px-6">
         <div>
-          <p
-            className="text-[0.55rem] font-bold uppercase tracking-[0.22em] sm:text-[0.6rem]"
-            style={{ color: "var(--brand-butter)" }}
-          >
-            30 МАЯ · MADRID
+          <p className="text-[0.5rem] font-medium uppercase tracking-[0.2em] text-white/40 sm:text-[0.55rem]">
+            30 мая · Madrid
           </p>
-          <p className="mt-0.5 font-display text-xs uppercase leading-none tracking-normal text-white sm:mt-1 sm:text-sm">
+          <p className="mt-0.5 font-serif text-sm text-white sm:text-base">
             Beauty Day
           </p>
         </div>
         <a
           href="#event"
-          aria-label="Посмотреть программу"
-          className="inline-flex size-10 items-center justify-center rounded-full bg-brand-butter text-brand-ink transition-colors hover:bg-white sm:size-12"
+          className="inline-flex items-center justify-center bg-white px-5 py-2.5 text-[0.55rem] font-semibold uppercase tracking-[0.12em] text-brand-ink transition-colors hover:bg-brand-butter sm:px-6 sm:py-3 sm:text-[0.6rem]"
         >
-          <ArrowUpRight className="size-4 sm:size-5" />
+          Занять место
         </a>
       </div>
     </div>

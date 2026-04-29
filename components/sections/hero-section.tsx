@@ -1,4 +1,7 @@
+"use client"
+
 import Image from "next/image"
+import { motion } from "framer-motion"
 
 export function HeroSection() {
   return (
@@ -7,49 +10,112 @@ export function HeroSection() {
       aria-label="SOY ELLA — главный экран"
       className="relative min-h-[100svh] overflow-hidden bg-brand-ink"
     >
-      {/* Photo */}
-      <Image
-        src="/soy-ella/2nd.JPG"
-        alt="SOY ELLA — женское комьюнити в Мадриде"
-        fill
-        priority
-        sizes="100vw"
-        className="animate-hero-photo object-cover object-[center_65%]"
-      />
+      {/* Photo with scale animation */}
+      <motion.div
+        initial={{ scale: 1.1, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ duration: 1.8, ease: [0.16, 1, 0.3, 1] }}
+        className="absolute inset-0"
+      >
+        <Image
+          src="/soy-ella/2nd.JPG"
+          alt="SOY ELLA — женское комьюнити в Мадриде"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-[center_60%]"
+          style={{ filter: 'saturate(0.85) contrast(1.05)' }}
+        />
+      </motion.div>
 
-      {/* Gradient overlays for depth */}
-      <div className="absolute inset-0 bg-gradient-to-b from-brand-ink/60 via-transparent to-brand-ink/70" />
-      <div className="absolute inset-0 bg-brand-ink/20" />
+      {/* Soft gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-brand-ink/40 via-brand-ink/20 to-brand-ink/60" />
 
-      {/* Centered lockup - inspired by reference */}
-      <div className="hero-lockup">
-        <p className="animate-fade-up mb-4 font-sans text-[0.65rem] font-semibold uppercase tracking-[0.35em] text-brand-butter/90 sm:mb-6 sm:text-xs sm:tracking-[0.4em]">
-          Женское комьюнити · Мадрид
-        </p>
-        <h1 className="animate-fade-up font-display text-[15vw] leading-[0.8] tracking-[-0.01em] text-white [animation-delay:0.1s] sm:text-[12vw] md:text-[10vw] lg:text-[9vw]">
-          SOY ELLA
-        </h1>
-        <p className="animate-fade-up mx-auto mt-6 max-w-[20rem] text-[0.85rem] font-light leading-relaxed text-white/85 [animation-delay:0.2s] sm:mt-8 sm:max-w-md sm:text-base md:max-w-lg md:text-lg">
-          Закрытое женское комьюнити в Мадриде для девушек, которые выбирают рост,
-          качество жизни и сильное окружение.
-        </p>
-        <div className="animate-fade-up mt-8 [animation-delay:0.3s] sm:mt-10">
+      {/* Top bar with logo */}
+      <motion.div
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+        className="absolute left-0 right-0 top-0 z-20 px-5 pt-6 sm:px-8 sm:pt-8"
+      >
+        <div className="mx-auto flex max-w-[1400px] items-center justify-between">
+          <span className="font-display text-sm tracking-[0.15em] text-white/90 sm:text-base">
+            SOY ELLA
+          </span>
+          <span className="text-[0.6rem] font-medium uppercase tracking-[0.2em] text-white/50 sm:text-[0.65rem]">
+            Madrid · 2024
+          </span>
+        </div>
+      </motion.div>
+
+      {/* Center content */}
+      <div className="relative z-10 flex min-h-[100svh] flex-col items-center justify-center px-5 text-center sm:px-8">
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
+          className="mb-6 text-[0.6rem] font-medium uppercase tracking-[0.3em] text-white/70 sm:mb-8 sm:text-[0.7rem] sm:tracking-[0.35em]"
+        >
+          Закрытое женское комьюнити
+        </motion.p>
+
+        <motion.h1
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.2, delay: 0.7, ease: [0.16, 1, 0.3, 1] }}
+          className="font-display hero-title text-white"
+        >
+          Soy Ella.
+        </motion.h1>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.9, ease: [0.16, 1, 0.3, 1] }}
+          className="mx-auto mt-8 max-w-[22rem] text-[0.85rem] font-light leading-relaxed text-white/80 sm:mt-10 sm:max-w-md sm:text-base md:max-w-lg md:text-lg"
+        >
+          Камерные встречи, экспертный круг и среда, в которой решения рождаются за одним столом.
+        </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 1.1, ease: [0.16, 1, 0.3, 1] }}
+          className="mt-10 sm:mt-12"
+        >
           <a
             href="#event"
-            className="inline-flex items-center justify-center rounded-full border border-white/30 bg-white/10 px-8 py-3.5 text-[0.68rem] font-semibold uppercase tracking-[0.15em] text-white backdrop-blur-sm transition-all duration-500 hover:border-white/50 hover:bg-white hover:text-brand-ink sm:px-10 sm:py-4 sm:text-[0.72rem]"
+            className="inline-flex items-center justify-center border border-white/30 bg-transparent px-8 py-4 text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-white transition-all duration-500 hover:bg-white hover:text-brand-ink sm:px-10 sm:py-4 sm:text-[0.7rem]"
           >
             Занять место
           </a>
-        </div>
+        </motion.div>
       </div>
 
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 z-20 -translate-x-1/2 animate-fade-up [animation-delay:0.5s] sm:bottom-12">
-        <div className="flex flex-col items-center gap-3">
-          <span className="text-[0.6rem] font-semibold uppercase tracking-[0.3em] text-white/50">Scroll</span>
-          <div className="h-12 w-px bg-gradient-to-b from-white/50 to-transparent" />
+      {/* Bottom info */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 1.3, ease: [0.16, 1, 0.3, 1] }}
+        className="absolute bottom-0 left-0 right-0 z-20 px-5 pb-6 sm:px-8 sm:pb-8"
+      >
+        <div className="mx-auto flex max-w-[1400px] items-end justify-between">
+          <div>
+            <p className="text-[0.55rem] font-medium uppercase tracking-[0.2em] text-white/40 sm:text-[0.6rem]">
+              Следующая встреча
+            </p>
+            <p className="mt-1 font-serif text-sm text-white/80 sm:text-base">
+              30 мая · Мадрид
+            </p>
+          </div>
+          <div className="flex flex-col items-center">
+            <span className="text-[0.55rem] font-medium uppercase tracking-[0.25em] text-white/40 sm:text-[0.6rem]">
+              Scroll
+            </span>
+            <div className="mt-2 h-8 w-px bg-gradient-to-b from-white/40 to-transparent sm:h-10" />
+          </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   )
 }
