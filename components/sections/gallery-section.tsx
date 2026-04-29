@@ -38,21 +38,17 @@ export function GallerySection() {
         </motion.h2>
       </div>
 
-      {/* Gallery grid - modern masonry-like layout */}
+      {/* Gallery grid — uniform equal tiles */}
       <div className="site-shell">
-        <div className="grid grid-cols-2 gap-2 sm:gap-3 md:grid-cols-3 lg:gap-3 xl:grid-cols-4">
+        <div className="grid grid-cols-2 gap-2 sm:gap-3 md:grid-cols-4 lg:gap-3">
           {IMAGES.slice(0, 8).map((img, index) => (
             <motion.div
               key={img.src}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.8, delay: 0.08 * index }}
-              className={`group relative overflow-hidden bg-brand-sand ${
-                index === 0
-                  ? "col-span-2 aspect-[4/3] md:col-span-2 md:row-span-2 md:aspect-square xl:col-span-2 xl:aspect-square"
-                  : "aspect-[4/5] sm:aspect-square"
-              }`}
+              transition={{ duration: 0.8, delay: 0.06 * index }}
+              className="group relative aspect-square overflow-hidden rounded-xl bg-brand-sand"
             >
               <Image
                 src={img.src}

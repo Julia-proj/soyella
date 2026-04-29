@@ -82,67 +82,67 @@ export function AboutSection() {
           </motion.p>
         </div>
 
-        {/* Image grid */}
-        <div className="mt-16 grid gap-4 sm:mt-24 sm:gap-5 lg:grid-cols-12 lg:h-[500px] lg:gap-5 xl:h-[560px]">
-          {/* Left: organizers — portrait */}
+        {/* Image grid — 3-col band, fixed height */}
+        <div className="mt-14 grid grid-cols-2 gap-3 sm:mt-20 sm:gap-4 lg:grid-cols-3 lg:h-[300px] xl:h-[340px]">
+          {/* Left: organizers portrait */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1, delay: 0.2 }}
-            className="relative aspect-[3/2] overflow-hidden lg:col-span-5 lg:aspect-auto lg:h-full"
+            className="relative col-span-2 aspect-[3/2] overflow-hidden lg:col-span-1 lg:aspect-auto lg:h-full"
           >
             <Image
               src="/soy-ella/hero.jpg"
               alt="Организаторы SOY ELLA"
               fill
-              sizes="(min-width: 1024px) 42vw, 100vw"
+              sizes="(min-width: 1024px) 33vw, 100vw"
               className="editorial-photo object-cover object-[center_38%] transition-transform duration-1000 hover:scale-[1.02]"
             />
             {/* Founders badge */}
-            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 to-transparent pb-4 pl-4 pt-10 sm:pb-5 sm:pl-5">
-              <p className="text-[0.55rem] font-semibold uppercase tracking-[0.28em] text-brand-yellow sm:text-[0.6rem]">
+            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 to-transparent pb-4 pl-4 pt-10">
+              <p className="text-[0.55rem] font-semibold uppercase tracking-[0.28em] text-brand-yellow">
                 Founders
               </p>
-              <p className="mt-1 font-serif text-sm italic text-white/90 sm:text-base">
+              <p className="mt-1 font-serif text-sm italic text-white/90">
                 Silvia & Elena
               </p>
             </div>
           </motion.div>
 
-          {/* Right: community + detail — 2-col on mobile, grid rows on desktop */}
-          <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:col-span-7 lg:grid lg:grid-cols-1 lg:grid-rows-2 lg:gap-5">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 1, delay: 0.3 }}
-              className="relative aspect-[1/1] overflow-hidden lg:aspect-auto lg:h-full"
-            >
-              <Image
-                src="/soy-ella/girls.jpg"
-                alt="Участницы SOY ELLA — женское комьюнити в Мадриде"
-                fill
-                sizes="(min-width: 1024px) 58vw, 50vw"
-                className="editorial-photo object-cover object-[center_25%] transition-transform duration-1000 hover:scale-[1.02]"
-              />
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 1, delay: 0.4 }}
-              className="relative aspect-[1/1] overflow-hidden lg:aspect-auto lg:h-full"
-            >
-              <Image
-                src="/soy-ella/IMG_4749.PNG"
-                alt="Детали встречи SOY ELLA"
-                fill
-                sizes="(min-width: 1024px) 58vw, 50vw"
-                className="editorial-photo-warm object-cover object-center transition-transform duration-1000 hover:scale-[1.02]"
-              />
-            </motion.div>
-          </div>
+          {/* Center: community */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, delay: 0.3 }}
+            className="relative aspect-square overflow-hidden lg:aspect-auto lg:h-full"
+          >
+            <Image
+              src="/soy-ella/girls.jpg"
+              alt="Участницы SOY ELLA — женское комьюнити в Мадриде"
+              fill
+              sizes="(min-width: 1024px) 33vw, 100vw"
+              className="editorial-photo object-cover object-[center_25%] transition-transform duration-1000 hover:scale-[1.02]"
+            />
+          </motion.div>
+
+          {/* Right: detail */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, delay: 0.4 }}
+            className="relative aspect-square overflow-hidden lg:aspect-auto lg:h-full"
+          >
+            <Image
+              src="/soy-ella/IMG_4749.PNG"
+              alt="Детали встречи SOY ELLA"
+              fill
+              sizes="(min-width: 1024px) 33vw, 100vw"
+              className="editorial-photo-warm object-cover object-center transition-transform duration-1000 hover:scale-[1.02]"
+            />
+          </motion.div>
         </div>
 
         {/* Principles */}

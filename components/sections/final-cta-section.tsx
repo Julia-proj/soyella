@@ -87,7 +87,7 @@ export function FinalCtaSection() {
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center rounded-full bg-brand-yellow px-8 py-4 text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-brand-blue transition-all duration-300 hover:bg-brand-cream sm:px-10 sm:text-[0.7rem]"
           >
-            Занять место, 180€ →
+            Оплатить участие, 180 €
           </a>
           <a
             href="#about"
