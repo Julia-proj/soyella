@@ -53,9 +53,7 @@ export function FeaturedOrganizerSection() {
             className="flex flex-col justify-center"
           >
             <h2 className="display-mega font-display text-brand-blue">
-              Keratin
-              <br />
-              Madrid
+              Keratin<span className="lg:hidden"><br /></span><span className="hidden lg:inline"> </span>Madrid
               <span className="text-brand-butter"> × </span>
               <span className="text-brand-butter">Soy Ella</span>
             </h2>

@@ -83,14 +83,14 @@ export function AboutSection() {
         </div>
 
         {/* Image grid */}
-        <div className="mt-16 grid gap-4 sm:mt-24 sm:gap-5 lg:grid-cols-12 lg:gap-5">
+        <div className="mt-16 grid gap-4 sm:mt-24 sm:gap-5 lg:grid-cols-12 lg:h-[500px] lg:gap-5 xl:h-[560px]">
           {/* Left: organizers — portrait */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1, delay: 0.2 }}
-            className="relative aspect-[3/2] overflow-hidden lg:col-span-5 lg:aspect-[3/4]"
+            className="relative aspect-[3/2] overflow-hidden lg:col-span-5 lg:aspect-auto lg:h-full"
           >
             <Image
               src="/soy-ella/hero.jpg"
@@ -110,14 +110,14 @@ export function AboutSection() {
             </div>
           </motion.div>
 
-          {/* Right: community + detail — 2-col on mobile, stacked on desktop */}
-          <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:col-span-7 lg:flex lg:flex-col lg:gap-5">
+          {/* Right: community + detail — 2-col on mobile, grid rows on desktop */}
+          <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:col-span-7 lg:grid lg:grid-cols-1 lg:grid-rows-2 lg:gap-5">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 1, delay: 0.3 }}
-              className="relative aspect-[1/1] overflow-hidden lg:aspect-[4/3]"
+              className="relative aspect-[1/1] overflow-hidden lg:aspect-auto lg:h-full"
             >
               <Image
                 src="/soy-ella/girls.jpg"
@@ -132,7 +132,7 @@ export function AboutSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 1, delay: 0.4 }}
-              className="relative aspect-[1/1] overflow-hidden lg:aspect-[4/3]"
+              className="relative aspect-[1/1] overflow-hidden lg:aspect-auto lg:h-full"
             >
               <Image
                 src="/soy-ella/IMG_4749.PNG"

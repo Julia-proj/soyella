@@ -26,8 +26,8 @@ export function HeroSection() {
         <div className="absolute inset-0 bg-gradient-to-r from-brand-blue-deep/45 to-transparent" />
       </div>
 
-      {/* Content — bottom left */}
-      <div className="relative z-10 flex min-h-[100svh] flex-col items-start justify-end px-5 pb-32 pt-24 text-left sm:px-10 sm:pb-36 lg:px-20 lg:pb-40 xl:pb-48">
+      {/* Content — bottom left on mobile, centered on desktop */}
+      <div className="relative z-10 flex min-h-[100svh] flex-col items-start justify-end px-5 pb-32 pt-24 text-left sm:px-10 sm:pb-36 lg:justify-center lg:px-20 lg:pb-24 lg:pt-24 xl:px-24">
 
         {/* Eyebrow */}
         <motion.p
@@ -46,7 +46,7 @@ export function HeroSection() {
           transition={{ duration: 1.4, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
           className="font-display uppercase text-white"
           style={{
-            fontSize: "clamp(4.5rem, 28vw, 22rem)",
+            fontSize: "clamp(4.5rem, 18vw, 14rem)",
             lineHeight: 0.85,
             letterSpacing: "-0.01em",
             fontWeight: 400,

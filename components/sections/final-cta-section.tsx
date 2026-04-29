@@ -32,7 +32,7 @@ export function FinalCtaSection() {
       <div className="absolute inset-0 bg-gradient-to-t from-brand-blue-deep via-brand-blue-deep/40 to-transparent" />
 
       {/* Content */}
-      <div className="site-shell relative z-10 flex min-h-[70svh] flex-col justify-end pb-16 pt-20 sm:min-h-[80svh] sm:pb-20">
+      <div className="site-shell relative z-10 flex min-h-[70svh] flex-col justify-end pb-16 pt-20 sm:min-h-[80svh] sm:pb-20 lg:justify-center lg:pb-16 lg:pt-16">
         {/* Section tag */}
         <motion.span
           initial={{ opacity: 0 }}

@@ -16,8 +16,8 @@ const IMAGES = [
 
 export function GallerySection() {
   return (
-    <section id="gallery" aria-label="Галерея встреч" className="bg-brand-cream py-20 text-brand-blue sm:py-28 lg:py-36">
-      <div className="site-shell mb-14 sm:mb-20">
+    <section id="gallery" aria-label="Галерея встреч" className="bg-brand-cream py-16 text-brand-blue sm:py-24 lg:py-28">
+      <div className="site-shell mb-12 sm:mb-16">
         <motion.span
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -39,9 +39,9 @@ export function GallerySection() {
       </div>
 
       {/* Gallery grid - modern masonry-like layout */}
-      <div className="px-4 sm:px-6 lg:px-10">
-        <div className="grid grid-cols-2 gap-2 sm:gap-3 md:grid-cols-4 lg:gap-4">
-          {IMAGES.map((img, index) => (
+      <div className="site-shell">
+        <div className="grid grid-cols-2 gap-2 sm:gap-3 md:grid-cols-3 lg:gap-3 xl:grid-cols-4">
+          {IMAGES.slice(0, 8).map((img, index) => (
             <motion.div
               key={img.src}
               initial={{ opacity: 0, y: 20 }}
@@ -49,9 +49,9 @@ export function GallerySection() {
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.8, delay: 0.08 * index }}
               className={`group relative overflow-hidden bg-brand-sand ${
-                index === 0 ? "col-span-2 aspect-[4/3] md:col-span-2 md:row-span-2 md:aspect-auto" :
-                index === 3 ? "aspect-[3/4] md:col-span-1 md:aspect-[3/4]" :
-                "aspect-[4/5] sm:aspect-square"
+                index === 0
+                  ? "col-span-2 aspect-[4/3] md:col-span-2 md:row-span-2 md:aspect-square xl:col-span-2 xl:aspect-square"
+                  : "aspect-[4/5] sm:aspect-square"
               }`}
             >
               <Image

@@ -41,7 +41,7 @@ export function SiteFooter() {
               SOY ELLA
             </p>
             <p className="mt-6 max-w-sm text-base leading-relaxed text-brand-cream/55 sm:text-lg">
-              Закрытое женское комьюнити в Мадриде. Место, где рождаются дружбы,
+              Закрытое женское комьюнити в Мадриде. Место, где рождается дружба,
               проекты и большие идеи.
             </p>
           </div>

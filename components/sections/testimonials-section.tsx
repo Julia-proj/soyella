@@ -53,7 +53,7 @@ export function TestimonialsSection() {
           Что говорят участницы
         </motion.h2>
 
-        <ul className="mt-14 grid gap-x-12 sm:mt-20 sm:grid-cols-2 lg:gap-x-16">
+        <ul className="mt-14 grid gap-x-8 gap-y-0 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4 lg:gap-x-10">
           {REVIEWS.map((review, index) => (
             <motion.li
               key={review.name}
@@ -61,20 +61,20 @@ export function TestimonialsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.9, delay: 0.08 * index }}
-              className="border-t border-brand-ink/10 py-10 sm:py-14"
+              className="border-l-[2px] border-brand-yellow py-8 pl-7 sm:py-10 sm:pl-8"
             >
               <span
                 aria-hidden
-                className="font-serif text-5xl leading-none text-brand-yellow sm:text-6xl"
+                className="font-serif text-6xl leading-none text-brand-yellow/70 sm:text-7xl"
               >
                 &ldquo;
               </span>
-              <blockquote className="mt-4">
-                <p className="font-serif text-xl leading-relaxed text-brand-ink sm:text-2xl">
+              <blockquote className="mt-3">
+                <p className="font-serif text-lg leading-relaxed text-brand-ink sm:text-xl lg:text-lg xl:text-xl">
                   {review.text}
                 </p>
               </blockquote>
-              <footer className="mt-8">
+              <footer className="mt-6">
                 <p className="text-sm font-semibold uppercase tracking-[0.18em] text-brand-ink">
                   {review.name}
                 </p>
