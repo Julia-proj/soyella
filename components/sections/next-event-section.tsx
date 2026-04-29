@@ -99,46 +99,45 @@ export function NextEventSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1, delay: 0.3 }}
-            className="flex flex-col justify-between border border-white/10 p-6 sm:p-8 lg:col-span-5"
+            className="flex flex-col justify-between bg-white/[0.03] p-6 sm:p-8 lg:col-span-5"
           >
             <div>
               <span className="text-[0.6rem] font-semibold uppercase tracking-[0.2em] text-brand-butter sm:text-[0.65rem]">
                 Участие
               </span>
-              <p className="mt-6 font-serif text-3xl text-white sm:text-4xl">
-                195 €
+              <p className="mt-5 text-sm leading-relaxed text-white/65 sm:mt-6 sm:text-base">
+                Включено: welcome box, премиальные закуски и напитки, все выступления экспертов, нетворкинг и знакомства с участницами.
               </p>
-              <p className="mt-4 text-sm leading-relaxed text-white/60 sm:text-base">
-                Включено: welcome box, премиальные закуски и напитки, все выступления экспертов, нетворкинг.
+              <p className="mt-4 text-[0.6rem] font-medium uppercase tracking-[0.15em] text-white/40 sm:text-[0.65rem]">
+                Безопасная оплата через Stripe
               </p>
-              <ul className="mt-6 space-y-2 border-t border-white/10 pt-6 text-xs text-white/50 sm:text-sm">
-                <li className="flex items-center gap-2">
-                  <span className="size-1 rounded-full bg-brand-butter" aria-hidden />
-                  Безопасная оплата через Stripe
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="size-1 rounded-full bg-brand-butter" aria-hidden />
-                  Возврат за 72 часа до события
-                </li>
-              </ul>
             </div>
 
-            <div className="mt-8 flex flex-col gap-3 sm:mt-10">
+            <div className="mt-10 space-y-4 sm:mt-12">
+              {/* Full payment option */}
               <a
                 href="https://buy.stripe.com/YOUR_FULL_PAYMENT_LINK"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full bg-white py-4 text-center text-[0.65rem] font-semibold uppercase tracking-[0.15em] text-brand-ink transition-all duration-300 hover:bg-brand-butter sm:text-[0.7rem]"
+                className="group flex w-full items-center justify-between bg-brand-butter px-6 py-5 transition-all duration-300 hover:bg-white sm:px-8"
               >
-                Оплатить участие
+                <span className="text-[0.65rem] font-semibold uppercase tracking-[0.12em] text-brand-ink sm:text-[0.7rem]">
+                  Оплатить участие
+                </span>
+                <span className="font-serif text-xl text-brand-ink sm:text-2xl">195 €</span>
               </a>
+              
+              {/* Reservation option */}
               <a
                 href="https://buy.stripe.com/YOUR_RESERVATION_LINK"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full border border-white/20 bg-transparent py-4 text-center text-[0.65rem] font-semibold uppercase tracking-[0.15em] text-white transition-all duration-300 hover:bg-white/10 sm:text-[0.7rem]"
+                className="group flex w-full items-center justify-between border border-white/15 px-6 py-5 transition-all duration-300 hover:border-white/30 hover:bg-white/5 sm:px-8"
               >
-                Резервация · 50 €
+                <span className="text-[0.65rem] font-semibold uppercase tracking-[0.12em] text-white sm:text-[0.7rem]">
+                  Бронирование места
+                </span>
+                <span className="font-serif text-xl text-white sm:text-2xl">50 €</span>
               </a>
             </div>
           </motion.div>
@@ -162,7 +161,7 @@ export function NextEventSection() {
             {[
               { n: "01", t: "Экспертные выступления", d: "Спикеры уровня, короткие форматы, живые вопросы." },
               { n: "02", t: "Beauty инновации", d: "Новые подходы к уходу, волосам и коже." },
-              { n: "03", t: "Нетворкинг", d: "Знакомства, которые остаются не на один вечер." },
+              { n: "03", t: "Нетворкинг", d: "Знакомства, которые остаются не на один веч��р." },
               { n: "04", t: "Закуски и напитки", d: "Премиальное меню от партнеров." },
               { n: "05", t: "Подарки партнеров", d: "Каждая уходит с welcome box." },
               { n: "06", t: "Новые знакомства", d: "Девушки, с которыми хочется дружить." },
