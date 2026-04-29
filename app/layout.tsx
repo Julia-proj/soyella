@@ -24,6 +24,10 @@ export const metadata: Metadata = {
   description:
     "SOY ELLA - премиальное комьюнити для русскоговорящих женщин в Мадриде. Нетворкинг, рост, окружение уровня. Следующая встреча: BEAUTY DAY, 30 мая.",
   generator: "v0.app",
+  icons: {
+    icon: "/soy-ella/icon.svg",
+    apple: "/soy-ella/apple-icon.png",
+  },
   openGraph: {
     title: "SOY ELLA - закрытое женское комьюнити в Мадриде",
     description:

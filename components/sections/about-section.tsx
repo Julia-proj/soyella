@@ -1,6 +1,7 @@
 import Image from "next/image"
 import { Sticker } from "@/components/sticker"
 
+
 const PRINCIPLES = [
   {
     n: "01",
