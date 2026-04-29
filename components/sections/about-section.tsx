@@ -1,7 +1,8 @@
 "use client"
 
 import Image from "next/image"
-import { motion } from "framer-motion"
+import { useState } from "react"
+import { motion, AnimatePresence } from "framer-motion"
 
 const PRINCIPLES = [
   {
@@ -22,8 +23,52 @@ const PRINCIPLES = [
 ]
 
 export function AboutSection() {
+  const [lightbox, setLightbox] = useState<{ src: string; alt: string } | null>(null)
+
   return (
     <section id="about" aria-label="О SOY ELLA" className="section-pad relative overflow-hidden bg-brand-cream text-brand-blue">
+
+      {/* Lightbox */}
+      <AnimatePresence>
+        {lightbox && (
+          <motion.div
+            key="lightbox"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 backdrop-blur-sm"
+            onClick={() => setLightbox(null)}
+          >
+            <motion.div
+              initial={{ scale: 0.92, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.95, opacity: 0 }}
+              transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+              className="relative max-h-[90svh] max-w-[90vw]"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <Image
+                src={lightbox.src}
+                alt={lightbox.alt}
+                width={1200}
+                height={900}
+                className="max-h-[88svh] w-auto rounded-xl object-contain shadow-2xl"
+                style={{ maxWidth: "88vw" }}
+              />
+              <button
+                onClick={() => setLightbox(null)}
+                aria-label="Закрыть"
+                className="absolute -right-3 -top-3 flex size-9 items-center justify-center rounded-full bg-white/10 text-white backdrop-blur-md transition-colors hover:bg-white/20"
+              >
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                  <path d="M1 1l12 12M13 1L1 13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+                </svg>
+              </button>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
       <div className="site-shell">
         {/* Section number */}
         <motion.span
@@ -90,7 +135,8 @@ export function AboutSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1, delay: 0.2 }}
-            className="relative col-span-2 aspect-[3/2] overflow-hidden lg:col-span-1 lg:aspect-auto lg:h-full"
+            className="relative col-span-2 aspect-[3/2] cursor-pointer overflow-hidden lg:col-span-1 lg:aspect-auto lg:h-full"
+            onClick={() => setLightbox({ src: "/soy-ella/hero.jpg", alt: "Организаторы SOY ELLA" })}
           >
             <Image
               src="/soy-ella/hero.jpg"
@@ -116,7 +162,8 @@ export function AboutSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1, delay: 0.3 }}
-            className="relative aspect-square overflow-hidden lg:aspect-auto lg:h-full"
+            className="relative aspect-square cursor-pointer overflow-hidden lg:aspect-auto lg:h-full"
+            onClick={() => setLightbox({ src: "/soy-ella/girls.jpg", alt: "Участницы SOY ELLA" })}
           >
             <Image
               src="/soy-ella/girls.jpg"
@@ -133,7 +180,8 @@ export function AboutSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1, delay: 0.4 }}
-            className="relative aspect-square overflow-hidden lg:aspect-auto lg:h-full"
+            className="relative aspect-square cursor-pointer overflow-hidden lg:aspect-auto lg:h-full"
+            onClick={() => setLightbox({ src: "/soy-ella/IMG_4749.PNG", alt: "Детали встречи SOY ELLA" })}
           >
             <Image
               src="/soy-ella/IMG_4749.PNG"
