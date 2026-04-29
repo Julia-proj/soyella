@@ -82,10 +82,12 @@ export function FinalCtaSection() {
           className="mt-12 flex flex-wrap gap-3 sm:mt-14"
         >
           <a
-            href="#event"
+            href="https://buy.stripe.com/8x29AT8nv9YfdK48WLdnW1"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center bg-brand-yellow px-8 py-4 text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-brand-blue transition-all duration-300 hover:bg-brand-cream sm:px-10 sm:text-[0.7rem]"
           >
-            Занять место, 195€
+            Занять место, 180€
           </a>
           <a
             href="#about"

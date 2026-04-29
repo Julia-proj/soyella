@@ -96,7 +96,7 @@ export function AboutSection() {
               alt="Женщины общаются на встрече SOY ELLA"
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"
-              className="editorial-photo object-cover object-center transition-transform duration-1000 hover:scale-[1.02]"
+              className="editorial-photo object-cover object-[center_40%] transition-transform duration-1000 hover:scale-[1.02]"
             />
           </motion.div>
           <motion.div
@@ -111,7 +111,7 @@ export function AboutSection() {
               alt="Детали премиального события SOY ELLA"
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"
-              className="editorial-photo-warm object-cover object-center transition-transform duration-1000 hover:scale-[1.02]"
+              className="editorial-photo-warm object-cover object-[center_35%] transition-transform duration-1000 hover:scale-[1.02]"
             />
           </motion.div>
         </div>

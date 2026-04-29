@@ -5,7 +5,7 @@
 
 :root {
   --background: #faf6ef;
-  --foreground: #1e3148;
+  --foreground: #464f9c;
 
   --card: #ffffff;
   --card-foreground: #1a1815;
@@ -13,7 +13,7 @@
   --popover: #ffffff;
   --popover-foreground: #1a1815;
 
-  --primary: #1d2d3d;
+  --primary: #1d1bbb;
   --primary-foreground: #f3ede1;
 
   --secondary: #ebe2d0;
@@ -36,7 +36,7 @@
   --brand-blue:   #2d4a6f;   /* rich navy blue */
   --brand-blue-deep: #1e3148; /* deep navy for dark sections */
   --brand-yellow: #f2c744;   /* BRIGHT butter yellow like reference */
-  --brand-yellow-soft: #f7dc7a; /* lighter yellow for section bg */
+  --brand-yellow-soft: #feeaa2; /* lighter yellow for section bg */
   --brand-butter: #e5b830;   /* saturated gold */
   --brand-gold:   #d4a520;   /* rich gold */
   --brand-cream:  #faf6ef;   /* clean warm cream */

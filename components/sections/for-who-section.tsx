@@ -43,7 +43,7 @@ export function ForWhoSection() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="mt-6 max-w-xl text-base leading-relaxed text-brand-cream/65 sm:text-lg md:text-xl"
         >
-          Шесть признаков женщины, для которой Soy Ella про своих. Узнала себя хотя бы в трех, значит наша.
+          Если узнаешь себя, значит ты в правильном месте
         </motion.p>
 
         {/* Grid */}

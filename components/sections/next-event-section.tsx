@@ -57,15 +57,9 @@ export function NextEventSection() {
           </div>
           <div>
             <dt className="text-[0.6rem] font-medium uppercase tracking-[0.22em] text-brand-yellow sm:text-[0.65rem]">
-              Мест
+              Места
             </dt>
-            <dd className="mt-2 font-serif text-xl text-brand-cream sm:text-2xl">Ограничено</dd>
-          </div>
-          <div>
-            <dt className="text-[0.6rem] font-medium uppercase tracking-[0.22em] text-brand-yellow sm:text-[0.65rem]">
-              Формат
-            </dt>
-            <dd className="mt-2 font-serif text-xl text-brand-cream sm:text-2xl">Closed</dd>
+            <dd className="mt-2 font-serif text-xl text-brand-cream sm:text-2xl">Ограничены</dd>
           </div>
         </motion.dl>
 
@@ -116,7 +110,7 @@ export function NextEventSection() {
             <div className="mt-10 space-y-3 sm:mt-12">
               {/* PRIMARY — full payment, bright yellow, impossible to miss */}
               <a
-                href="https://buy.stripe.com/YOUR_FULL_PAYMENT_LINK"
+                href="https://buy.stripe.com/8x29AT8nv9YfdK48WLdnW1"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex w-full items-center justify-between bg-brand-yellow px-7 py-5 text-brand-blue-deep transition-colors duration-300 hover:bg-brand-yellow-soft"
@@ -124,12 +118,12 @@ export function NextEventSection() {
                 <span className="text-[0.7rem] font-bold uppercase tracking-[0.18em]">
                   Оплатить участие
                 </span>
-                <span className="font-display text-2xl font-normal">195 €</span>
+                <span className="font-display text-2xl font-normal">180 €</span>
               </a>
 
               {/* SECONDARY — reservation, outlined */}
               <a
-                href="https://buy.stripe.com/YOUR_RESERVATION_LINK"
+                href="https://buy.stripe.com/00wcN56fn7Q7eO8c8XdnW1T"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex w-full items-center justify-between border border-brand-cream/30 px-7 py-5 text-brand-cream transition-colors duration-300 hover:border-brand-yellow hover:text-brand-yellow"
@@ -161,7 +155,7 @@ export function NextEventSection() {
             {[
               { n: "01", t: "Экспертные выступления", d: "Спикеры уровня, короткие форматы, живые вопросы." },
               { n: "02", t: "Beauty инновации", d: "Новые подходы к уходу, волосам и коже." },
-              { n: "03", t: "Нетворкинг", d: "Зн��комства, которые остаются не на один вечер." },
+              { n: "03", t: "Нетворкинг", d: "Знакомства, которые остаются не на один вечер." },
               { n: "04", t: "Закуски и напитки", d: "Премиальное меню от партнеров." },
               { n: "05", t: "Подарки партнеров", d: "Каждая уходит с welcome box." },
               { n: "06", t: "Новые знакомства", d: "Девушки, с которыми хочется дружить." },
