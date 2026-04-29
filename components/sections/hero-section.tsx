@@ -20,22 +20,8 @@ export function HeroSection() {
           sizes="100vw"
           className="object-cover object-center"
         />
-        {/* Strong dark overlay so text is readable */}
-        <div className="absolute inset-0 bg-brand-blue/60" />
-        {/* Bottom fade for bottom bar */}
-        <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-brand-blue/80 to-transparent" />
-      </div>
-
-      {/* Top header bar */}
-      <div className="absolute inset-x-0 top-0 z-20">
-        <div className="site-shell flex items-center justify-between py-7 sm:py-8">
-          <span className="text-[0.6rem] font-medium uppercase tracking-[0.28em] text-white/60 sm:text-[0.65rem]">
-            EST. Madrid
-          </span>
-          <span className="text-[0.6rem] font-medium uppercase tracking-[0.28em] text-white/60 sm:text-[0.65rem]">
-            Closed Community
-          </span>
-        </div>
+        {/* Elegant gradient overlay — dark at bottom for text, subtle at top */}
+        <div className="absolute inset-0 bg-gradient-to-b from-brand-blue-deep/30 via-brand-blue-deep/50 to-brand-blue-deep/85" />
       </div>
 
       {/* Content — vertically centered */}
@@ -104,7 +90,7 @@ export function HeroSection() {
             Beauty Day · No. 04
           </p>
           <p className="text-[0.6rem] font-medium uppercase tracking-[0.25em] text-white/50 sm:text-[0.65rem]">
-            By Invitation
+            Мест ограничено
           </p>
         </div>
       </motion.div>
