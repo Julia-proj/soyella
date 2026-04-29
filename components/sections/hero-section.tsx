@@ -40,9 +40,9 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="mb-8 text-[0.62rem] font-medium uppercase tracking-[0.4em] text-white/50 sm:mb-10 sm:text-[0.65rem]"
+          className="mb-7 text-[0.6rem] font-medium uppercase tracking-[0.35em] text-white/55 sm:mb-9 sm:text-[0.68rem]"
         >
-          SOY ELLA
+          Закрытое женское комьюнити
         </motion.p>
 
         {/* Main title */}
@@ -50,15 +50,14 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 28 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.4, delay: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="font-serif text-white"
+          className="font-display text-white"
           style={{
-            fontSize: "clamp(2.8rem, 16vw, 12rem)",
-            lineHeight: 1.1,
-            letterSpacing: "-0.01em",
-            fontWeight: 400,
+            fontSize: "clamp(4rem, 22vw, 16rem)",
+            lineHeight: 0.85,
+            letterSpacing: "-0.02em",
           }}
         >
-          Закрытое сообщество женщин в Мадриде
+          Soy Ella.
         </motion.h1>
 
         {/* Subtitle */}
@@ -66,7 +65,7 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 1.1, ease: [0.16, 1, 0.3, 1] }}
-          className="mx-auto mt-10 max-w-lg text-[0.95rem] font-light leading-[1.8] text-white/65 sm:mt-12 sm:max-w-xl sm:text-base md:max-w-2xl md:text-lg"
+          className="mx-auto mt-9 max-w-xs text-sm font-light leading-[1.7] text-white/70 sm:mt-11 sm:max-w-sm sm:text-base md:max-w-md md:text-lg"
         >
           Камерные встречи, экспертный круг и среда, в которой решения рождаются за одним столом.
         </motion.p>
