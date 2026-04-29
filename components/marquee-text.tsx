@@ -3,7 +3,7 @@
 import { motion } from "framer-motion"
 
 interface MarqueeTextProps {
-  variant?: "blue" | "yellow" | "cream"
+  variant?: "blue" | "yellow" | "cream" | "black"
   className?: string
 }
 
@@ -16,6 +16,7 @@ export function MarqueeText({ variant = "blue", className = "" }: MarqueeTextPro
     blue:   "bg-brand-blue text-white",
     yellow: "bg-brand-yellow text-brand-blue",
     cream:  "bg-brand-cream text-brand-blue border-y border-brand-blue/10",
+    black:  "bg-black text-white",
   }
 
   return (

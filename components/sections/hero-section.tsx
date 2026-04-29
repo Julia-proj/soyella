@@ -90,7 +90,7 @@ export function HeroSection() {
             Beauty Day No. 04
           </p>
           <p className="text-[0.6rem] font-medium uppercase tracking-[0.25em] text-white/50 sm:text-[0.65rem]">
-            Мест ограничено
+            Места ограничены
           </p>
         </div>
       </motion.div>

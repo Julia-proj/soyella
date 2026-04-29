@@ -17,7 +17,6 @@ export default function Page() {
     <>
       <main>
         <HeroSection />
-        <MarqueeText variant="blue" />
         <AboutSection />
         <NextEventSection />
         <ExpertsSection />
@@ -25,6 +24,7 @@ export default function Page() {
         <FeaturedOrganizerSection />
         <ForWhoSection />
         <GallerySection />
+        <MarqueeText variant="black" />
         <TestimonialsSection />
         <FinalCtaSection />
       </main>
