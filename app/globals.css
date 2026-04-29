@@ -4,8 +4,8 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: #f3ede1;
-  --foreground: #1a1815;
+  --background: #faf6ef;
+  --foreground: #1e3148;
 
   --card: #ffffff;
   --card-foreground: #1a1815;
@@ -32,21 +32,21 @@
   --input: #d8cdb6;
   --ring: #d4ba6a;
 
-  /* ── Brand tokens — Anna Schmidt inspired editorial palette ─── */
-  --brand-blue:   #2e5f8a;   /* vibrant mid-blue — visible on cream */
-  --brand-blue-deep: #1a3a58; /* deep blue for dark sections */
-  --brand-yellow: #f0d060;   /* bright butter yellow — clear on dark */
-  --brand-yellow-soft: #f5e494; /* soft yellow */
-  --brand-butter: #e0b84a;   /* rich gold-amber */
-  --brand-gold:   #c9a23a;   /* dark gold */
-  --brand-cream:  #f5ede0;   /* warm cream base */
-  --brand-cream-deep: #ece3d0; /* deeper cream */
-  --brand-sand:   #e8dcc8;   /* sand section bg */
+  /* ── Brand tokens — BRIGHT Anna Schmidt palette ─── */
+  --brand-blue:   #2d4a6f;   /* rich navy blue */
+  --brand-blue-deep: #1e3148; /* deep navy for dark sections */
+  --brand-yellow: #f2c744;   /* BRIGHT butter yellow like reference */
+  --brand-yellow-soft: #f7dc7a; /* lighter yellow for section bg */
+  --brand-butter: #e5b830;   /* saturated gold */
+  --brand-gold:   #d4a520;   /* rich gold */
+  --brand-cream:  #faf6ef;   /* clean warm cream */
+  --brand-cream-deep: #f2ebe0; /* slightly deeper cream */
+  --brand-sand:   #f5ede2;   /* clean sand */
   --brand-ink:    #1a1815;   /* warm black */
   --brand-ink-soft: #2a2622;
-  --brand-white:  #fdf8f0;   /* warm off-white */
-  --brand-taupe:  #8a7c66;   /* warm taupe for labels */
-  --footer-accent: #f0d060;
+  --brand-white:  #fefcf8;   /* pure warm white */
+  --brand-taupe:  #7a6c58;   /* warm taupe for labels */
+  --footer-accent: #f2c744;
 
   --radius: 0.125rem;
 }
