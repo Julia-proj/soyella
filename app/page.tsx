@@ -1,3 +1,4 @@
+import { IntroAnimation } from "@/components/intro-animation"
 import { SiteNav } from "@/components/site-nav"
 import { HeroSection } from "@/components/sections/hero-section"
 import { AboutSection } from "@/components/sections/about-section"
@@ -15,6 +16,7 @@ import { MarqueeText } from "@/components/marquee-text"
 export default function Page() {
   return (
     <>
+      <IntroAnimation />
       <main>
         <HeroSection />
         <AboutSection />

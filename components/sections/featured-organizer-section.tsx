@@ -39,7 +39,7 @@ export function FeaturedOrganizerSection() {
                 className="editorial-photo object-cover object-top transition-transform duration-1000 hover:scale-[1.02]"
               />
             </div>
-            <p className="mt-4 text-[0.6rem] font-medium uppercase tracking-[0.18em] text-brand-blue/55 sm:text-[0.65rem]">
+            <p className="mt-4 text-[0.65rem] font-medium uppercase tracking-[0.18em] text-brand-blue/55">
               Елена Александрова · Founder · Keratin Madrid
             </p>
           </motion.div>
@@ -58,7 +58,7 @@ export function FeaturedOrganizerSection() {
               <span className="text-brand-butter">Soy Ella</span>
             </h2>
 
-            <p className="mt-10 max-w-lg text-base leading-relaxed text-brand-ink/65 sm:text-lg md:text-xl">
+            <p className="mt-10 max-w-lg text-base leading-relaxed text-brand-ink/65 sm:text-lg">
               Keratin Madrid является одним из организаторов сообщества Soy Ella. Елена Александрова отвечает за экспертную программу и представит на встрече систему домашнего профессионального восстановления волос для девушек, которые ценят качество и время.
             </p>
 
@@ -67,7 +67,7 @@ export function FeaturedOrganizerSection() {
                 href="https://www.instagram.com/curso_keratin_madrid/"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center justify-center rounded-md bg-brand-blue px-7 py-4 text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-brand-cream transition-all duration-300 hover:bg-brand-blue-deep sm:px-8 sm:text-[0.7rem]"
+                className="inline-flex items-center justify-center rounded-full bg-brand-blue px-7 py-4 text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-brand-cream transition-all duration-300 hover:bg-brand-blue-deep sm:px-8 sm:text-[0.7rem]"
               >
                 Instagram Keratin Madrid
               </a>

@@ -46,7 +46,7 @@ export function HeroSection() {
           transition={{ duration: 1.4, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
           className="font-display uppercase text-white"
           style={{
-            fontSize: "clamp(4rem, 20vw, 16rem)",
+            fontSize: "clamp(4rem, 13vw, 8.5rem)",
             lineHeight: 0.88,
             letterSpacing: "-0.01em",
             fontWeight: 400,

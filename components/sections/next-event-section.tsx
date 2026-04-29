@@ -1,7 +1,13 @@
 "use client"
 
+import dynamic from "next/dynamic"
 import Image from "next/image"
 import { motion } from "framer-motion"
+
+const SparklesCore = dynamic(
+  () => import("@/components/ui/sparkles").then((m) => ({ default: m.SparklesCore })),
+  { ssr: false }
+)
 
 export function NextEventSection() {
   return (
@@ -11,9 +17,18 @@ export function NextEventSection() {
       className="relative overflow-hidden"
     >
       {/* ── TOP ZONE — black ───────────────────────────────────── */}
-      <div className="bg-black text-brand-cream">
+      <div className="relative bg-black text-brand-cream overflow-hidden">
+        <SparklesCore
+          background="transparent"
+          particleColor="#f2c744"
+          particleDensity={50}
+          minSize={0.4}
+          maxSize={1.2}
+          speed={1.2}
+          className="absolute inset-0 z-0 h-full w-full"
+        />
         {/* Desktop: photo left, content right — full-bleed */}
-        <div className="lg:grid lg:grid-cols-[50fr_50fr] lg:items-stretch xl:grid-cols-[52fr_48fr]">
+        <div className="relative z-10 lg:grid lg:grid-cols-[50fr_50fr] lg:items-stretch xl:grid-cols-[52fr_48fr]">
 
           {/* PHOTO COLUMN — left on desktop, hidden on mobile */}
           <motion.figure
@@ -23,7 +38,7 @@ export function NextEventSection() {
             transition={{ duration: 1.4, ease: "easeOut" }}
             className="hidden overflow-hidden lg:block lg:p-5 xl:p-6"
           >
-            <div className="relative h-full min-h-[480px] w-full overflow-hidden rounded-2xl xl:min-h-[520px]">
+            <div className="relative h-full min-h-[390px] w-full overflow-hidden rounded-2xl xl:min-h-[430px]">
               <Image
                 src="/soy-ella/IMG_4920.jpeg"
                 alt="Beauty Day — следующая встреча SOY ELLA"
@@ -39,7 +54,7 @@ export function NextEventSection() {
           </motion.figure>
 
           {/* CONTENT COLUMN — right on desktop, full-width on mobile */}
-          <div className="flex flex-col justify-center gap-6 px-[max(5vw,1.25rem)] py-14 md:px-[max(8vw,3rem)] md:py-16 lg:gap-7 lg:px-10 lg:py-10 xl:px-14 xl:py-12">
+          <div className="flex flex-col justify-center gap-6 px-[max(5vw,1.25rem)] py-14 md:px-[max(8vw,3rem)] md:py-16 lg:gap-5 lg:px-10 lg:py-8 xl:px-14 xl:py-10">
 
             {/* Badge + title */}
             <div>
@@ -58,7 +73,7 @@ export function NextEventSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 1, delay: 0.1 }}
-                className="display-mega mt-6 font-display text-brand-cream sm:mt-8 lg:mt-5"
+                className="mt-6 font-display text-[clamp(3.6rem,6vw,5rem)] leading-[0.92] text-brand-cream sm:mt-8 lg:mt-4"
               >
                 Beauty
                 <br />
@@ -90,7 +105,7 @@ export function NextEventSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="mt-8 flex flex-wrap gap-6 border-t border-white/10 pt-6 sm:gap-10 lg:mt-6 lg:pt-5"
+                className="mt-8 flex flex-wrap gap-6 border-t border-white/10 pt-6 sm:gap-10 lg:mt-5 lg:pt-4"
               >
                 <div>
                   <dt className="text-[0.6rem] font-medium uppercase tracking-[0.22em] text-brand-yellow sm:text-[0.65rem]">
@@ -139,21 +154,28 @@ export function NextEventSection() {
               <p className="mb-5 text-[0.6rem] font-semibold uppercase tracking-[0.2em] text-brand-yellow">
                 Свободных мест осталось мало
               </p>
-              <div className="space-y-1.5">
+              <div className="space-y-3">
                 <a
                   href="https://buy.stripe.com/8x29AT8nv9YfdK48WLdnW1U"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex w-full items-center justify-between rounded-full bg-brand-yellow px-5 py-3 text-brand-blue-deep transition-colors duration-300 hover:bg-brand-yellow-soft lg:py-3"
+                  className="flex w-full items-center justify-between rounded-full bg-brand-yellow px-5 py-3 text-brand-blue-deep transition-colors duration-300 hover:bg-brand-yellow-soft"
                 >
                   <span className="text-[0.7rem] font-bold uppercase tracking-[0.18em]">
                     Оплатить участие
                   </span>
                   <span className="font-display text-2xl font-normal">180 €</span>
                 </a>
+
+                <div className="flex items-center gap-3">
+                  <div className="h-px flex-1 bg-white/15" />
+                  <span className="text-[0.6rem] font-medium uppercase tracking-[0.2em] text-white/35">или</span>
+                  <div className="h-px flex-1 bg-white/15" />
+                </div>
+
                 <div>
                   <a
-                    href="https://buy.stripe.com/8x29AT8nv9YfdK48WLdnW1U"
+                    href="https://buy.stripe.com/00wcN56fn7Q7eO8c8XdnW1T"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex w-full items-center justify-between rounded-full border border-white/20 px-5 py-3 text-brand-cream transition-colors duration-300 hover:border-brand-yellow hover:text-brand-yellow"
@@ -163,8 +185,8 @@ export function NextEventSection() {
                     </span>
                     <span className="font-display text-2xl font-normal">50 €</span>
                   </a>
-                  <p className="mt-2 px-1 text-xs leading-relaxed text-white/45">
-                    Фиксирует твоё место. Остаток 130 € оплачивается ближе к дате.
+                  <p className="mt-2.5 text-[0.6rem] leading-relaxed text-white/35">
+                    Фиксирует место. Остаток 130 € оплатишь ближе к дате.
                   </p>
                 </div>
               </div>
@@ -179,23 +201,29 @@ export function NextEventSection() {
         </div>
       </div>
 
-      {/* ── BOTTOM ZONE — brand-blue ───────────────────────────── */}
-      <div className="bg-brand-blue text-brand-cream">
-        <div className="site-shell py-10 md:py-14 xl:py-16">
+      {/* ── BOTTOM ZONE — light noise ───────────────────────────── */}
+      <div className="relative overflow-hidden" style={{ background: "#b8d8ef" }}>
+        {/* Grain — multiply on light bg = visible dark texture */}
+        <div
+          aria-hidden
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")`,
+            backgroundSize: "180px 180px",
+            opacity: 0.45,
+            mixBlendMode: "multiply",
+          }}
+        />
+        <div className="site-shell relative z-10 py-12 md:py-16 xl:py-20">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1, delay: 0.1 }}
           >
-            <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-              <h3 className="font-serif text-2xl text-brand-cream sm:text-3xl md:text-4xl">
-                Почему стоит быть здесь
-              </h3>
-              <span className="text-[0.65rem] font-semibold uppercase tracking-[0.22em] text-brand-yellow sm:text-[0.7rem]">
-                Beauty Day · 30 мая
-              </span>
-            </div>
+            <h3 className="font-serif text-2xl text-brand-ink sm:text-3xl md:text-4xl">
+              <span className="text-brand-ink/80">Почему стоит быть здесь</span>
+            </h3>
             <ul className="mt-8 grid gap-3 sm:mt-10 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3">
               {[
                 { n: "01", t: "Экспертные выступления", d: "Спикеры уровня, короткие форматы, живые вопросы." },
@@ -205,12 +233,12 @@ export function NextEventSection() {
                 { n: "05", t: "Подарки партнеров", d: "Каждая уходит с welcome box." },
                 { n: "06", t: "Новые знакомства", d: "Девушки, с которыми хочется дружить." },
               ].map((item) => (
-                <li key={item.n} className="border border-brand-cream/15 p-5 transition-colors duration-500 hover:border-brand-yellow/40 sm:p-6">
-                  <span className="text-[0.65rem] font-semibold uppercase tracking-[0.22em] text-brand-yellow sm:text-[0.7rem]">
+                <li key={item.n} className="rounded-2xl border border-black/10 p-5 transition-colors duration-300 hover:border-black/20 hover:bg-black/5 sm:p-6">
+                  <span className="text-[0.65rem] font-semibold uppercase tracking-[0.22em] text-brand-gold">
                     {item.n}
                   </span>
-                  <h4 className="mt-4 font-serif text-lg text-brand-cream sm:text-xl">{item.t}</h4>
-                  <p className="mt-2 text-sm leading-relaxed text-brand-cream/60 sm:text-base">{item.d}</p>
+                  <h4 className="mt-4 font-serif text-lg text-brand-ink sm:text-xl">{item.t}</h4>
+                  <p className="mt-2 text-sm leading-relaxed text-brand-ink/60 sm:text-base">{item.d}</p>
                 </li>
               ))}
             </ul>

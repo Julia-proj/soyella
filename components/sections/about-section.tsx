@@ -76,7 +76,7 @@ export function AboutSection() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="section-number section-number-dark"
+          className="section-number section-number-plain-dark"
         >
           No. 01 / О Soy Ella
         </motion.span>
@@ -112,7 +112,7 @@ export function AboutSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-base leading-relaxed text-brand-ink/65 sm:text-lg md:text-xl"
+            className="text-base leading-relaxed text-brand-ink/65 sm:text-lg"
           >
             Мы создаем среду, в которой легко быть собой, говорить по-настоящему и находить своих. Без пустых знакомств и конкуренции.
           </motion.p>
@@ -121,7 +121,7 @@ export function AboutSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-base leading-relaxed text-brand-ink/65 sm:text-lg md:text-xl"
+            className="text-base leading-relaxed text-brand-ink/65 sm:text-lg"
           >
             Каждая встреча продумана как личный вечер: сильные спикеры, теплый контакт, премиальные партнеры и девушки, с которыми хочется оставаться на связи.
           </motion.p>
@@ -204,10 +204,10 @@ export function AboutSection() {
               transition={{ duration: 0.8, delay: 0.1 * i }}
               className="border-b border-brand-ink/10 py-10 sm:border-b-0 sm:border-r sm:px-8 sm:py-14 sm:last:border-r-0 md:px-10"
             >
-              <span className="text-[0.65rem] font-semibold uppercase tracking-[0.22em] text-brand-butter sm:text-[0.7rem]">
+              <span className="text-[0.65rem] font-semibold uppercase tracking-[0.22em] text-brand-butter">
                 {item.n}
               </span>
-              <h3 className="mt-5 font-serif text-2xl text-brand-blue sm:text-3xl">
+              <h3 className="section-h3 mt-5 font-serif text-brand-blue">
                 {item.t}
               </h3>
               <p className="mt-4 text-base leading-relaxed text-brand-ink/60 sm:text-lg">

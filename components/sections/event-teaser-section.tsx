@@ -4,7 +4,7 @@ export function EventTeaserSection() {
   return (
     <section aria-label="Анонс встречи" className="bg-foreground text-background">
       <div className="site-shell flex flex-col items-center py-16 text-center md:py-20">
-        <p className="text-xs uppercase tracking-[0.25em] text-background/40 mb-4">
+        <p className="text-[0.65rem] uppercase tracking-[0.22em] text-background/40 mb-4">
           30 мая · Мадрид
         </p>
         <h2
@@ -22,3 +22,4 @@ export function EventTeaserSection() {
       </div>
     </section>
   )
+}

@@ -41,7 +41,7 @@ export function ForWhoSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="mt-6 max-w-2xl text-base leading-relaxed text-brand-cream/65 sm:text-lg md:text-xl"
+          className="mt-6 max-w-2xl text-base leading-relaxed text-brand-cream/65 sm:text-lg"
         >
           Если узнаешь себя, значит ты в правильном месте
         </motion.p>
@@ -55,14 +55,14 @@ export function ForWhoSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.05 * i }}
-              className="group bg-brand-blue p-7 transition-colors duration-500 hover:bg-brand-blue-deep sm:p-8 xl:p-9"
+              className="group bg-brand-blue p-7 transition-colors duration-500 hover:bg-brand-blue-deep sm:p-8 lg:p-7 xl:p-8"
             >
               <div className="flex items-start justify-between gap-4">
-                <span className="text-[0.65rem] font-semibold uppercase tracking-[0.22em] text-brand-yellow sm:text-[0.7rem]">
+                <span className="text-[0.65rem] font-semibold uppercase tracking-[0.22em] text-brand-yellow">
                   {item.n}
                 </span>
               </div>
-              <h3 className="mt-5 font-serif text-2xl text-brand-cream sm:text-3xl">
+              <h3 className="section-h3 mt-5 font-serif text-brand-cream">
                 {item.t}
               </h3>
               <p className="mt-4 text-base leading-relaxed text-brand-cream/60 sm:text-lg">

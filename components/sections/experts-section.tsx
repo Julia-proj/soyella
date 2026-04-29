@@ -56,13 +56,13 @@ export function ExpertsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1, delay: 0.1 }}
-          className="mega-title mt-8 max-w-3xl font-display text-brand-blue sm:mt-10"
+          className="mega-title mt-8 max-w-3xl font-display text-brand-blue/80 sm:mt-10"
         >
           Что будет в этот день
         </motion.h2>
 
         {/* Experts grid - larger photos */}
-        <div className="mt-14 grid gap-8 sm:mt-20 sm:grid-cols-2 sm:gap-10 lg:grid-cols-3 xl:grid-cols-5">
+        <div className="mt-14 grid gap-8 sm:mt-16 sm:grid-cols-2 sm:gap-10 lg:grid-cols-3 xl:grid-cols-5">
           {EXPERTS.map((expert, index) => (
             <motion.article
               key={expert.name}
@@ -70,7 +70,9 @@ export function ExpertsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.08 * index }}
-              className="group"
+              className={`group${
+                index === 4 ? " sm:col-span-2 lg:col-span-1" : ""
+              }`}
             >
               {/* Image */}
               <div className="relative aspect-[3/4] overflow-hidden bg-brand-cream sm:aspect-[4/5] xl:aspect-[3/4]">
@@ -86,10 +88,10 @@ export function ExpertsSection() {
 
               {/* Content */}
               <div className="mt-6 sm:mt-7">
-                <span className="text-[0.65rem] font-semibold uppercase tracking-[0.22em] text-brand-ink/45 sm:text-[0.7rem]">
+                <span className="text-[0.65rem] font-semibold uppercase tracking-[0.22em] text-brand-ink/45">
                   {expert.tag}
                 </span>
-                <h3 className="mt-3 font-serif text-2xl text-brand-blue sm:text-3xl">
+                <h3 className="section-h3 mt-3 font-serif text-brand-blue">
                   {expert.name}
                 </h3>
                 <p className="mt-3 text-base leading-relaxed text-brand-ink/65 sm:text-lg">

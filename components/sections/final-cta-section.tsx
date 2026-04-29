@@ -22,7 +22,7 @@ export function FinalCtaSection() {
           alt="Участницы SOY ELLA на встрече в Мадриде"
           fill
           sizes="100vw"
-          className="object-cover object-[center_65%]"
+          className="object-cover object-[center_42%] lg:object-[center_35%]"
           style={{ filter: 'saturate(0.85) contrast(1.05)' }}
         />
       </motion.div>
@@ -69,7 +69,7 @@ export function FinalCtaSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="mt-8 max-w-xl text-base leading-relaxed text-brand-cream/75 sm:text-lg md:text-xl"
+          className="mt-8 max-w-xl text-base leading-relaxed text-brand-cream/75 sm:text-lg"
         >
           Занимай одно из мест на Beauty Day. Без формальностей, просто приходи, знакомься и останься среди своих.
         </motion.p>
