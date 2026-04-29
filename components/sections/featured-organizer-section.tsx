@@ -30,7 +30,7 @@ export function FeaturedOrganizerSection() {
             transition={{ duration: 1 }}
             className="relative"
           >
-            <div className="relative aspect-[4/3] overflow-hidden sm:aspect-[3/2]">
+            <div className="relative aspect-[3/2] overflow-hidden sm:aspect-[3/2]">
               <Image
                 src="/soy-ella/expert-keratin-madrid.jpg"
                 alt="Елена Александрова, Keratin Madrid"
@@ -69,7 +69,7 @@ export function FeaturedOrganizerSection() {
                 href="https://www.instagram.com/curso_keratin_madrid/"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center justify-center bg-brand-blue px-7 py-4 text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-brand-cream transition-all duration-300 hover:bg-brand-blue-deep sm:px-8 sm:text-[0.7rem]"
+                className="inline-flex items-center justify-center rounded-md bg-brand-blue px-7 py-4 text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-brand-cream transition-all duration-300 hover:bg-brand-blue-deep sm:px-8 sm:text-[0.7rem]"
               >
                 Instagram Keratin Madrid
               </a>
@@ -77,7 +77,7 @@ export function FeaturedOrganizerSection() {
                 href="https://www.instagram.com/curso_keratin_madrid/"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center justify-center border border-brand-blue/30 bg-transparent px-7 py-4 text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-brand-blue transition-all duration-300 hover:border-brand-blue hover:bg-brand-blue hover:text-brand-cream sm:px-8 sm:text-[0.7rem]"
+                className="inline-flex items-center justify-center rounded-full border border-brand-blue/30 bg-transparent px-7 py-4 text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-brand-blue transition-all duration-300 hover:border-brand-blue hover:bg-brand-blue hover:text-brand-cream sm:px-8 sm:text-[0.7rem]"
               >
                 В доступе скоро
               </a>

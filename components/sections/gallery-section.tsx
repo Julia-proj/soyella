@@ -49,7 +49,7 @@ export function GallerySection() {
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.8, delay: 0.08 * index }}
               className={`group relative overflow-hidden bg-brand-sand ${
-                index === 0 ? "aspect-[3/4] md:col-span-2 md:row-span-2 md:aspect-square" : 
+                index === 0 ? "aspect-[3/4] md:col-span-2 md:row-span-2 md:aspect-square" :
                 index === 5 ? "aspect-[3/4] md:col-span-1 md:aspect-square" :
                 "aspect-[4/5] sm:aspect-square"
               }`}

@@ -83,37 +83,66 @@ export function AboutSection() {
         </div>
 
         {/* Image grid */}
-        <div className="mt-16 grid gap-4 sm:mt-24 sm:gap-6 lg:grid-cols-2">
+        <div className="mt-16 grid gap-4 sm:mt-24 sm:gap-5 lg:grid-cols-12 lg:gap-5">
+          {/* Left: organizers — portrait */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1, delay: 0.2 }}
-            className="relative aspect-[4/3] overflow-hidden sm:aspect-[16/10]"
+            className="relative aspect-[3/2] overflow-hidden lg:col-span-5 lg:aspect-[3/4]"
           >
             <Image
               src="/soy-ella/hero.jpg"
-              alt="Женщины общаются на встрече SOY ELLA"
+              alt="Организаторы SOY ELLA"
               fill
-              sizes="(min-width: 1024px) 50vw, 100vw"
-              className="editorial-photo object-cover object-[center_40%] transition-transform duration-1000 hover:scale-[1.02]"
+              sizes="(min-width: 1024px) 42vw, 100vw"
+              className="editorial-photo object-cover object-[center_38%] transition-transform duration-1000 hover:scale-[1.02]"
             />
+            {/* Founders badge */}
+            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 to-transparent pb-4 pl-4 pt-10 sm:pb-5 sm:pl-5">
+              <p className="text-[0.55rem] font-semibold uppercase tracking-[0.28em] text-brand-yellow sm:text-[0.6rem]">
+                Founders
+              </p>
+              <p className="mt-1 font-serif text-sm italic text-white/90 sm:text-base">
+                Silvia & Elena
+              </p>
+            </div>
           </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1, delay: 0.3 }}
-            className="relative aspect-[4/3] overflow-hidden sm:aspect-[16/10]"
-          >
-            <Image
-              src="/soy-ella/IMG_4749.PNG"
-              alt="Детали премиального события SOY ELLA"
-              fill
-              sizes="(min-width: 1024px) 50vw, 100vw"
-              className="editorial-photo-warm object-cover object-[center_35%] transition-transform duration-1000 hover:scale-[1.02]"
-            />
-          </motion.div>
+
+          {/* Right: community + detail — 2-col on mobile, stacked on desktop */}
+          <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:col-span-7 lg:flex lg:flex-col lg:gap-5">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1, delay: 0.3 }}
+              className="relative aspect-[1/1] overflow-hidden lg:aspect-[4/3]"
+            >
+              <Image
+                src="/soy-ella/girls.jpg"
+                alt="Участницы SOY ELLA — женское комьюнити в Мадриде"
+                fill
+                sizes="(min-width: 1024px) 58vw, 50vw"
+                className="editorial-photo object-cover object-[center_25%] transition-transform duration-1000 hover:scale-[1.02]"
+              />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1, delay: 0.4 }}
+              className="relative aspect-[1/1] overflow-hidden lg:aspect-[4/3]"
+            >
+              <Image
+                src="/soy-ella/IMG_4749.PNG"
+                alt="Детали встречи SOY ELLA"
+                fill
+                sizes="(min-width: 1024px) 58vw, 50vw"
+                className="editorial-photo-warm object-cover object-center transition-transform duration-1000 hover:scale-[1.02]"
+              />
+            </motion.div>
+          </div>
         </div>
 
         {/* Principles */}

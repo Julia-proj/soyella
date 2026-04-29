@@ -75,8 +75,8 @@ export function SiteNav() {
             className={cn(
               "hidden lg:inline-flex px-6 py-2.5 text-[0.6rem] font-semibold uppercase tracking-[0.12em] transition-all duration-300",
               scrolled
-                ? "border border-brand-ink bg-brand-ink text-white hover:bg-transparent hover:text-brand-ink"
-                : "border border-white/30 text-white hover:bg-white hover:text-brand-ink",
+                ? "rounded-md border border-brand-ink bg-brand-ink text-white hover:bg-transparent hover:text-brand-ink"
+                : "rounded-md border border-white/30 text-white hover:bg-white hover:text-brand-ink",
             )}
           >
             Занять место
@@ -150,7 +150,7 @@ export function SiteNav() {
         <a
           href="#event"
           onClick={() => setOpen(false)}
-          className="mt-10 inline-flex w-full items-center justify-center border border-brand-ink bg-brand-ink py-4 text-[0.65rem] font-semibold uppercase tracking-[0.12em] text-white transition-colors hover:bg-transparent hover:text-brand-ink"
+          className="mt-10 inline-flex w-full items-center justify-center rounded-md border border-brand-ink bg-brand-ink py-4 text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-white transition-colors hover:bg-transparent hover:text-brand-ink"
         >
           Занять место
         </a>

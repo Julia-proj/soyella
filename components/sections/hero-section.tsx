@@ -20,19 +20,21 @@ export function HeroSection() {
           sizes="100vw"
           className="object-cover object-center"
         />
-        {/* Elegant gradient overlay — dark at bottom for text, subtle at top */}
-        <div className="absolute inset-0 bg-gradient-to-b from-brand-blue-deep/30 via-brand-blue-deep/50 to-brand-blue-deep/85" />
+        {/* Bottom gradient — darkest where text lives */}
+        <div className="absolute inset-0 bg-gradient-to-t from-brand-blue-deep/90 via-brand-blue-deep/35 to-transparent" />
+        {/* Left gradient — extra readability for left-aligned text */}
+        <div className="absolute inset-0 bg-gradient-to-r from-brand-blue-deep/45 to-transparent" />
       </div>
 
-      {/* Content — vertically centered */}
-      <div className="relative z-10 flex min-h-[100svh] flex-col items-center justify-center px-4 pb-28 pt-24 text-center sm:px-8 sm:pb-36">
+      {/* Content — bottom left */}
+      <div className="relative z-10 flex min-h-[100svh] flex-col items-start justify-end px-5 pb-32 pt-24 text-left sm:px-10 sm:pb-36 lg:px-20">
 
         {/* Eyebrow */}
         <motion.p
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-          className="mb-8 text-[0.65rem] font-semibold uppercase tracking-[0.35em] text-brand-yellow sm:mb-10 sm:text-[0.7rem]"
+          className="mb-6 text-[0.65rem] font-semibold uppercase tracking-[0.35em] text-brand-yellow sm:mb-8 sm:text-[0.7rem]"
         >
           Madrid
         </motion.p>
@@ -58,7 +60,7 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, delay: 0.9, ease: [0.16, 1, 0.3, 1] }}
-          className="mx-auto mt-10 max-w-sm text-base font-light leading-relaxed text-white/80 sm:mt-12 sm:max-w-md sm:text-lg"
+          className="mt-8 max-w-sm text-base font-light leading-relaxed text-white/80 sm:mt-10 sm:max-w-md sm:text-lg"
         >
           Закрытое женское комьюнити в Мадриде для девушек, которые выбирают рост, качество жизни и сильное окружение.
         </motion.p>
@@ -69,9 +71,9 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 1.1, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-12 inline-flex items-center gap-3 bg-brand-yellow px-8 py-4 text-[0.65rem] font-semibold uppercase tracking-[0.22em] text-brand-blue transition-all duration-300 hover:bg-white sm:mt-14 sm:px-10"
+          className="mt-10 inline-flex items-center gap-3 rounded-md bg-brand-yellow px-8 py-4 text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-brand-blue transition-all duration-300 hover:bg-white sm:mt-12 sm:px-10"
         >
-          Следующая встреча
+          Следующая встреча →
         </motion.a>
       </div>
 

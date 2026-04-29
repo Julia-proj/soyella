@@ -16,7 +16,7 @@ export function StickyMobileCta() {
   return (
     <div
       className={cn(
-        "fixed inset-x-0 bottom-0 z-50 bg-brand-ink/95 backdrop-blur-sm text-white transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] lg:hidden",
+        "fixed inset-x-0 bottom-0 z-50 bg-brand-blue text-white transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] lg:hidden",
         visible ? "translate-y-0" : "translate-y-full",
       )}
       style={{ paddingBottom: "env(safe-area-inset-bottom, 0px)" }}
@@ -32,7 +32,7 @@ export function StickyMobileCta() {
         </div>
         <a
           href="#event"
-          className="inline-flex items-center justify-center bg-white px-5 py-2.5 text-[0.55rem] font-semibold uppercase tracking-[0.12em] text-brand-ink transition-colors hover:bg-brand-butter sm:px-6 sm:py-3 sm:text-[0.6rem]"
+          className="inline-flex items-center justify-center rounded-md bg-white px-5 py-2.5 text-[0.55rem] font-semibold uppercase tracking-[0.2em] text-brand-ink transition-colors hover:bg-brand-butter sm:px-6 sm:py-3 sm:text-[0.6rem]"
         >
           Занять место
         </a>

@@ -85,13 +85,13 @@ export function FinalCtaSection() {
             href="https://buy.stripe.com/8x29AT8nv9YfdK48WLdnW1"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center bg-brand-yellow px-8 py-4 text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-brand-blue transition-all duration-300 hover:bg-brand-cream sm:px-10 sm:text-[0.7rem]"
+            className="inline-flex items-center justify-center rounded-md bg-brand-yellow px-8 py-4 text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-brand-blue transition-all duration-300 hover:bg-brand-cream sm:px-10 sm:text-[0.7rem]"
           >
-            Занять место, 180€
+            Занять место, 180€ →
           </a>
           <a
             href="#about"
-            className="inline-flex items-center justify-center border border-brand-cream/30 bg-transparent px-8 py-4 text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-brand-cream transition-all duration-300 hover:bg-brand-cream hover:text-brand-blue sm:px-10 sm:text-[0.7rem]"
+            className="inline-flex items-center justify-center rounded-full border border-brand-cream/30 bg-transparent px-8 py-4 text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-brand-cream transition-all duration-300 hover:bg-brand-cream hover:text-brand-blue sm:px-10 sm:text-[0.7rem]"
           >
             Сначала узнать больше
           </a>

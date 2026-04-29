@@ -4,13 +4,13 @@ import { motion } from "framer-motion"
 
 interface MarqueeTextProps {
   variant?: "blue" | "yellow" | "cream" | "black"
+  text?: string
   className?: string
 }
 
-export function MarqueeText({ variant = "blue", className = "" }: MarqueeTextProps) {
-  const word = "Soy Ella"
-  const separator = "   ·   "
-  const repeated = Array(12).fill(word + separator).join("")
+export function MarqueeText({ variant = "blue", text, className = "" }: MarqueeTextProps) {
+  const phrase = text ?? "Soy Ella"
+  const repeated = Array(10).fill(phrase + "   ·   ").join("")
 
   const styles: Record<string, string> = {
     blue:   "bg-brand-blue text-white",
@@ -30,14 +30,14 @@ export function MarqueeText({ variant = "blue", className = "" }: MarqueeTextPro
         transition={{
           repeat: Infinity,
           repeatType: "loop",
-          duration: 28,
+          duration: 35,
           ease: "linear",
         }}
       >
         {[0, 1].map((i) => (
           <span
             key={i}
-            className="font-display text-xl uppercase tracking-[0.25em] sm:text-2xl md:text-3xl lg:text-4xl"
+            className="font-display text-2xl uppercase tracking-[0.3em] sm:text-3xl md:text-4xl lg:text-5xl"
           >
             {repeated}
           </span>

@@ -20,11 +20,10 @@ export default function Page() {
         <AboutSection />
         <NextEventSection />
         <ExpertsSection />
-        <MarqueeText variant="cream" />
         <FeaturedOrganizerSection />
         <ForWhoSection />
         <GallerySection />
-        <MarqueeText variant="black" />
+        <MarqueeText variant="black" text="30 мая · Beauty Day · Madrid" />
         <TestimonialsSection />
         <FinalCtaSection />
       </main>
