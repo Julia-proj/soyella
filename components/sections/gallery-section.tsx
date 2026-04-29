@@ -54,7 +54,7 @@ export function GallerySection() {
                 src={img.src}
                 alt={img.alt}
                 fill
-                sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 50vw"
+                  sizes="(min-width: 768px) 25vw, 50vw"
                 className="object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
                 style={{ filter: "saturate(0.94) contrast(1.02)" }}
               />

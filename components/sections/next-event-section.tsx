@@ -13,7 +13,7 @@ export function NextEventSection() {
       {/* ── TOP ZONE — black ───────────────────────────────────── */}
       <div className="bg-black text-brand-cream">
         {/* Desktop: photo left, content right — full-bleed */}
-        <div className="lg:grid lg:min-h-[560px] lg:grid-cols-[50fr_50fr] lg:items-stretch xl:grid-cols-[52fr_48fr]">
+        <div className="lg:grid lg:grid-cols-[50fr_50fr] lg:items-stretch xl:grid-cols-[52fr_48fr]">
 
           {/* PHOTO COLUMN — left on desktop, hidden on mobile */}
           <motion.figure
@@ -21,14 +21,14 @@ export function NextEventSection() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 1.4, ease: "easeOut" }}
-            className="hidden overflow-hidden lg:block lg:p-6 xl:p-8"
+            className="hidden overflow-hidden lg:block lg:p-5 xl:p-6"
           >
-            <div className="relative h-full w-full overflow-hidden rounded-2xl">
+            <div className="relative h-full min-h-[480px] w-full overflow-hidden rounded-2xl xl:min-h-[520px]">
               <Image
                 src="/soy-ella/IMG_4920.jpeg"
                 alt="Beauty Day — следующая встреча SOY ELLA"
                 fill
-                sizes="(min-width: 1024px) 58vw, 100vw"
+                sizes="(min-width: 1024px) 52vw, 100vw"
                 className="editorial-photo-warm object-cover object-center"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-black/20" />
@@ -39,7 +39,7 @@ export function NextEventSection() {
           </motion.figure>
 
           {/* CONTENT COLUMN — right on desktop, full-width on mobile */}
-          <div className="flex flex-col gap-8 px-[max(5vw,1.25rem)] py-16 md:px-[max(8vw,3rem)] md:py-20 lg:gap-10 lg:px-12 lg:py-14 xl:px-16 xl:py-16">
+          <div className="flex flex-col justify-center gap-6 px-[max(5vw,1.25rem)] py-14 md:px-[max(8vw,3rem)] md:py-16 lg:gap-7 lg:px-10 lg:py-10 xl:px-14 xl:py-12">
 
             {/* Badge + title */}
             <div>
@@ -58,7 +58,7 @@ export function NextEventSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 1, delay: 0.1 }}
-                className="display-mega mt-8 font-display text-brand-cream sm:mt-10"
+                className="display-mega mt-6 font-display text-brand-cream sm:mt-8 lg:mt-5"
               >
                 Beauty
                 <br />
@@ -90,25 +90,25 @@ export function NextEventSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="mt-8 flex flex-wrap gap-6 border-t border-white/10 pt-8 sm:gap-10"
+                className="mt-8 flex flex-wrap gap-6 border-t border-white/10 pt-6 sm:gap-10 lg:mt-6 lg:pt-5"
               >
                 <div>
                   <dt className="text-[0.6rem] font-medium uppercase tracking-[0.22em] text-brand-yellow sm:text-[0.65rem]">
                     Дата
                   </dt>
-                  <dd className="mt-1.5 font-serif text-lg text-brand-cream sm:text-xl">30 мая</dd>
+                  <dd className="mt-1 font-serif text-base text-brand-cream sm:text-lg lg:text-base">30 мая</dd>
                 </div>
                 <div>
                   <dt className="text-[0.6rem] font-medium uppercase tracking-[0.22em] text-brand-yellow sm:text-[0.65rem]">
                     Локация
                   </dt>
-                  <dd className="mt-1.5 font-serif text-lg text-brand-cream sm:text-xl">Madrid</dd>
+                  <dd className="mt-1 font-serif text-base text-brand-cream sm:text-lg lg:text-base">Madrid</dd>
                 </div>
                 <div>
                   <dt className="text-[0.6rem] font-medium uppercase tracking-[0.22em] text-brand-yellow sm:text-[0.65rem]">
                     Места
                   </dt>
-                  <dd className="mt-1.5 font-serif text-lg text-brand-cream sm:text-xl">Ограничены</dd>
+                  <dd className="mt-1 font-serif text-base text-brand-cream sm:text-lg lg:text-base">Ограничены</dd>
                 </div>
               </motion.dl>
             </div>
@@ -123,7 +123,7 @@ export function NextEventSection() {
               <span className="text-[0.65rem] font-semibold uppercase tracking-[0.25em] text-brand-yellow">
                 Участие включает
               </span>
-              <p className="mt-4 text-base leading-relaxed text-brand-cream/75 sm:text-lg">
+              <p className="mt-3 text-base leading-relaxed text-brand-cream/75 lg:text-sm">
                 Welcome box, премиальные закуски и напитки, все выступления экспертов, нетворкинг и знакомства с участницами.
               </p>
             </motion.div>
@@ -134,7 +134,7 @@ export function NextEventSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.35 }}
-              className="border-t border-white/10 pt-8"
+              className="border-t border-white/10 pt-6"
             >
               <p className="mb-5 text-[0.6rem] font-semibold uppercase tracking-[0.2em] text-brand-yellow">
                 Свободных мест осталось мало
@@ -144,7 +144,7 @@ export function NextEventSection() {
                   href="https://buy.stripe.com/8x29AT8nv9YfdK48WLdnW1U"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex w-full items-center justify-between rounded-full bg-brand-yellow px-5 py-4 text-brand-blue-deep transition-colors duration-300 hover:bg-brand-yellow-soft"
+                  className="flex w-full items-center justify-between rounded-full bg-brand-yellow px-5 py-3 text-brand-blue-deep transition-colors duration-300 hover:bg-brand-yellow-soft lg:py-3"
                 >
                   <span className="text-[0.7rem] font-bold uppercase tracking-[0.18em]">
                     Оплатить участие
@@ -156,7 +156,7 @@ export function NextEventSection() {
                     href="https://buy.stripe.com/8x29AT8nv9YfdK48WLdnW1U"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex w-full items-center justify-between rounded-full border border-white/20 px-5 py-4 text-brand-cream transition-colors duration-300 hover:border-brand-yellow hover:text-brand-yellow"
+                    className="flex w-full items-center justify-between rounded-full border border-white/20 px-5 py-3 text-brand-cream transition-colors duration-300 hover:border-brand-yellow hover:text-brand-yellow"
                   >
                     <span className="text-[0.7rem] font-semibold uppercase tracking-[0.18em]">
                       Забронировать место
@@ -181,7 +181,7 @@ export function NextEventSection() {
 
       {/* ── BOTTOM ZONE — brand-blue ───────────────────────────── */}
       <div className="bg-brand-blue text-brand-cream">
-        <div className="site-shell py-14 md:py-20 xl:py-24">
+        <div className="site-shell py-10 md:py-14 xl:py-16">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}

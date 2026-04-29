@@ -53,7 +53,7 @@ export function TestimonialsSection() {
           Что говорят участницы
         </motion.h2>
 
-        <ul className="mt-14 grid gap-x-8 gap-y-0 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4 lg:gap-x-10">
+        <ul className="mt-12 grid gap-x-8 gap-y-0 sm:mt-16 sm:grid-cols-2 sm:gap-y-6 lg:mt-14 lg:grid-cols-4 lg:gap-x-10 lg:gap-y-0">
           {REVIEWS.map((review, index) => (
             <motion.li
               key={review.name}

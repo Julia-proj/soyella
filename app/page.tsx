@@ -23,7 +23,7 @@ export default function Page() {
         <FeaturedOrganizerSection />
         <ForWhoSection />
         <GallerySection />
-        <MarqueeText variant="black" text="30 мая · Beauty Day · Madrid" />
+        <MarqueeText variant="black" text="NETWORKING · ENERGÍA · BELLEZA · CRECIMIENTO" />
         <TestimonialsSection />
         <FinalCtaSection />
       </main>

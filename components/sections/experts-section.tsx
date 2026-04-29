@@ -70,7 +70,7 @@ export function ExpertsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.08 * index }}
-              className={`group${index === 0 ? " lg:col-span-2 xl:col-span-1" : ""}`}
+              className="group"
             >
               {/* Image */}
               <div className="relative aspect-[3/4] overflow-hidden bg-brand-cream sm:aspect-[4/5] xl:aspect-[3/4]">
