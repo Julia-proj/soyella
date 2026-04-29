@@ -8,7 +8,7 @@ export function NextEventSection() {
     <section
       id="event"
       aria-label="Следующая встреча SOY ELLA"
-      className="section-pad relative overflow-hidden bg-brand-ink text-white"
+      className="section-pad relative overflow-hidden bg-brand-blue text-brand-cream"
     >
       <div className="site-shell">
         {/* Section number */}
@@ -17,7 +17,7 @@ export function NextEventSection() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-[0.6rem] font-medium uppercase tracking-[0.2em] text-white/40 sm:text-[0.65rem]"
+          className="section-number section-number-light"
         >
           No. 02 / Следующая встреча
         </motion.span>
@@ -28,11 +28,11 @@ export function NextEventSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1, delay: 0.1 }}
-          className="mt-6 font-display text-[clamp(3rem,12vw,8rem)] leading-[0.85] tracking-[-0.02em] text-white sm:mt-8"
+          className="display-mega mt-8 font-display text-brand-cream sm:mt-10"
         >
           Beauty
           <br />
-          <span className="text-brand-butter">Day.</span>
+          <span className="text-brand-yellow">Day.</span>
         </motion.h2>
 
         {/* Metadata */}
@@ -41,31 +41,31 @@ export function NextEventSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="mt-10 flex flex-wrap gap-8 border-y border-white/10 py-6 sm:mt-14 sm:gap-12 sm:py-8"
+          className="mt-12 flex flex-wrap gap-8 border-y border-brand-cream/15 py-8 sm:mt-16 sm:gap-14 sm:py-10"
         >
           <div>
-            <dt className="text-[0.55rem] font-medium uppercase tracking-[0.2em] text-white/40 sm:text-[0.6rem]">
+            <dt className="text-[0.6rem] font-medium uppercase tracking-[0.22em] text-brand-yellow sm:text-[0.65rem]">
               Дата
             </dt>
-            <dd className="mt-1 font-serif text-lg text-white sm:text-xl">30 мая</dd>
+            <dd className="mt-2 font-serif text-xl text-brand-cream sm:text-2xl">30 мая</dd>
           </div>
           <div>
-            <dt className="text-[0.55rem] font-medium uppercase tracking-[0.2em] text-white/40 sm:text-[0.6rem]">
+            <dt className="text-[0.6rem] font-medium uppercase tracking-[0.22em] text-brand-yellow sm:text-[0.65rem]">
               Локация
             </dt>
-            <dd className="mt-1 font-serif text-lg text-white sm:text-xl">Madrid</dd>
+            <dd className="mt-2 font-serif text-xl text-brand-cream sm:text-2xl">Madrid</dd>
           </div>
           <div>
-            <dt className="text-[0.55rem] font-medium uppercase tracking-[0.2em] text-white/40 sm:text-[0.6rem]">
+            <dt className="text-[0.6rem] font-medium uppercase tracking-[0.22em] text-brand-yellow sm:text-[0.65rem]">
               Мест
             </dt>
-            <dd className="mt-1 font-serif text-lg text-white sm:text-xl">Ограничено</dd>
+            <dd className="mt-2 font-serif text-xl text-brand-cream sm:text-2xl">Ограничено</dd>
           </div>
           <div>
-            <dt className="text-[0.55rem] font-medium uppercase tracking-[0.2em] text-white/40 sm:text-[0.6rem]">
+            <dt className="text-[0.6rem] font-medium uppercase tracking-[0.22em] text-brand-yellow sm:text-[0.65rem]">
               Формат
             </dt>
-            <dd className="mt-1 font-serif text-lg text-white sm:text-xl">Closed</dd>
+            <dd className="mt-2 font-serif text-xl text-brand-cream sm:text-2xl">Closed</dd>
           </div>
         </motion.dl>
 
@@ -88,7 +88,7 @@ export function NextEventSection() {
                 className="editorial-photo-warm object-cover object-center"
               />
             </div>
-            <figcaption className="mt-3 text-[0.6rem] font-medium uppercase tracking-[0.15em] text-white/30 sm:text-[0.65rem]">
+            <figcaption className="mt-3 text-[0.6rem] font-medium uppercase tracking-[0.15em] text-brand-cream/40 sm:text-[0.65rem]">
               Beauty Day · Madrid
             </figcaption>
           </motion.figure>
@@ -99,16 +99,16 @@ export function NextEventSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1, delay: 0.3 }}
-            className="flex flex-col justify-between bg-white/[0.03] p-6 sm:p-8 lg:col-span-5"
+            className="flex flex-col justify-between bg-brand-blue-deep/40 p-6 sm:p-8 lg:col-span-5"
           >
             <div>
-              <span className="text-[0.6rem] font-semibold uppercase tracking-[0.2em] text-brand-butter sm:text-[0.65rem]">
+              <span className="text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-brand-yellow sm:text-[0.65rem]">
                 Участие
               </span>
-              <p className="mt-5 text-sm leading-relaxed text-white/65 sm:mt-6 sm:text-base">
+              <p className="mt-5 text-base leading-relaxed text-brand-cream/75 sm:mt-6 sm:text-lg">
                 Включено: welcome box, премиальные закуски и напитки, все выступления экспертов, нетворкинг и знакомства с участницами.
               </p>
-              <p className="mt-4 text-[0.6rem] font-medium uppercase tracking-[0.15em] text-white/40 sm:text-[0.65rem]">
+              <p className="mt-4 text-[0.6rem] font-medium uppercase tracking-[0.15em] text-brand-cream/45 sm:text-[0.65rem]">
                 Безопасная оплата через Stripe
               </p>
             </div>
@@ -119,12 +119,12 @@ export function NextEventSection() {
                 href="https://buy.stripe.com/YOUR_FULL_PAYMENT_LINK"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex w-full items-center justify-between bg-brand-butter px-6 py-5 transition-all duration-300 hover:bg-white sm:px-8"
+                className="group flex w-full items-center justify-between bg-brand-yellow px-6 py-5 transition-all duration-300 hover:bg-brand-cream sm:px-8"
               >
-                <span className="text-[0.65rem] font-semibold uppercase tracking-[0.12em] text-brand-ink sm:text-[0.7rem]">
+                <span className="text-[0.65rem] font-semibold uppercase tracking-[0.15em] text-brand-blue sm:text-[0.7rem]">
                   Оплатить участие
                 </span>
-                <span className="font-serif text-xl text-brand-ink sm:text-2xl">195 €</span>
+                <span className="font-serif text-xl text-brand-blue sm:text-2xl">195 €</span>
               </a>
               
               {/* Reservation option */}
@@ -132,12 +132,12 @@ export function NextEventSection() {
                 href="https://buy.stripe.com/YOUR_RESERVATION_LINK"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex w-full items-center justify-between border border-white/15 px-6 py-5 transition-all duration-300 hover:border-white/30 hover:bg-white/5 sm:px-8"
+                className="group flex w-full items-center justify-between border border-brand-cream/25 px-6 py-5 transition-all duration-300 hover:border-brand-yellow hover:bg-brand-blue-deep/40 sm:px-8"
               >
-                <span className="text-[0.65rem] font-semibold uppercase tracking-[0.12em] text-white sm:text-[0.7rem]">
+                <span className="text-[0.65rem] font-semibold uppercase tracking-[0.15em] text-brand-cream sm:text-[0.7rem]">
                   Бронирование места
                 </span>
-                <span className="font-serif text-xl text-white sm:text-2xl">50 €</span>
+                <span className="font-serif text-xl text-brand-cream sm:text-2xl">50 €</span>
               </a>
             </div>
           </motion.div>
@@ -149,29 +149,29 @@ export function NextEventSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1, delay: 0.3 }}
-          className="mt-20 border-t border-white/15 pt-14 sm:mt-28 sm:pt-20"
+          className="mt-24 border-t border-brand-cream/15 pt-16 sm:mt-32 sm:pt-24"
         >
-          <span className="text-[0.6rem] font-medium uppercase tracking-[0.2em] text-brand-butter sm:text-[0.65rem]">
+          <span className="text-[0.65rem] font-semibold uppercase tracking-[0.22em] text-brand-yellow sm:text-[0.7rem]">
             В программе
           </span>
-          <h3 className="mt-4 font-serif text-2xl text-white sm:mt-5 sm:text-3xl md:text-4xl">
+          <h3 className="mt-5 font-serif text-3xl text-brand-cream sm:mt-6 sm:text-4xl md:text-5xl">
             Что ждет на Beauty Day
           </h3>
-          <ul className="mt-8 grid gap-4 sm:mt-10 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3">
+          <ul className="mt-10 grid gap-5 sm:mt-14 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
             {[
               { n: "01", t: "Экспертные выступления", d: "Спикеры уровня, короткие форматы, живые вопросы." },
               { n: "02", t: "Beauty инновации", d: "Новые подходы к уходу, волосам и коже." },
-              { n: "03", t: "Нетворкинг", d: "Знакомства, которые остаются не на один веч��р." },
+              { n: "03", t: "Нетворкинг", d: "Знакомства, которые остаются не на один вечер." },
               { n: "04", t: "Закуски и напитки", d: "Премиальное меню от партнеров." },
               { n: "05", t: "Подарки партнеров", d: "Каждая уходит с welcome box." },
               { n: "06", t: "Новые знакомства", d: "Девушки, с которыми хочется дружить." },
             ].map((item) => (
-              <li key={item.n} className="border border-white/10 p-5 sm:p-6">
-                <span className="text-[0.6rem] font-medium uppercase tracking-[0.2em] text-brand-butter sm:text-[0.65rem]">
+              <li key={item.n} className="border border-brand-cream/15 p-6 transition-colors duration-500 hover:border-brand-yellow/40 sm:p-7">
+                <span className="text-[0.65rem] font-semibold uppercase tracking-[0.22em] text-brand-yellow sm:text-[0.7rem]">
                   {item.n}
                 </span>
-                <h4 className="mt-4 font-serif text-lg text-white sm:text-xl">{item.t}</h4>
-                <p className="mt-2 text-sm leading-relaxed text-white/55">{item.d}</p>
+                <h4 className="mt-5 font-serif text-xl text-brand-cream sm:text-2xl">{item.t}</h4>
+                <p className="mt-3 text-base leading-relaxed text-brand-cream/65">{item.d}</p>
               </li>
             ))}
           </ul>

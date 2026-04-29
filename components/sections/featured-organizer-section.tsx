@@ -7,7 +7,7 @@ export function FeaturedOrganizerSection() {
   return (
     <section
       aria-label="Один из организаторов встречи - Keratin Madrid"
-      className="section-pad relative overflow-hidden bg-brand-cream text-brand-ink"
+      className="section-pad relative overflow-hidden bg-brand-cream text-brand-blue"
     >
       <div className="site-shell">
         {/* Section number */}
@@ -16,7 +16,7 @@ export function FeaturedOrganizerSection() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="section-number"
+          className="section-number section-number-dark"
         >
           No. 04 / Co-organizer
         </motion.span>
@@ -39,7 +39,7 @@ export function FeaturedOrganizerSection() {
                 className="editorial-photo object-cover object-top transition-transform duration-1000 hover:scale-[1.02]"
               />
             </div>
-            <p className="mt-3 text-[0.6rem] font-medium uppercase tracking-[0.15em] text-brand-ink/40 sm:text-[0.65rem]">
+            <p className="mt-4 text-[0.6rem] font-medium uppercase tracking-[0.18em] text-brand-blue/55 sm:text-[0.65rem]">
               Елена Александрова · Founder · Keratin Madrid
             </p>
           </motion.div>
@@ -52,24 +52,24 @@ export function FeaturedOrganizerSection() {
             transition={{ duration: 1, delay: 0.1 }}
             className="flex flex-col justify-center"
           >
-            <h2 className="font-display text-[clamp(2rem,6vw,4rem)] leading-[0.9] tracking-[-0.01em] text-brand-ink">
+            <h2 className="display-mega font-display text-brand-blue">
               Keratin
               <br />
               Madrid
-              <span className="text-brand-taupe"> × </span>
-              <span className="text-brand-taupe">Soy Ella</span>
+              <span className="text-brand-butter"> × </span>
+              <span className="text-brand-butter">Soy Ella</span>
             </h2>
 
-            <p className="mt-8 max-w-lg text-base leading-relaxed text-brand-ink/70 sm:text-lg">
+            <p className="mt-10 max-w-lg text-base leading-relaxed text-brand-blue/75 sm:text-lg md:text-xl">
               Keratin Madrid является одним из организаторов сообщества Soy Ella. Елена Александрова отвечает за экспертную программу и приводит на встречи систему домашнего восстановления волос для девушек, которые ценят качество и время.
             </p>
 
-            <div className="mt-8 flex flex-wrap gap-3 sm:mt-10">
+            <div className="mt-10 flex flex-wrap gap-3 sm:mt-12">
               <a
                 href="https://www.instagram.com/keratin_madrid/"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center justify-center border border-brand-ink bg-brand-ink px-6 py-3.5 text-[0.65rem] font-semibold uppercase tracking-[0.15em] text-white transition-all duration-300 hover:bg-transparent hover:text-brand-ink sm:px-8 sm:text-[0.7rem]"
+                className="inline-flex items-center justify-center bg-brand-blue px-7 py-4 text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-brand-cream transition-all duration-300 hover:bg-brand-blue-deep sm:px-8 sm:text-[0.7rem]"
               >
                 Instagram Keratin Madrid
               </a>
@@ -77,31 +77,31 @@ export function FeaturedOrganizerSection() {
                 href="https://www.instagram.com/curso_keratin_madrid/"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center justify-center border border-brand-ink/20 bg-transparent px-6 py-3.5 text-[0.65rem] font-semibold uppercase tracking-[0.15em] text-brand-ink transition-all duration-300 hover:border-brand-ink hover:bg-brand-ink hover:text-white sm:px-8 sm:text-[0.7rem]"
+                className="inline-flex items-center justify-center border border-brand-blue/30 bg-transparent px-7 py-4 text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-brand-blue transition-all duration-300 hover:border-brand-blue hover:bg-brand-blue hover:text-brand-cream sm:px-8 sm:text-[0.7rem]"
               >
                 Смотреть курс
               </a>
             </div>
 
             {/* Stats */}
-            <dl className="mt-10 grid grid-cols-3 border-t border-brand-ink/10 pt-8 sm:mt-14 sm:pt-10">
+            <dl className="mt-12 grid grid-cols-3 border-t border-brand-blue/15 pt-10 sm:mt-16 sm:pt-12">
               <div>
-                <dt className="text-[0.55rem] font-medium uppercase tracking-[0.15em] text-brand-ink/40 sm:text-[0.6rem]">
+                <dt className="text-[0.6rem] font-medium uppercase tracking-[0.2em] text-brand-blue/55 sm:text-[0.65rem]">
                   Лет практики
                 </dt>
-                <dd className="mt-2 font-serif text-2xl text-brand-ink sm:text-3xl md:text-4xl">12</dd>
+                <dd className="mt-3 font-serif text-3xl text-brand-blue sm:text-4xl md:text-5xl">12</dd>
               </div>
               <div>
-                <dt className="text-[0.55rem] font-medium uppercase tracking-[0.15em] text-brand-ink/40 sm:text-[0.6rem]">
+                <dt className="text-[0.6rem] font-medium uppercase tracking-[0.2em] text-brand-blue/55 sm:text-[0.65rem]">
                   Учениц
                 </dt>
-                <dd className="mt-2 font-serif text-2xl text-brand-ink sm:text-3xl md:text-4xl">500+</dd>
+                <dd className="mt-3 font-serif text-3xl text-brand-blue sm:text-4xl md:text-5xl">500+</dd>
               </div>
               <div>
-                <dt className="text-[0.55rem] font-medium uppercase tracking-[0.15em] text-brand-ink/40 sm:text-[0.6rem]">
+                <dt className="text-[0.6rem] font-medium uppercase tracking-[0.2em] text-brand-blue/55 sm:text-[0.65rem]">
                   Город
                 </dt>
-                <dd className="mt-2 font-serif text-2xl text-brand-ink sm:text-3xl md:text-4xl">Madrid</dd>
+                <dd className="mt-3 font-serif text-3xl text-brand-blue sm:text-4xl md:text-5xl">Madrid</dd>
               </div>
             </dl>
           </motion.div>

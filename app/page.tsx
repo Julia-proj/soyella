@@ -17,10 +17,11 @@ export default function Page() {
     <>
       <main>
         <HeroSection />
-        <MarqueeText className="bg-brand-cream" />
+        <MarqueeText variant="blue" />
         <AboutSection />
         <NextEventSection />
         <ExpertsSection />
+        <MarqueeText variant="cream" />
         <FeaturedOrganizerSection />
         <ForWhoSection />
         <GallerySection />

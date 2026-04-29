@@ -34,7 +34,7 @@ export function TestimonialsSection() {
     <section
       id="reviews"
       aria-label="Отзывы участниц"
-      className="section-pad bg-brand-cream text-brand-ink"
+      className="section-pad bg-brand-yellow-soft text-brand-blue"
     >
       <div className="site-shell">
         {/* Section header */}
@@ -43,7 +43,7 @@ export function TestimonialsSection() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="section-number"
+          className="section-number section-number-dark"
         >
           No. 07 / Отзывы
         </motion.span>
@@ -53,7 +53,7 @@ export function TestimonialsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1, delay: 0.1 }}
-          className="section-title mt-6 max-w-2xl font-display sm:mt-8"
+          className="mega-title mt-8 max-w-3xl font-display text-brand-blue sm:mt-10"
         >
           Что говорят участницы
         </motion.h2>
@@ -63,13 +63,13 @@ export function TestimonialsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="mt-4 max-w-lg text-base leading-relaxed text-brand-ink/60 sm:text-lg"
+          className="mt-6 max-w-xl text-base leading-relaxed text-brand-blue/70 sm:text-lg md:text-xl"
         >
           Короткие живые отзывы девушек, которые приходят к нам снова.
         </motion.p>
 
         {/* Reviews grid */}
-        <ul className="mt-12 grid gap-4 sm:mt-16 sm:grid-cols-2 lg:gap-6">
+        <ul className="mt-14 grid gap-5 sm:mt-20 sm:grid-cols-2 lg:gap-7">
           {REVIEWS.map((review, index) => (
             <motion.li
               key={review.name}
@@ -77,22 +77,21 @@ export function TestimonialsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.1 * index }}
-              className="flex flex-col border border-brand-ink/10 p-6 sm:p-8"
+              className="flex flex-col bg-brand-cream p-7 transition-shadow duration-500 hover:shadow-[0_20px_50px_-15px_rgba(29,45,61,0.15)] sm:p-10"
             >
-              <p className="font-serif text-lg leading-relaxed text-brand-ink sm:text-xl md:text-2xl">
+              <p className="font-serif text-xl leading-relaxed text-brand-blue sm:text-2xl md:text-3xl">
                 {review.text}
               </p>
 
-              <div className="mt-8 flex items-center gap-4 pt-6 border-t border-brand-ink/10">
-                {/* Avatar initial */}
-                <span className="flex size-10 items-center justify-center bg-brand-ink font-serif text-sm text-white sm:size-12 sm:text-base">
+              <div className="mt-10 flex items-center gap-4 border-t border-brand-blue/15 pt-7">
+                <span className="flex size-12 items-center justify-center bg-brand-blue font-serif text-base text-brand-cream sm:size-14 sm:text-lg">
                   {review.initial}
                 </span>
                 <div>
-                  <p className="text-sm font-semibold text-brand-ink sm:text-base">{review.name}</p>
-                  <p className="mt-0.5 text-xs text-brand-ink/50 sm:text-sm">{review.role}</p>
+                  <p className="text-base font-semibold text-brand-blue sm:text-lg">{review.name}</p>
+                  <p className="mt-0.5 text-sm text-brand-blue/55">{review.role}</p>
                 </div>
-                <span className="ml-auto font-serif text-2xl text-brand-ink/10 sm:text-3xl">
+                <span className="ml-auto font-serif text-3xl text-brand-blue/15 sm:text-4xl">
                   {String(index + 1).padStart(2, '0')}
                 </span>
               </div>

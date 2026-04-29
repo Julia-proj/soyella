@@ -4,14 +4,21 @@ import { motion } from "framer-motion"
 
 interface MarqueeTextProps {
   text?: string
+  variant?: "blue" | "yellow" | "cream"
   className?: string
 }
 
-export function MarqueeText({ className = "" }: MarqueeTextProps) {
-  const content = "Soy Ella · Soy Ella · Soy Ella · Soy Ella · "
+export function MarqueeText({ variant = "blue", className = "" }: MarqueeTextProps) {
+  const content = "Soy Ella  +++  Madrid  +++  Closed Community  +++  Quality over Quantity  +++  "
+
+  const styles = {
+    blue: "bg-brand-blue text-brand-yellow",
+    yellow: "bg-brand-yellow text-brand-blue",
+    cream: "bg-brand-cream text-brand-blue border-y border-brand-blue/15",
+  }
 
   return (
-    <div className={`overflow-hidden border-y border-brand-ink/10 py-6 sm:py-8 ${className}`}>
+    <div className={`overflow-hidden py-5 sm:py-6 ${styles[variant]} ${className}`}>
       <motion.div
         className="flex whitespace-nowrap"
         animate={{ x: ["0%", "-50%"] }}
@@ -19,15 +26,18 @@ export function MarqueeText({ className = "" }: MarqueeTextProps) {
           x: {
             repeat: Infinity,
             repeatType: "loop",
-            duration: 30,
+            duration: 35,
             ease: "linear",
           },
         }}
       >
-        <span className="font-display text-3xl tracking-[0.15em] text-brand-ink sm:text-4xl md:text-5xl lg:text-6xl">
+        <span className="font-display text-2xl tracking-[0.08em] sm:text-3xl md:text-4xl lg:text-5xl">
           {content}
         </span>
-        <span className="font-display text-3xl tracking-[0.15em] text-brand-ink sm:text-4xl md:text-5xl lg:text-6xl">
+        <span className="font-display text-2xl tracking-[0.08em] sm:text-3xl md:text-4xl lg:text-5xl">
+          {content}
+        </span>
+        <span className="font-display text-2xl tracking-[0.08em] sm:text-3xl md:text-4xl lg:text-5xl">
           {content}
         </span>
       </motion.div>

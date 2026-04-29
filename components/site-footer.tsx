@@ -10,22 +10,22 @@ const NAV = [
 
 export function SiteFooter() {
   return (
-    <footer id="contact" className="bg-brand-ink pb-12 text-white sm:pb-16 lg:pb-20">
+    <footer id="contact" className="bg-brand-blue-deep pb-12 text-brand-cream sm:pb-16 lg:pb-20">
 
       {/* Event banner */}
-      <div className="border-b border-white/10">
-        <div className="site-shell flex flex-col gap-6 py-10 sm:py-14 md:flex-row md:items-end md:justify-between">
+      <div className="border-b border-brand-cream/10">
+        <div className="site-shell flex flex-col gap-6 py-12 sm:py-16 md:flex-row md:items-end md:justify-between">
           <div>
-            <p className="text-[0.55rem] font-medium uppercase tracking-[0.2em] text-white/40 sm:text-[0.6rem]">
+            <p className="text-[0.6rem] font-medium uppercase tracking-[0.22em] text-brand-yellow sm:text-[0.65rem]">
               Следующая встреча
             </p>
-            <p className="mt-3 font-display text-2xl leading-none tracking-[-0.01em] text-white sm:text-3xl md:text-4xl">
+            <p className="mt-4 font-display text-3xl leading-none tracking-[-0.01em] text-brand-cream sm:text-4xl md:text-5xl">
               30 мая · Madrid
             </p>
           </div>
           <a
             href="#event"
-            className="inline-flex items-center justify-center self-start border border-white/20 bg-transparent px-8 py-4 text-[0.6rem] font-semibold uppercase tracking-[0.15em] text-white transition-all duration-300 hover:bg-white hover:text-brand-ink sm:text-[0.65rem] md:self-auto"
+            className="inline-flex items-center justify-center self-start border border-brand-cream/25 bg-transparent px-8 py-4 text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-brand-cream transition-all duration-300 hover:bg-brand-yellow hover:text-brand-blue hover:border-brand-yellow sm:text-[0.7rem] md:self-auto"
           >
             Посмотреть программу
           </a>
@@ -33,27 +33,27 @@ export function SiteFooter() {
       </div>
 
       {/* Footer content */}
-      <div className="site-shell py-12 sm:py-16">
+      <div className="site-shell py-14 sm:py-20">
         <div className="grid gap-10 sm:gap-12 lg:grid-cols-12">
 
           <div className="lg:col-span-5">
-            <p className="font-display text-xl tracking-[0.05em] text-white sm:text-2xl">
+            <p className="font-display text-2xl tracking-[0.05em] text-brand-cream sm:text-3xl">
               SOY ELLA
             </p>
-            <p className="mt-5 max-w-sm text-sm leading-relaxed text-white/50 sm:text-base">
+            <p className="mt-6 max-w-sm text-base leading-relaxed text-brand-cream/55 sm:text-lg">
               Закрытое женское комьюнити в Мадриде. Место, где рождаются дружбы,
               проекты и большие идеи.
             </p>
           </div>
 
           <div className="lg:col-span-3">
-            <p className="text-[0.55rem] font-semibold uppercase tracking-[0.2em] text-brand-butter sm:text-[0.6rem]">
+            <p className="text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-brand-yellow sm:text-[0.65rem]">
               Навигация
             </p>
-            <ul className="mt-5 space-y-3 text-sm text-white/50">
+            <ul className="mt-6 space-y-3 text-base text-brand-cream/55">
               {NAV.map((link) => (
                 <li key={link.href}>
-                  <TransitionLink href={link.href} className="transition-colors hover:text-white">
+                  <TransitionLink href={link.href} className="transition-colors hover:text-brand-cream">
                     {link.label}
                   </TransitionLink>
                 </li>
@@ -62,16 +62,16 @@ export function SiteFooter() {
           </div>
 
           <div className="lg:col-span-4">
-            <p className="text-[0.55rem] font-semibold uppercase tracking-[0.2em] text-brand-butter sm:text-[0.6rem]">
+            <p className="text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-brand-yellow sm:text-[0.65rem]">
               Контакты
             </p>
-            <ul className="mt-5 space-y-3 text-sm text-white/50">
+            <ul className="mt-6 space-y-3 text-base text-brand-cream/55">
               <li>
                 <a
                   href="https://instagram.com/"
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-2 transition-colors hover:text-white"
+                  className="inline-flex items-center gap-2 transition-colors hover:text-brand-cream"
                 >
                   <Instagram className="size-4" aria-hidden />
                   Instagram
@@ -80,7 +80,7 @@ export function SiteFooter() {
               <li>
                 <a
                   href="mailto:hello@soyella.com"
-                  className="inline-flex items-center gap-2 transition-colors hover:text-white"
+                  className="inline-flex items-center gap-2 transition-colors hover:text-brand-cream"
                 >
                   <Mail className="size-4" aria-hidden />
                   hello@soyella.com
@@ -97,7 +97,7 @@ export function SiteFooter() {
 
         </div>
 
-        <div className="mt-12 flex flex-col justify-between gap-4 border-t border-white/10 pt-8 text-[0.6rem] font-medium uppercase tracking-[0.1em] text-white/30 sm:mt-16 sm:flex-row sm:text-[0.65rem]">
+        <div className="mt-14 flex flex-col justify-between gap-4 border-t border-brand-cream/10 pt-10 text-[0.6rem] font-medium uppercase tracking-[0.15em] text-brand-cream/35 sm:mt-20 sm:flex-row sm:text-[0.65rem]">
           <p>© {new Date().getFullYear()} Soy Ella — Madrid</p>
           <p>Сделано с вниманием к деталям</p>
         </div>

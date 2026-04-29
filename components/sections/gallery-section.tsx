@@ -14,14 +14,14 @@ const IMAGES = [
 
 export function GallerySection() {
   return (
-    <section id="gallery" aria-label="Галерея встреч" className="bg-brand-cream py-20 sm:py-28 lg:py-36">
-      <div className="site-shell mb-12 sm:mb-16">
+    <section id="gallery" aria-label="Галерея встреч" className="bg-brand-cream py-20 text-brand-blue sm:py-28 lg:py-36">
+      <div className="site-shell mb-14 sm:mb-20">
         <motion.span
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="section-number"
+          className="section-number section-number-dark"
         >
           No. 06 / Атмосфера
         </motion.span>
@@ -30,7 +30,7 @@ export function GallerySection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.1 }}
-          className="section-title mt-6 max-w-lg font-display sm:mt-8"
+          className="mega-title mt-8 max-w-2xl font-display text-brand-blue sm:mt-10"
         >
           Наши встречи в кадре
         </motion.h2>

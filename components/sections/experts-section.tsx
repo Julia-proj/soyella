@@ -38,7 +38,7 @@ const EXPERTS = [
 
 export function ExpertsSection() {
   return (
-    <section id="experts" aria-label="Эксперты встречи" className="section-pad bg-brand-sand text-brand-ink">
+    <section id="experts" aria-label="Эксперты встречи" className="section-pad bg-brand-yellow-soft text-brand-blue">
       <div className="site-shell">
         {/* Section header */}
         <motion.span
@@ -46,7 +46,7 @@ export function ExpertsSection() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="section-number"
+          className="section-number section-number-dark"
         >
           No. 03 / Программа
         </motion.span>
@@ -56,13 +56,13 @@ export function ExpertsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1, delay: 0.1 }}
-          className="section-title mt-6 max-w-2xl font-display sm:mt-8"
+          className="mega-title mt-8 max-w-3xl font-display text-brand-blue sm:mt-10"
         >
           Что будет в этот день
         </motion.h2>
 
         {/* Experts grid - larger photos */}
-        <div className="mt-12 grid gap-6 sm:mt-16 sm:grid-cols-2 sm:gap-8 lg:grid-cols-3">
+        <div className="mt-14 grid gap-8 sm:mt-20 sm:grid-cols-2 sm:gap-10 lg:grid-cols-3">
           {EXPERTS.map((expert, index) => (
             <motion.article
               key={expert.name}
@@ -72,7 +72,7 @@ export function ExpertsSection() {
               transition={{ duration: 0.8, delay: 0.08 * index }}
               className="group"
             >
-              {/* Image - larger aspect ratio */}
+              {/* Image */}
               <div className="relative aspect-[3/4] overflow-hidden bg-brand-cream sm:aspect-[4/5]">
                 <Image
                   src={expert.image}
@@ -85,14 +85,14 @@ export function ExpertsSection() {
               </div>
 
               {/* Content */}
-              <div className="mt-5 sm:mt-6">
-                <span className="text-[0.6rem] font-semibold uppercase tracking-[0.2em] text-brand-gold sm:text-[0.65rem]">
+              <div className="mt-6 sm:mt-7">
+                <span className="text-[0.65rem] font-semibold uppercase tracking-[0.22em] text-brand-blue/55 sm:text-[0.7rem]">
                   {expert.tag}
                 </span>
-                <h3 className="mt-2 font-serif text-xl text-brand-ink sm:text-2xl">
+                <h3 className="mt-3 font-serif text-2xl text-brand-blue sm:text-3xl">
                   {expert.name}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-brand-ink/60 sm:text-base">
+                <p className="mt-3 text-base leading-relaxed text-brand-blue/70 sm:text-lg">
                   {expert.topic}
                 </p>
               </div>
