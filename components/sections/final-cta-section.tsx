@@ -82,10 +82,10 @@ export function FinalCtaSection() {
           className="mt-12 flex flex-wrap gap-3 sm:mt-14"
         >
           <a
-            href="https://buy.stripe.com/8x29AT8nv9YfdK48WLdnW1"
+            href="https://buy.stripe.com/00wcN56fn7Q7eO8c8XdnW1T"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center rounded-md bg-brand-yellow px-8 py-4 text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-brand-blue transition-all duration-300 hover:bg-brand-cream sm:px-10 sm:text-[0.7rem]"
+            className="inline-flex items-center justify-center rounded-full bg-brand-yellow px-8 py-4 text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-brand-blue transition-all duration-300 hover:bg-brand-cream sm:px-10 sm:text-[0.7rem]"
           >
             Занять место, 180€ →
           </a>

@@ -32,7 +32,7 @@ export function StickyMobileCta() {
         </div>
         <a
           href="#event"
-          className="inline-flex items-center justify-center rounded-md bg-white px-5 py-2.5 text-[0.55rem] font-semibold uppercase tracking-[0.2em] text-brand-ink transition-colors hover:bg-brand-butter sm:px-6 sm:py-3 sm:text-[0.6rem]"
+          className="inline-flex items-center justify-center rounded-full bg-white px-5 py-2.5 text-[0.55rem] font-semibold uppercase tracking-[0.2em] text-brand-ink transition-colors hover:bg-brand-butter sm:px-6 sm:py-3 sm:text-[0.6rem]"
         >
           Занять место
         </a>

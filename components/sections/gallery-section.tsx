@@ -8,7 +8,7 @@ const IMAGES = [
   { src: "/soy-ella/gallery-speaker.PNG", alt: "Флористика встречи SOY ELLA" },
   { src: "/soy-ella/gallery-communication.PNG", alt: "Букет и сервировка встречи" },
   { src: "/soy-ella/salmon.jpeg", alt: "Премиальные закуски на встрече" },
-  { src: "/soy-ella/reir.jpg", alt: "Выступление эксперта SOY ELLA" },
+  { src: "/soy-ella/reir.JPG", alt: "Выступление эксперта SOY ELLA" },
   { src: "/soy-ella/ambiente.jpeg", alt: "Выступление эксперта SOY ELLA" },
   { src: "/soy-ella/vstrechi.jpg", alt: "Девушки на встрече SOY ELLA" },
   { src: "/soy-ella/gallery-girls.jpg", alt: "Девушки на встрече SOY ELLA" },

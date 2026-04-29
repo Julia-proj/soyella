@@ -110,11 +110,14 @@ export function NextEventSection() {
               </div>
 
               <div className="mt-10 space-y-3 sm:mt-12">
+                <p className="text-[0.6rem] font-semibold uppercase tracking-[0.2em] text-brand-yellow">
+                  Свободных мест осталось мало
+                </p>
                 <a
-                  href="https://buy.stripe.com/8x29AT8nv9YfdK48WLdnW1"
+                  href="https://buy.stripe.com/00wcN56fn7Q7eO8c8XdnW1T"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex w-full items-center justify-between rounded-md bg-brand-yellow px-7 py-5 text-brand-blue-deep transition-colors duration-300 hover:bg-brand-yellow-soft"
+                  className="flex w-full items-center justify-between rounded-full bg-brand-yellow px-7 py-5 text-brand-blue-deep transition-colors duration-300 hover:bg-brand-yellow-soft"
                 >
                   <span className="text-[0.7rem] font-bold uppercase tracking-[0.18em]">
                     Оплатить участие
@@ -128,10 +131,13 @@ export function NextEventSection() {
                   className="flex w-full items-center justify-between rounded-full border border-white/20 px-7 py-5 text-brand-cream transition-colors duration-300 hover:border-brand-yellow hover:text-brand-yellow"
                 >
                   <span className="text-[0.7rem] font-semibold uppercase tracking-[0.18em]">
-                    Бронирование места
+                    Забронировать место
                   </span>
                   <span className="font-display text-2xl font-normal">50 €</span>
                 </a>
+                <p className="px-1 pt-1 text-[0.6rem] leading-relaxed text-white/45">
+                  Бронирование фиксирует твоё место. Остаток 130 € оплатишь ближе к дате.
+                </p>
               </div>
             </motion.div>
           </div>

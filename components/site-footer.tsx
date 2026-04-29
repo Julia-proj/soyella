@@ -1,4 +1,4 @@
-import { Instagram, Mail, MapPin } from "lucide-react"
+import { Instagram, MapPin } from "lucide-react"
 import { TransitionLink } from "@/components/ui/transition-link"
 
 const NAV = [
@@ -25,7 +25,7 @@ export function SiteFooter() {
           </div>
           <a
             href="#event"
-            className="inline-flex items-center justify-center self-start border border-brand-cream/25 bg-transparent px-8 py-4 text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-brand-cream transition-all duration-300 hover:bg-brand-yellow hover:text-brand-blue hover:border-brand-yellow sm:text-[0.7rem] md:self-auto"
+            className="inline-flex items-center justify-center self-start rounded-full border border-brand-cream/25 bg-transparent px-8 py-4 text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-brand-cream transition-all duration-300 hover:bg-brand-yellow hover:text-brand-blue hover:border-brand-yellow sm:text-[0.7rem] md:self-auto"
           >
             Посмотреть программу
           </a>
@@ -68,22 +68,13 @@ export function SiteFooter() {
             <ul className="mt-6 space-y-3 text-base text-brand-cream/55">
               <li>
                 <a
-                  href="https://instagram.com/"
+                  href="https://www.instagram.com/soy_ella.madrid/"
                   target="_blank"
                   rel="noreferrer"
                   className="inline-flex items-center gap-2 transition-colors hover:text-brand-cream"
                 >
                   <Instagram className="size-4" aria-hidden />
                   Instagram
-                </a>
-              </li>
-              <li>
-                <a
-                  href="mailto:hello@soyella.com"
-                  className="inline-flex items-center gap-2 transition-colors hover:text-brand-cream"
-                >
-                  <Mail className="size-4" aria-hidden />
-                  hello@soyella.com
                 </a>
               </li>
               <li>

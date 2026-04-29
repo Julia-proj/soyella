@@ -71,7 +71,7 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 1.1, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-10 inline-flex items-center gap-3 rounded-md bg-brand-yellow px-8 py-4 text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-brand-blue transition-all duration-300 hover:bg-white sm:mt-12 sm:px-10"
+          className="mt-10 inline-flex items-center gap-3 rounded-full bg-brand-yellow px-8 py-4 text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-brand-blue transition-all duration-300 hover:bg-white sm:mt-12 sm:px-10"
         >
           Следующая встреча →
         </motion.a>

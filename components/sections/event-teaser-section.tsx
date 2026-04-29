@@ -14,7 +14,7 @@ export function EventTeaserSection() {
         </h2>
         <a
           href="#event"
-          className="mt-8 inline-flex items-center gap-2 border border-background/30 text-background px-8 py-4 text-[0.72rem] font-bold uppercase tracking-[0.12em] transition-colors hover:bg-background hover:text-foreground"
+          className="mt-8 inline-flex items-center gap-2 rounded-full border border-background/30 text-background px-8 py-4 text-[0.72rem] font-bold uppercase tracking-[0.12em] transition-colors hover:bg-background hover:text-foreground"
         >
           Смотреть программу
           <ArrowUpRight className="size-4" aria-hidden />
