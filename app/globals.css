@@ -32,16 +32,17 @@
   --input: #e0dcd4;
   --ring: #8b7355;
 
-  /* ── Brand tokens — elegant minimal palette ─── */
-  --brand-butter: #b8a888;   /* warm taupe gold */
-  --brand-blue:   #5d6d78;   /* muted slate */
-  --brand-cream:  #f8f6f2;   /* warm white */
-  --brand-sand:   #f0ede7;   /* soft sand */
+  /* ── Brand tokens — elegant palette with gold & blue accents ─── */
+  --brand-butter: #c9a962;   /* warm gold accent */
+  --brand-gold:   #c9a962;   /* gold for highlights */
+  --brand-blue:   #4a6fa5;   /* refined blue accent */
+  --brand-cream:  #f9f7f3;   /* warm white */
+  --brand-sand:   #f2efe9;   /* soft sand */
   --brand-ink:    #1a1816;   /* rich warm black */
   --brand-ink-soft: #2a2826;
-  --brand-white:  #fcfaf7;   /* pure off-white */
+  --brand-white:  #fdfbf8;   /* pure off-white */
   --brand-taupe:  #8c7c6c;   /* warm taupe for labels */
-  --footer-accent: #b8a888;
+  --footer-accent: #c9a962;
 
   --radius: 0.125rem;
 }
@@ -71,6 +72,7 @@
   --color-ring: var(--ring);
 
   --color-brand-butter: var(--brand-butter);
+  --color-brand-gold: var(--brand-gold);
   --color-brand-blue: var(--brand-blue);
   --color-brand-cream: var(--brand-cream);
   --color-brand-sand: var(--brand-sand);

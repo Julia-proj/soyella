@@ -150,9 +150,9 @@ export function NextEventSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1, delay: 0.3 }}
-          className="mt-16 sm:mt-20"
+          className="mt-16 border-t border-white/10 pt-12 sm:mt-20 sm:pt-16"
         >
-          <h3 className="text-[0.6rem] font-semibold uppercase tracking-[0.2em] text-white/40 sm:text-[0.65rem]">
+          <h3 className="font-serif text-2xl text-white sm:text-3xl">
             Что будет на встрече
           </h3>
           <ul className="mt-6 grid gap-px bg-white/10 sm:grid-cols-2 lg:grid-cols-3">
@@ -161,7 +161,7 @@ export function NextEventSection() {
               { n: "02", t: "Beauty инновации", d: "Новые подходы к уходу, волосам и коже." },
               { n: "03", t: "Нетворкинг", d: "Знакомства, которые остаются не на один вечер." },
               { n: "04", t: "Закуски и напитки", d: "Премиальное меню от партнеров." },
-              { n: "05", t: "Подарки партнеров", d: "Каждая уходит с welcome box." },
+              { n: "05", t: "Подарки ��артнеров", d: "Каждая уходит с welcome box." },
               { n: "06", t: "Новые знакомства", d: "Девушки, с которыми хочется дружить." },
             ].map((item) => (
               <li key={item.n} className="bg-brand-ink p-5 sm:p-6">

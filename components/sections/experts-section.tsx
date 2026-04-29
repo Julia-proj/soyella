@@ -28,6 +28,12 @@ const EXPERTS = [
     tag: "Tea",
     image: "/soy-ella/matcha.jpg",
   },
+  {
+    name: "Lera Ruma",
+    topic: "Личный бренд и стратегия: как говорить о себе ярко и строить влиятельный проект",
+    tag: "Стратегия",
+    image: "/soy-ella/expert-lera-ruma.jpg",
+  },
 ]
 
 export function ExpertsSection() {
@@ -52,41 +58,41 @@ export function ExpertsSection() {
           transition={{ duration: 1, delay: 0.1 }}
           className="section-title mt-6 max-w-2xl font-display sm:mt-8"
         >
-          Те, кто выйдет к нам на сцену
+          Что будет в этот день
         </motion.h2>
 
-        {/* Experts grid - larger photos */}
-        <div className="mt-12 grid gap-6 sm:mt-16 sm:grid-cols-2 lg:gap-8">
+        {/* Experts grid */}
+        <div className="mt-10 grid gap-4 sm:mt-14 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3 lg:gap-6">
           {EXPERTS.map((expert, index) => (
             <motion.article
               key={expert.name}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.1 * index }}
+              transition={{ duration: 0.8, delay: 0.08 * index }}
               className="group"
             >
-              {/* Large image */}
-              <div className="relative aspect-[4/3] overflow-hidden bg-brand-cream sm:aspect-[3/2]">
+              {/* Image - more square on mobile for compactness */}
+              <div className="relative aspect-[4/3] overflow-hidden bg-brand-cream">
                 <Image
                   src={expert.image}
                   alt={`Эксперт SOY ELLA: ${expert.name}`}
                   fill
-                  sizes="(min-width: 1024px) 45vw, (min-width: 640px) 50vw, 100vw"
+                  sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                   className="object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]"
-                  style={{ filter: "saturate(0.9) contrast(1.02)" }}
+                  style={{ filter: "saturate(0.92) contrast(1.02)" }}
                 />
               </div>
 
               {/* Content */}
-              <div className="mt-5 sm:mt-6">
-                <span className="text-[0.6rem] font-medium uppercase tracking-[0.2em] text-brand-taupe sm:text-[0.65rem]">
+              <div className="mt-4 sm:mt-5">
+                <span className="text-[0.55rem] font-semibold uppercase tracking-[0.2em] text-brand-gold sm:text-[0.6rem]">
                   {expert.tag}
                 </span>
-                <h3 className="mt-2 font-serif text-2xl text-brand-ink sm:text-3xl">
+                <h3 className="mt-1.5 font-serif text-xl text-brand-ink sm:text-2xl">
                   {expert.name}
                 </h3>
-                <p className="mt-2 text-base leading-relaxed text-brand-ink/60 sm:text-lg">
+                <p className="mt-1.5 text-sm leading-relaxed text-brand-ink/55 sm:text-base">
                   {expert.topic}
                 </p>
               </div>
