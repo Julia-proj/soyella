@@ -27,8 +27,9 @@ export function FinalCtaSection() {
         />
       </motion.div>
 
-      {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-brand-blue-deep via-brand-blue-deep/60 to-brand-blue-deep/40" />
+      {/* Strong overlay — text must be readable over photo */}
+      <div className="absolute inset-0 bg-brand-blue-deep/75" />
+      <div className="absolute inset-0 bg-gradient-to-t from-brand-blue-deep via-brand-blue-deep/40 to-transparent" />
 
       {/* Content */}
       <div className="site-shell relative z-10 flex min-h-[70svh] flex-col justify-end pb-16 pt-20 sm:min-h-[80svh] sm:pb-20">
