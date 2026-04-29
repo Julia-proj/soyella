@@ -37,16 +37,16 @@ export function HeroSection() {
           Madrid
         </motion.p>
 
-        {/* Main title — enormous like reference */}
+        {/* Main title — HUGE */}
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.4, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
-          className="font-display text-white"
+          className="font-display uppercase text-white"
           style={{
-            fontSize: "clamp(5rem, 22vw, 16rem)",
-            lineHeight: 0.88,
-            letterSpacing: "-0.02em",
+            fontSize: "clamp(4.5rem, 28vw, 22rem)",
+            lineHeight: 0.85,
+            letterSpacing: "-0.01em",
             fontWeight: 400,
           }}
         >
