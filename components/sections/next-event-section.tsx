@@ -2,6 +2,7 @@
 
 import Image from "next/image"
 import { motion } from "framer-motion"
+import { Mic, Sparkles, Users, Wine, Gift, Heart } from "lucide-react"
 import { Spotlight } from "@/components/ui/spotlight-new"
 
 export function NextEventSection() {
@@ -202,7 +203,7 @@ export function NextEventSection() {
       </div>
 
       {/* ── BOTTOM ZONE — light noise ───────────────────────────── */}
-      <div className="relative overflow-hidden" style={{ background: "#b8d8ef" }}>
+      <div className="relative overflow-hidden" style={{ background: "#a8cce6" }}>
         {/* Grain — multiply on light bg = visible dark texture */}
         <div
           aria-hidden
@@ -221,24 +222,22 @@ export function NextEventSection() {
             viewport={{ once: true }}
             transition={{ duration: 1, delay: 0.1 }}
           >
-            <h3 className="font-serif text-2xl text-brand-blue-deep sm:text-3xl md:text-4xl">
-              <span className="text-brand-blue-deep/85">Почему стоит быть здесь</span>
+            <h3 className="font-display text-3xl font-medium text-brand-ink sm:text-4xl md:text-5xl">
+              Почему стоит быть здесь
             </h3>
-            <ul className="mt-8 grid gap-3 sm:mt-10 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3">
+            <ul className="mt-12 grid gap-3 sm:mt-14 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3">
               {[
-                { n: "01", t: "Экспертные выступления", d: "Спикеры уровня, короткие форматы, живые вопросы." },
-                { n: "02", t: "Beauty инновации", d: "Новые подходы к уходу, волосам и коже." },
-                { n: "03", t: "Нетворкинг", d: "Знакомства, которые остаются не на один вечер." },
-                { n: "04", t: "Закуски и напитки", d: "Премиальное меню от партнеров." },
-                { n: "05", t: "Подарки партнеров", d: "Каждая уходит с welcome box." },
-                { n: "06", t: "Новые знакомства", d: "Девушки, с которыми хочется дружить." },
+                { icon: Mic,      t: "Экспертные выступления", d: "Спикеры уровня, короткие форматы, живые вопросы." },
+                { icon: Sparkles, t: "Beauty инновации",       d: "Новые подходы к уходу, волосам и коже." },
+                { icon: Users,    t: "Нетворкинг",             d: "Знакомства, которые остаются не на один вечер." },
+                { icon: Wine,     t: "Закуски и напитки",      d: "Премиальное меню от партнеров." },
+                { icon: Gift,     t: "Подарки партнеров",      d: "Каждая уходит с welcome box." },
+                { icon: Heart,    t: "Новые знакомства",       d: "Девушки, с которыми хочется дружить." },
               ].map((item) => (
-                <li key={item.n} className="rounded-2xl border border-brand-blue-deep/10 bg-white/20 p-5 shadow-[0_18px_60px_rgba(30,49,72,0.06)] transition-colors duration-300 hover:border-brand-blue-deep/18 hover:bg-white/[0.28] sm:p-6">
-                  <span className="text-[0.62rem] font-semibold uppercase tracking-[0.18em] text-brand-blue-deep/50">
-                    {item.n}
-                  </span>
-                  <h4 className="mt-4 font-serif text-xl font-medium text-brand-blue-deep sm:text-2xl">{item.t}</h4>
-                  <p className="mt-2 text-sm leading-relaxed text-brand-blue-deep/65 sm:text-base">{item.d}</p>
+                <li key={item.t} className="border-t border-brand-ink/20 pb-2 pt-6 first:border-t-0 first:pt-0 sm:[&:nth-child(2)]:border-t-0 sm:[&:nth-child(2)]:pt-0 lg:[&:nth-child(3)]:border-t-0 lg:[&:nth-child(3)]:pt-0">
+                  <item.icon size={22} strokeWidth={1.5} className="text-brand-ink/40" />
+                  <h4 className="mt-3 font-serif text-xl font-medium text-brand-ink sm:text-2xl">{item.t}</h4>
+                  <p className="mt-2 text-sm leading-relaxed text-brand-ink/65 sm:text-base">{item.d}</p>
                 </li>
               ))}
             </ul>
