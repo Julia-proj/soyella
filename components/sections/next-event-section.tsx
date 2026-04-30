@@ -4,6 +4,7 @@ import Image from "next/image"
 import { motion } from "framer-motion"
 import { Mic, Sparkles, Users, Wine, Gift, Heart } from "lucide-react"
 import { Spotlight } from "@/components/ui/spotlight-new"
+import { openBookingModal } from "@/lib/booking-events"
 
 export function NextEventSection() {
   return (
@@ -152,46 +153,61 @@ export function NextEventSection() {
               transition={{ duration: 0.8, delay: 0.35 }}
               className="border-t border-white/10 pt-6"
             >
-              <p className="mb-5 text-[0.6rem] font-semibold uppercase tracking-[0.2em] text-brand-yellow">
-                Свободных мест осталось мало
-              </p>
+              {/* Deadline — самостоятельный акцентный блок */}
+              <div className="mb-5 flex items-center gap-3 rounded-xl border border-brand-yellow/20 bg-brand-yellow/[0.06] px-4 py-3">
+                <span
+                  className="h-2 w-2 shrink-0 rounded-full bg-brand-yellow"
+                  style={{ boxShadow: "0 0 7px 2px rgba(247,229,158,0.45)" }}
+                />
+                <div>
+                  <p className="text-[0.65rem] font-bold uppercase tracking-[0.22em] leading-none text-brand-yellow">
+                    Бронь до 23 мая
+                  </p>
+                  <p className="mt-1 text-[0.55rem] font-medium uppercase tracking-[0.15em] text-white/55">
+                    Свободных мест осталось мало
+                  </p>
+                </div>
+              </div>
+
               <div className="space-y-3">
+                {/* Primary — полная оплата */}
                 <a
                   href="https://buy.stripe.com/8x29AT8nv9YfdK48WLdnW1U"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex w-full items-center justify-between gap-4 rounded-full bg-brand-yellow px-4 py-3 text-brand-blue-deep transition-colors duration-300 hover:bg-brand-yellow-soft sm:px-5"
+                  className="btn-cta flex w-full items-center justify-between gap-4 rounded-full bg-brand-yellow px-5 py-4 text-brand-blue-deep transition-all duration-300 hover:scale-[1.012] hover:bg-brand-yellow-soft hover:shadow-[0_8px_28px_rgba(247,229,158,0.28)] active:scale-[0.99] sm:px-6"
                 >
-                  <span className="min-w-0 text-[0.62rem] font-bold uppercase tracking-[0.14em] sm:text-[0.7rem] sm:tracking-[0.18em]">
+                  <span className="min-w-0 text-xs font-bold uppercase tracking-[0.15em] sm:text-[0.7rem] sm:tracking-[0.18em]">
                     Оплатить участие
                   </span>
-                  <span className="shrink-0 font-display text-2xl font-normal">180 €</span>
+                  <span className="shrink-0 font-sans text-xl font-semibold tabular-nums tracking-tight">180 €</span>
                 </a>
 
                 <div className="flex items-center gap-3">
-                  <div className="h-px flex-1 bg-white/15" />
-                  <span className="text-[0.6rem] font-medium uppercase tracking-[0.2em] text-white/35">или</span>
-                  <div className="h-px flex-1 bg-white/15" />
+                  <div className="h-px flex-1 bg-white/10" />
+                  <span className="text-[0.58rem] font-medium uppercase tracking-[0.2em] text-white/30">или</span>
+                  <div className="h-px flex-1 bg-white/10" />
                 </div>
 
+                {/* Secondary — предоплата (открывает модалку) */}
                 <div>
-                  <a
-                    href="https://buy.stripe.com/00wcN56fn7Q7eO8c8XdnW1T"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex w-full items-center justify-between gap-4 rounded-full border border-white/20 px-4 py-3 text-brand-cream transition-colors duration-300 hover:border-brand-yellow hover:text-brand-yellow sm:px-5"
+                  <button
+                    type="button"
+                    onClick={openBookingModal}
+                    className="flex w-full items-center justify-between gap-4 rounded-full border border-white/15 px-5 py-3.5 text-brand-cream/75 transition-all duration-300 hover:border-white/30 hover:text-brand-cream sm:px-6"
                   >
-                    <span className="min-w-0 text-[0.62rem] font-semibold uppercase tracking-[0.14em] sm:text-[0.7rem] sm:tracking-[0.18em]">
+                    <span className="min-w-0 text-xs font-medium uppercase tracking-[0.14em] sm:text-[0.68rem] sm:tracking-[0.18em]">
                       Забронировать место
                     </span>
-                    <span className="shrink-0 font-display text-2xl font-normal">50 €</span>
-                  </a>
-                  <p className="mt-2.5 text-[0.6rem] leading-relaxed text-white/35">
+                    <span className="shrink-0 font-sans text-lg font-semibold tabular-nums tracking-tight">50 €</span>
+                  </button>
+                  <p className="mt-2 px-1 text-[0.58rem] leading-relaxed text-white/30">
                     Фиксирует место. Остаток 130 € оплатишь ближе к дате.
                   </p>
                 </div>
               </div>
-              <p className="mt-5 text-center text-[0.58rem] font-medium uppercase tracking-[0.18em] text-white/25">
+
+              <p className="mt-5 text-center text-[0.55rem] font-medium uppercase tracking-[0.18em] text-white/20">
                 Stripe · Безопасная оплата
               </p>
             </motion.div>

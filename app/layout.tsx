@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next"
 import { Manrope, Cormorant_Garamond } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { RevealController } from "@/components/reveal-controller"
+import { BookingModal } from "@/components/booking-modal"
 import "./globals.css"
 
 const cormorant = Cormorant_Garamond({
@@ -76,6 +77,7 @@ export default function RootLayout({
       <body className="font-sans antialiased text-foreground">
         {children}
         <RevealController />
+        <BookingModal />
         {process.env.NODE_ENV === "production" && <Analytics />}
       </body>
     </html>

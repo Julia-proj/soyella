@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react"
 import { cn } from "@/lib/utils"
+import { openBookingModal } from "@/lib/booking-events"
 
 export function StickyMobileCta() {
   const [visible, setVisible] = useState(false)
@@ -22,20 +23,24 @@ export function StickyMobileCta() {
       style={{ paddingBottom: "env(safe-area-inset-bottom, 0px)" }}
     >
       <div className="flex h-16 items-center justify-between gap-3 px-4 sm:px-6">
-        <div className="min-w-0">
-          <p className="text-[0.5rem] font-medium uppercase tracking-[0.2em] text-white/40 sm:text-[0.55rem]">
+        <div className="min-w-0 flex flex-col">
+          <p className="text-[0.48rem] font-medium uppercase tracking-[0.2em] text-white/40 sm:text-[0.52rem]">
             30 мая · Madrid
           </p>
-          <p className="mt-0.5 font-serif text-sm text-white sm:text-base">
-            <span className="text-lg font-semibold text-brand-yellow drop-shadow-sm sm:text-xl">Beauty Day</span>
+          <p className="mt-0.5 text-lg font-semibold text-brand-yellow sm:text-xl">
+            Beauty Day
+          </p>
+          <p className="mt-0.5 text-[0.48rem] font-semibold uppercase tracking-[0.18em] text-brand-yellow/70 sm:text-[0.52rem]">
+            бронь до 23 мая
           </p>
         </div>
-        <a
-          href="#event"
+        <button
+          type="button"
+          onClick={openBookingModal}
           className="inline-flex shrink-0 items-center justify-center rounded-full bg-white px-4 py-2.5 text-[0.52rem] font-semibold uppercase tracking-[0.14em] text-brand-ink transition-colors hover:bg-brand-butter sm:px-6 sm:py-3 sm:text-[0.6rem] sm:tracking-[0.2em]"
         >
           Занять место
-        </a>
+        </button>
       </div>
     </div>
   )
