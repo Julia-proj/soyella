@@ -25,21 +25,19 @@ const ogImage = "/soy-ella/og-image.jpg"
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "SOY ELLA - закрытое женское комьюнити в Мадриде",
+  title: "SOY ELLA — закрытое женское комьюнити в Мадриде",
   description:
-    "SOY ELLA - премиальное комьюнити для русскоговорящих женщин в Мадриде. Нетворкинг, рост, окружение уровня. Следующая встреча: BEAUTY DAY, 30 мая.",
+    "SOY ELLA — премиальное комьюнити для русскоговорящих женщин в Мадриде. Нетворкинг, рост, окружение уровня. Следующая встреча: BEAUTY DAY, 30 мая.",
   applicationName: "SOY ELLA",
   alternates: {
     canonical: "/",
   },
   icons: {
-    icon: "/soy-ella/icon.svg",
     apple: "/soy-ella/apple-icon.png",
   },
   openGraph: {
-    title: "SOY ELLA - закрытое женское комьюнити в Мадриде",
-    description:
-      "Премиальное комьюнити для русскоговорящих женщин в Мадриде. Следующая встреча: BEAUTY DAY, 30 мая.",
+    title: "SOY ELLA — закрытое женское комьюнити в Мадриде",
+    description: "Премиальное комьюнити для роста, окружения и возможностей",
     url: "/",
     siteName: "SOY ELLA",
     images: [
@@ -47,7 +45,7 @@ export const metadata: Metadata = {
         url: ogImage,
         width: 1200,
         height: 630,
-        alt: "SOY ELLA - Beauty Day в Мадриде",
+        alt: "SOY ELLA — Beauty Day в Мадриде",
       },
     ],
     locale: "ru_RU",
@@ -55,7 +53,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "SOY ELLA - Beauty Day в Мадриде",
+    title: "SOY ELLA — Beauty Day в Мадриде",
     description: "Премиальное женское комьюнити в Мадриде. Следующая встреча: BEAUTY DAY, 30 мая.",
     images: [ogImage],
   },

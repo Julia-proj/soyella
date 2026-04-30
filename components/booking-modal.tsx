@@ -144,22 +144,18 @@ export function BookingModal() {
             className={
               isMobile
                 ? "fixed inset-x-0 bottom-0 z-[201] max-h-[90svh] overflow-y-auto rounded-t-2xl bg-brand-cream"
-                : "fixed left-1/2 top-1/2 z-[201] w-full max-w-md -translate-x-1/2 -translate-y-1/2 rounded-2xl bg-brand-cream shadow-2xl"
+                : "fixed left-1/2 top-1/2 z-[201] w-[calc(100%-2rem)] max-w-md -translate-x-1/2 -translate-y-1/2 max-h-[90svh] overflow-y-auto rounded-2xl bg-brand-cream shadow-2xl"
             }
-            style={
-              isMobile
-                ? { paddingBottom: "env(safe-area-inset-bottom, 0px)" }
-                : undefined
-            }
+            style={{ paddingBottom: "env(safe-area-inset-bottom, 0px)" }}
             initial={panelInitial}
             animate={panelAnimate}
             exit={panelExit}
             transition={panelTransition}
           >
-            <div className="relative p-6 sm:p-8">
+            <div className="relative p-5 sm:p-6 md:p-8">
               {/* Drag handle — mobile only */}
               {isMobile && (
-                <div className="mx-auto mb-5 h-1 w-10 rounded-full bg-brand-ink/15" />
+                <div className="mx-auto mb-4 h-1 w-10 rounded-full bg-brand-ink/15" />
               )}
 
               {/* Close button */}
@@ -179,29 +175,29 @@ export function BookingModal() {
               </span>
 
               {/* Title */}
-              <h2 className="mt-4 font-display text-2xl leading-tight text-brand-ink sm:text-3xl">
+              <h2 className="mt-3 font-display text-xl leading-tight text-brand-ink sm:mt-4 sm:text-2xl md:text-3xl">
                 Забронировать место на Beauty Day
               </h2>
 
               {/* Date */}
-              <p className="mt-2 text-[0.65rem] font-medium uppercase tracking-[0.2em] text-brand-taupe">
+              <p className="mt-1.5 text-[0.65rem] font-medium uppercase tracking-[0.2em] text-brand-taupe sm:mt-2">
                 30 мая · Мадрид
               </p>
 
               {/* Body */}
-              <p className="mt-4 text-sm leading-relaxed text-brand-ink/65">
+              <p className="mt-3 text-sm leading-relaxed text-brand-ink/65 sm:mt-4">
                 Если ты уже всё решила, можно не листать сайт до конца.
                 Забронируй место сейчас, а детали мы отправим после оплаты.
               </p>
 
-              <div className="mt-6 h-px bg-brand-ink/8" />
+              <div className="mt-4 h-px bg-brand-ink/8 sm:mt-6" />
 
               {/* Option 1 — Deposit, primary */}
               <a
                 href={STRIPE_DEPOSIT}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-5 flex w-full items-center justify-between gap-4 rounded-full bg-brand-ink px-5 py-4 text-brand-cream transition-colors hover:bg-[#2a2622]"
+                className="mt-4 flex w-full items-center justify-between gap-3 rounded-full bg-brand-ink px-4 py-3.5 text-brand-cream transition-colors hover:bg-[#2a2622] sm:mt-5 sm:gap-4 sm:px-5 sm:py-4"
               >
                 <span className="min-w-0 text-[0.65rem] font-bold uppercase tracking-[0.2em]">
                   Резервация места
@@ -213,7 +209,7 @@ export function BookingModal() {
               </p>
 
               {/* Separator */}
-              <div className="my-4 flex items-center gap-3">
+              <div className="my-3 flex items-center gap-3 sm:my-4">
                 <div className="h-px flex-1 bg-brand-ink/8" />
                 <span className="text-[0.58rem] uppercase tracking-[0.2em] text-brand-ink/30">или</span>
                 <div className="h-px flex-1 bg-brand-ink/8" />
@@ -224,7 +220,7 @@ export function BookingModal() {
                 href={STRIPE_FULL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex w-full items-center justify-between gap-4 rounded-full border border-brand-ink/15 px-5 py-3.5 text-brand-ink/75 transition-colors hover:border-brand-ink/30 hover:text-brand-ink"
+                className="flex w-full items-center justify-between gap-3 rounded-full border border-brand-ink/15 px-4 py-3 text-brand-ink/75 transition-colors hover:border-brand-ink/30 hover:text-brand-ink sm:gap-4 sm:px-5 sm:py-3.5"
               >
                 <span className="min-w-0 text-[0.65rem] font-medium uppercase tracking-[0.2em]">
                   Полная оплата
@@ -233,7 +229,7 @@ export function BookingModal() {
               </a>
 
               {/* Footer */}
-              <p className="mt-5 text-center text-[0.55rem] uppercase tracking-[0.18em] text-brand-ink/25">
+              <p className="mt-4 text-center text-[0.55rem] uppercase tracking-[0.18em] text-brand-ink/25 sm:mt-5">
                 Оплата доступна до 23 мая · Stripe · Безопасная оплата
               </p>
             </div>
