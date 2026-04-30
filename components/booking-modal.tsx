@@ -96,22 +96,22 @@ export function BookingModal() {
   const overlayTransition = { duration: shouldReduceMotion ? 0.1 : 0.3 }
 
   const panelInitial = shouldReduceMotion
-    ? { opacity: 0 }
+    ? isMobile ? { opacity: 0 } : { opacity: 0, x: "-50%", y: "-50%" }
     : isMobile
     ? { y: "100%" }
-    : { opacity: 0, scale: 0.95, y: "-46%" }
+    : { opacity: 0, scale: 0.95, x: "-50%", y: "-46%" }
 
   const panelAnimate = shouldReduceMotion
-    ? { opacity: 1 }
+    ? isMobile ? { opacity: 1 } : { opacity: 1, x: "-50%", y: "-50%" }
     : isMobile
     ? { y: 0 }
-    : { opacity: 1, scale: 1, y: "-50%" }
+    : { opacity: 1, scale: 1, x: "-50%", y: "-50%" }
 
   const panelExit = shouldReduceMotion
-    ? { opacity: 0 }
+    ? isMobile ? { opacity: 0 } : { opacity: 0, x: "-50%", y: "-50%" }
     : isMobile
     ? { y: "100%" }
-    : { opacity: 0, scale: 0.97, y: "-48%" }
+    : { opacity: 0, scale: 0.97, x: "-50%", y: "-48%" }
 
   const panelTransition = shouldReduceMotion
     ? { duration: 0.15 }
@@ -144,7 +144,7 @@ export function BookingModal() {
             className={
               isMobile
                 ? "fixed inset-x-0 bottom-0 z-[201] max-h-[90svh] overflow-y-auto rounded-t-2xl bg-brand-cream"
-                : "fixed left-1/2 top-1/2 z-[201] w-[calc(100%-2rem)] max-w-md -translate-x-1/2 -translate-y-1/2 max-h-[90svh] overflow-y-auto rounded-2xl bg-brand-cream shadow-2xl"
+                : "fixed left-1/2 top-1/2 z-[201] w-[calc(100%-2rem)] max-w-md max-h-[90svh] overflow-y-auto rounded-2xl bg-brand-cream shadow-2xl"
             }
             style={{ paddingBottom: "env(safe-area-inset-bottom, 0px)" }}
             initial={panelInitial}
