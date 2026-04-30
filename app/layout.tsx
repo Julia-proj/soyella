@@ -1,18 +1,18 @@
 import type { Metadata, Viewport } from "next"
-import { Montserrat, Old_Standard_TT } from "next/font/google"
+import { Manrope, Cormorant_Garamond } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { RevealController } from "@/components/reveal-controller"
 import "./globals.css"
 
-const oldStandard = Old_Standard_TT({
+const cormorant = Cormorant_Garamond({
   subsets: ["latin", "cyrillic"],
   variable: "--font-serif",
-  weight: ["400", "700"],
+  weight: ["300", "400", "500", "600"],
   style: ["normal", "italic"],
   display: "swap",
 })
 
-const montserrat = Montserrat({
+const manrope = Manrope({
   subsets: ["latin", "cyrillic"],
   variable: "--font-sans",
   weight: ["400", "500", "600", "700"],
@@ -72,7 +72,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="ru" className={`${oldStandard.variable} ${montserrat.variable} bg-background`}>
+    <html lang="ru" className={`${cormorant.variable} ${manrope.variable} bg-background`}>
       <body className="font-sans antialiased text-foreground">
         {children}
         <RevealController />

@@ -27,7 +27,7 @@ export function StickyMobileCta() {
             30 мая · Madrid
           </p>
           <p className="mt-0.5 font-serif text-sm text-white sm:text-base">
-            <span className="text-lg font-bold text-brand-yellow drop-shadow-sm sm:text-xl">Beauty Day</span>
+            <span className="text-lg font-semibold text-brand-yellow drop-shadow-sm sm:text-xl">Beauty Day</span>
           </p>
         </div>
         <a

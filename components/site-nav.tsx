@@ -44,7 +44,7 @@ export function SiteNav() {
           <a
             href="#home"
             aria-label="SOY ELLA — на главную"
-            className="font-display text-sm tracking-[0.1em] sm:text-base"
+            className="font-display text-base font-medium tracking-[0.15em] sm:text-lg"
           >
             <span className={cn("transition-colors duration-300", scrolled ? "text-brand-ink" : "text-white")}>SOY </span>
             <span className="text-brand-blue">ELLA</span>
@@ -120,7 +120,7 @@ export function SiteNav() {
         aria-label="Меню навигации"
       >
         <div className="flex items-center justify-between">
-          <span className="font-display text-sm uppercase tracking-[0.1em]">
+          <span className="font-display text-base font-medium tracking-[0.15em]">
             <span className="text-brand-ink">SOY </span><span className="text-brand-blue">ELLA</span>
           </span>
           <button
@@ -139,7 +139,7 @@ export function SiteNav() {
               <TransitionLink
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="block border-t border-brand-ink/10 py-5 font-serif text-2xl text-brand-ink transition-colors hover:text-brand-taupe"
+                className="block border-t border-brand-ink/10 py-5 font-serif text-2xl font-medium text-brand-ink transition-colors hover:text-brand-taupe"
               >
                 {link.label}
               </TransitionLink>

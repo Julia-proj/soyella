@@ -237,7 +237,7 @@ export function NextEventSection() {
                   <span className="text-[0.62rem] font-semibold uppercase tracking-[0.18em] text-brand-blue-deep/50">
                     {item.n}
                   </span>
-                  <h4 className="mt-4 font-serif text-lg text-brand-blue-deep sm:text-xl">{item.t}</h4>
+                  <h4 className="mt-4 font-serif text-xl font-medium text-brand-blue-deep sm:text-2xl">{item.t}</h4>
                   <p className="mt-2 text-sm leading-relaxed text-brand-blue-deep/65 sm:text-base">{item.d}</p>
                 </li>
               ))}

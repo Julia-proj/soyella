@@ -70,7 +70,7 @@ export function TestimonialsSection() {
                 &ldquo;
               </span>
               <blockquote className="mt-3">
-                <p className="font-serif text-lg leading-relaxed text-brand-ink sm:text-xl lg:text-lg xl:text-xl">
+                <p className="font-serif text-xl font-medium leading-relaxed text-brand-ink sm:text-2xl">
                   {review.text}
                 </p>
               </blockquote>

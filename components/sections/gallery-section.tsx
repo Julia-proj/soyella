@@ -16,8 +16,8 @@ const IMAGES = [
 
 export function GallerySection() {
   return (
-    <section id="gallery" aria-label="Галерея встреч" className="bg-brand-cream py-16 text-brand-blue sm:py-24 lg:py-28">
-      <div className="site-shell mb-12 sm:mb-16">
+    <section id="gallery" aria-label="Галерея встреч" className="bg-brand-cream py-16 text-brand-blue sm:py-24 lg:py-16">
+      <div className="site-shell mb-12 sm:mb-16 lg:mb-10">
         <motion.span
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
